@@ -1,0 +1,26 @@
+//
+//  Float+MathUtils.swift
+//  ios-spritekit-flappy-flying-bird
+//
+//  Created by Astemir Eleev on 02/05/2018.
+//  Copyright © 2018 Astemir Eleev. All rights reserved.
+//
+
+import CoreGraphics
+
+extension CGFloat {
+    
+    func clamp(min: CGFloat, max: CGFloat) -> CGFloat {
+        if (self > max) {
+            return max
+        } else if (self < min) {
+            return min
+        } else {
+            return self
+        }
+    }
+    
+    static func range(min: CGFloat, max: CGFloat) -> CGFloat {
+        return CGFloat(Float(arc4random()) / 0xFFFFFFFF) * (max - min) + min
+    }
+}
