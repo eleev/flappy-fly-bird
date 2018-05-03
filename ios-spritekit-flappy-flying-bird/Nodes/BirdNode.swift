@@ -46,9 +46,11 @@ class BirdNode: SKSpriteNode, Updatable {
 
     fileprivate func preparePhysicsBody() {
         physicsBody = SKPhysicsBody(circleOfRadius: size.width / 2.5)
+        
         physicsBody?.categoryBitMask = PhysicsCategories.player.rawValue
         physicsBody?.contactTestBitMask = PhysicsCategories.pipe.rawValue | PhysicsCategories.gap.rawValue | PhysicsCategories.boundary.rawValue
         physicsBody?.collisionBitMask = PhysicsCategories.pipe.rawValue | PhysicsCategories.boundary.rawValue
+        
         physicsBody?.allowsRotation = false
         physicsBody?.restitution = 0.0
     }
