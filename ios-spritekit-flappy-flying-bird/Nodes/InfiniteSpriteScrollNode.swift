@@ -21,6 +21,8 @@ class InfiniteSpriteScrollNode: SKNode {
     var background: SKNode
     var backgroundSpeed: TimeInterval
     
+    let maxNumOfTiles = 2
+    
     internal var delta = TimeInterval(0)
     internal var lastUpdateTime = TimeInterval(0)
     
@@ -34,7 +36,8 @@ class InfiniteSpriteScrollNode: SKNode {
         let texture = SKTexture(imageNamed: fileName)
         let width = texture.size().width
         
-        for x in 0...2 {
+        
+        for x in 0...maxNumOfTiles {
             let tile = SKSpriteNode(texture: texture)
             tile.xScale = scale.x
             tile.yScale = scale.y
@@ -65,12 +68,14 @@ class InfiniteSpriteScrollNode: SKNode {
         let posX = -backgroundSpeed * delta
         background.position = CGPoint(x: background.position.x + CGFloat(posX), y: 0.0)
         
+        let maxTiles = CGFloat(maxNumOfTiles)
+        
         background.enumerateChildNodes(withName: key) { [weak self] node, stop in
             if let unwrappedSelf = self {
                 let background_screen_position = unwrappedSelf.background.convert(node.position, to: unwrappedSelf)
                 
                 if background_screen_position.x <= -node.frame.size.width {
-                    node.position = CGPoint(x: node.position.x + (node.frame.size.width * 2), y: node.position.y)
+                    node.position = CGPoint(x: node.position.x + (node.frame.size.width * maxTiles), y: node.position.y)
                 }
             } else {
                 debugPrint(#function + " could not unwrap self, current enumeration iteration will be skipped")
