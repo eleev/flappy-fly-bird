@@ -22,6 +22,6 @@ protocol GameSceneProtocol {
     
     // MARK: - Initializers
     
-    init(with scene: SKScene)
+    init?(with scene: SKScene)
     
 }
