@@ -19,15 +19,16 @@ class InfiniteSpriteScrollNode: SKNode {
     
     var tiles: [SKNode]
     var background: SKNode
-    var backgroundSpeed = 100.0
+    var backgroundSpeed: TimeInterval
     
     internal var delta = TimeInterval(0)
     internal var lastUpdateTime = TimeInterval(0)
     
     // MARK: - Initailziers
     
-    init(fileName: String, scaleFactor scale: CGPoint = CGPoint(x: 1.0, y: 1.0)) {
-
+    init(fileName: String, scaleFactor scale: CGPoint = CGPoint(x: 1.0, y: 1.0), speed: TimeInterval = 100) {
+        self.backgroundSpeed = speed
+        
         tiles = [SKSpriteNode]()
         background = SKNode()
         let texture = SKTexture(imageNamed: fileName)
