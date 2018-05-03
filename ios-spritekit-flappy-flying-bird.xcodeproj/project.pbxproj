@@ -16,6 +16,36 @@
 		A9ACB92A2099A1F300966991 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9ACB9292099A1F300966991 /* Assets.xcassets */; };
 		A9ACB92D2099A1F300966991 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9ACB92B2099A1F300966991 /* LaunchScreen.storyboard */; };
 		A9ACB9382099A1F300966991 /* ios_spritekit_flappy_flying_birdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ACB9372099A1F300966991 /* ios_spritekit_flappy_flying_birdTests.swift */; };
+		A9ACB9502099A47800966991 /* Kenney Pixel.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A9ACB9452099A47800966991 /* Kenney Pixel.ttf */; };
+		A9ACB9512099A47800966991 /* Kenney Pixel Square.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A9ACB9462099A47800966991 /* Kenney Pixel Square.ttf */; };
+		A9ACB9522099A47800966991 /* Kenney Rocket.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A9ACB9472099A47800966991 /* Kenney Rocket.ttf */; };
+		A9ACB9532099A47800966991 /* Kenney High.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A9ACB9482099A47800966991 /* Kenney High.ttf */; };
+		A9ACB9542099A47800966991 /* Kenney Rocket Square.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A9ACB9492099A47800966991 /* Kenney Rocket Square.ttf */; };
+		A9ACB9552099A47800966991 /* Kenney High Square.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A9ACB94A2099A47800966991 /* Kenney High Square.ttf */; };
+		A9ACB9562099A47800966991 /* Kenney Mini.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A9ACB94B2099A47800966991 /* Kenney Mini.ttf */; };
+		A9ACB9572099A47800966991 /* Kenney Future.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A9ACB94C2099A47800966991 /* Kenney Future.ttf */; };
+		A9ACB9582099A47800966991 /* Kenney Future Narrow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A9ACB94D2099A47800966991 /* Kenney Future Narrow.ttf */; };
+		A9ACB9592099A47800966991 /* Kenney Blocks.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A9ACB94E2099A47800966991 /* Kenney Blocks.ttf */; };
+		A9ACB95A2099A47800966991 /* Kenney Mini Square.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A9ACB94F2099A47800966991 /* Kenney Mini Square.ttf */; };
+		A9ACB96B2099B42300966991 /* PauseButtonPressAction.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9ACB96A2099B42300966991 /* PauseButtonPressAction.sks */; };
+		A9ACB9732099B7AF00966991 /* rollover1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A9ACB96D2099B7AE00966991 /* rollover1.mp3 */; };
+		A9ACB9742099B7AF00966991 /* click1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A9ACB96E2099B7AF00966991 /* click1.mp3 */; };
+		A9ACB9752099B7AF00966991 /* switch3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A9ACB96F2099B7AF00966991 /* switch3.mp3 */; };
+		A9ACB9762099B7AF00966991 /* click2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A9ACB9702099B7AF00966991 /* click2.mp3 */; };
+		A9ACB9772099B7AF00966991 /* switch2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A9ACB9712099B7AF00966991 /* switch2.mp3 */; };
+		A9ACB9782099B7AF00966991 /* rollover2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A9ACB9722099B7AF00966991 /* rollover2.mp3 */; };
+		A9ACB97E2099C8C400966991 /* InfiniteSpriteScrollNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ACB97D2099C8C400966991 /* InfiniteSpriteScrollNode.swift */; };
+		A9ACB9802099E61100966991 /* BirdFlyingAction.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9ACB97F2099E61100966991 /* BirdFlyingAction.sks */; };
+		A9ACB9872099E74600966991 /* BirdNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ACB9862099E74600966991 /* BirdNode.swift */; };
+		A9ACB98B2099F0D300966991 /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ACB98A2099F0D300966991 /* Updatable.swift */; };
+		A9ACB98D2099F0FC00966991 /* Touchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ACB98C2099F0FC00966991 /* Touchable.swift */; };
+		A9ACB9972099F19E00966991 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A9ACB9962099F19E00966991 /* .gitignore */; };
+		A9ACB9992099F1D200966991 /* PhysicsCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ACB9982099F1D200966991 /* PhysicsCategories.swift */; };
+		A9ACB99C209A0DE100966991 /* CGFloat+MathUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ACB99B209A0DE100966991 /* CGFloat+MathUtils.swift */; };
+		A9ACB99F209A0F4D00966991 /* GameSceneAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ACB99E209A0F4D00966991 /* GameSceneAdapter.swift */; };
+		A9D4CFD7209AF515006461AF /* SKScene+SpriteUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4CFD6209AF515006461AF /* SKScene+SpriteUploader.swift */; };
+		A9D4CFD9209AF53E006461AF /* SKTextureAtlas+FrameUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4CFD8209AF53E006461AF /* SKTextureAtlas+FrameUploader.swift */; };
+		A9D4CFDB209AFA06006461AF /* GameSceneProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4CFDA209AFA06006461AF /* GameSceneProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +72,36 @@
 		A9ACB9332099A1F300966991 /* ios-spritekit-flappy-flying-birdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-spritekit-flappy-flying-birdTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9ACB9372099A1F300966991 /* ios_spritekit_flappy_flying_birdTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_spritekit_flappy_flying_birdTests.swift; sourceTree = "<group>"; };
 		A9ACB9392099A1F300966991 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9ACB9452099A47800966991 /* Kenney Pixel.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kenney Pixel.ttf"; sourceTree = "<group>"; };
+		A9ACB9462099A47800966991 /* Kenney Pixel Square.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kenney Pixel Square.ttf"; sourceTree = "<group>"; };
+		A9ACB9472099A47800966991 /* Kenney Rocket.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kenney Rocket.ttf"; sourceTree = "<group>"; };
+		A9ACB9482099A47800966991 /* Kenney High.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kenney High.ttf"; sourceTree = "<group>"; };
+		A9ACB9492099A47800966991 /* Kenney Rocket Square.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kenney Rocket Square.ttf"; sourceTree = "<group>"; };
+		A9ACB94A2099A47800966991 /* Kenney High Square.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kenney High Square.ttf"; sourceTree = "<group>"; };
+		A9ACB94B2099A47800966991 /* Kenney Mini.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kenney Mini.ttf"; sourceTree = "<group>"; };
+		A9ACB94C2099A47800966991 /* Kenney Future.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kenney Future.ttf"; sourceTree = "<group>"; };
+		A9ACB94D2099A47800966991 /* Kenney Future Narrow.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kenney Future Narrow.ttf"; sourceTree = "<group>"; };
+		A9ACB94E2099A47800966991 /* Kenney Blocks.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kenney Blocks.ttf"; sourceTree = "<group>"; };
+		A9ACB94F2099A47800966991 /* Kenney Mini Square.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kenney Mini Square.ttf"; sourceTree = "<group>"; };
+		A9ACB96A2099B42300966991 /* PauseButtonPressAction.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PauseButtonPressAction.sks; sourceTree = "<group>"; };
+		A9ACB96D2099B7AE00966991 /* rollover1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rollover1.mp3; sourceTree = "<group>"; };
+		A9ACB96E2099B7AF00966991 /* click1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = click1.mp3; sourceTree = "<group>"; };
+		A9ACB96F2099B7AF00966991 /* switch3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = switch3.mp3; sourceTree = "<group>"; };
+		A9ACB9702099B7AF00966991 /* click2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = click2.mp3; sourceTree = "<group>"; };
+		A9ACB9712099B7AF00966991 /* switch2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = switch2.mp3; sourceTree = "<group>"; };
+		A9ACB9722099B7AF00966991 /* rollover2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rollover2.mp3; sourceTree = "<group>"; };
+		A9ACB97D2099C8C400966991 /* InfiniteSpriteScrollNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InfiniteSpriteScrollNode.swift; path = "ios-spritekit-flappy-flying-bird/Nodes/InfiniteSpriteScrollNode.swift"; sourceTree = SOURCE_ROOT; };
+		A9ACB97F2099E61100966991 /* BirdFlyingAction.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BirdFlyingAction.sks; sourceTree = "<group>"; };
+		A9ACB9862099E74600966991 /* BirdNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdNode.swift; sourceTree = "<group>"; };
+		A9ACB98A2099F0D300966991 /* Updatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updatable.swift; sourceTree = "<group>"; };
+		A9ACB98C2099F0FC00966991 /* Touchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Touchable.swift; sourceTree = "<group>"; };
+		A9ACB9962099F19E00966991 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		A9ACB9982099F1D200966991 /* PhysicsCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsCategories.swift; sourceTree = "<group>"; };
+		A9ACB99B209A0DE100966991 /* CGFloat+MathUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+MathUtils.swift"; sourceTree = "<group>"; };
+		A9ACB99E209A0F4D00966991 /* GameSceneAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSceneAdapter.swift; sourceTree = "<group>"; };
+		A9D4CFD6209AF515006461AF /* SKScene+SpriteUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKScene+SpriteUploader.swift"; sourceTree = "<group>"; };
+		A9D4CFD8209AF53E006461AF /* SKTextureAtlas+FrameUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKTextureAtlas+FrameUploader.swift"; sourceTree = "<group>"; };
+		A9D4CFDA209AFA06006461AF /* GameSceneProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSceneProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +125,7 @@
 		A9ACB9102099A1F200966991 = {
 			isa = PBXGroup;
 			children = (
+				A9ACB9962099F19E00966991 /* .gitignore */,
 				A9ACB91B2099A1F200966991 /* ios-spritekit-flappy-flying-bird */,
 				A9ACB9362099A1F300966991 /* ios-spritekit-flappy-flying-birdTests */,
 				A9ACB91A2099A1F200966991 /* Products */,
@@ -84,14 +145,17 @@
 			isa = PBXGroup;
 			children = (
 				A9ACB91C2099A1F200966991 /* AppDelegate.swift */,
-				A9ACB91E2099A1F200966991 /* GameScene.sks */,
-				A9ACB9202099A1F200966991 /* Actions.sks */,
-				A9ACB9222099A1F200966991 /* GameScene.swift */,
-				A9ACB9242099A1F200966991 /* GameViewController.swift */,
-				A9ACB9262099A1F200966991 /* Main.storyboard */,
-				A9ACB9292099A1F300966991 /* Assets.xcassets */,
-				A9ACB92B2099A1F300966991 /* LaunchScreen.storyboard */,
 				A9ACB92E2099A1F300966991 /* Info.plist */,
+				A9ACB9932099F16800966991 /* Storyboards */,
+				A9ACB9922099F15E00966991 /* View Controllers */,
+				A9ACB99D209A0F3D00966991 /* Adapeters */,
+				A9ACB99A209A0DD100966991 /* Extensions */,
+				A9ACB9902099F13700966991 /* Scenes */,
+				A9ACB98F2099F12000966991 /* Assets */,
+				A9ACB98E2099F11900966991 /* Utils */,
+				A9ACB9892099F0C100966991 /* Protocols */,
+				A9ACB9882099F0B600966991 /* Nodes */,
+				A9ACB96C2099B46E00966991 /* Actions */,
 			);
 			path = "ios-spritekit-flappy-flying-bird";
 			sourceTree = "<group>";
@@ -103,6 +167,136 @@
 				A9ACB9392099A1F300966991 /* Info.plist */,
 			);
 			path = "ios-spritekit-flappy-flying-birdTests";
+			sourceTree = "<group>";
+		};
+		A9ACB9442099A47800966991 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A9ACB9452099A47800966991 /* Kenney Pixel.ttf */,
+				A9ACB9462099A47800966991 /* Kenney Pixel Square.ttf */,
+				A9ACB9472099A47800966991 /* Kenney Rocket.ttf */,
+				A9ACB9482099A47800966991 /* Kenney High.ttf */,
+				A9ACB9492099A47800966991 /* Kenney Rocket Square.ttf */,
+				A9ACB94A2099A47800966991 /* Kenney High Square.ttf */,
+				A9ACB94B2099A47800966991 /* Kenney Mini.ttf */,
+				A9ACB94C2099A47800966991 /* Kenney Future.ttf */,
+				A9ACB94D2099A47800966991 /* Kenney Future Narrow.ttf */,
+				A9ACB94E2099A47800966991 /* Kenney Blocks.ttf */,
+				A9ACB94F2099A47800966991 /* Kenney Mini Square.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		A9ACB95B2099B14A00966991 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				A9ACB95C2099B15000966991 /* UI */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
+		A9ACB95C2099B15000966991 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A9ACB96E2099B7AF00966991 /* click1.mp3 */,
+				A9ACB9702099B7AF00966991 /* click2.mp3 */,
+				A9ACB96D2099B7AE00966991 /* rollover1.mp3 */,
+				A9ACB9722099B7AF00966991 /* rollover2.mp3 */,
+				A9ACB9712099B7AF00966991 /* switch2.mp3 */,
+				A9ACB96F2099B7AF00966991 /* switch3.mp3 */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		A9ACB96C2099B46E00966991 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				A9ACB96A2099B42300966991 /* PauseButtonPressAction.sks */,
+				A9ACB9202099A1F200966991 /* Actions.sks */,
+				A9ACB97F2099E61100966991 /* BirdFlyingAction.sks */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		A9ACB9882099F0B600966991 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				A9ACB97D2099C8C400966991 /* InfiniteSpriteScrollNode.swift */,
+				A9ACB9862099E74600966991 /* BirdNode.swift */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
+		A9ACB9892099F0C100966991 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A9ACB98A2099F0D300966991 /* Updatable.swift */,
+				A9ACB98C2099F0FC00966991 /* Touchable.swift */,
+				A9D4CFDA209AFA06006461AF /* GameSceneProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A9ACB98E2099F11900966991 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A9ACB9982099F1D200966991 /* PhysicsCategories.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A9ACB98F2099F12000966991 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A9ACB9292099A1F300966991 /* Assets.xcassets */,
+				A9ACB9442099A47800966991 /* Fonts */,
+				A9ACB95B2099B14A00966991 /* Sound */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		A9ACB9902099F13700966991 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				A9ACB91E2099A1F200966991 /* GameScene.sks */,
+				A9ACB9222099A1F200966991 /* GameScene.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		A9ACB9922099F15E00966991 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A9ACB9242099A1F200966991 /* GameViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		A9ACB9932099F16800966991 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A9ACB9262099A1F200966991 /* Main.storyboard */,
+				A9ACB92B2099A1F300966991 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		A9ACB99A209A0DD100966991 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A9ACB99B209A0DE100966991 /* CGFloat+MathUtils.swift */,
+				A9D4CFD6209AF515006461AF /* SKScene+SpriteUploader.swift */,
+				A9D4CFD8209AF53E006461AF /* SKTextureAtlas+FrameUploader.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A9ACB99D209A0F3D00966991 /* Adapeters */ = {
+			isa = PBXGroup;
+			children = (
+				A9ACB99E209A0F4D00966991 /* GameSceneAdapter.swift */,
+			);
+			path = Adapeters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,11 +380,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9ACB9572099A47800966991 /* Kenney Future.ttf in Resources */,
+				A9ACB95A2099A47800966991 /* Kenney Mini Square.ttf in Resources */,
+				A9ACB96B2099B42300966991 /* PauseButtonPressAction.sks in Resources */,
+				A9ACB9732099B7AF00966991 /* rollover1.mp3 in Resources */,
+				A9ACB9512099A47800966991 /* Kenney Pixel Square.ttf in Resources */,
+				A9ACB9552099A47800966991 /* Kenney High Square.ttf in Resources */,
 				A9ACB9282099A1F200966991 /* Main.storyboard in Resources */,
+				A9ACB9592099A47800966991 /* Kenney Blocks.ttf in Resources */,
+				A9ACB9502099A47800966991 /* Kenney Pixel.ttf in Resources */,
+				A9ACB9562099A47800966991 /* Kenney Mini.ttf in Resources */,
+				A9ACB9972099F19E00966991 /* .gitignore in Resources */,
+				A9ACB9752099B7AF00966991 /* switch3.mp3 in Resources */,
+				A9ACB9802099E61100966991 /* BirdFlyingAction.sks in Resources */,
+				A9ACB9782099B7AF00966991 /* rollover2.mp3 in Resources */,
+				A9ACB9742099B7AF00966991 /* click1.mp3 in Resources */,
+				A9ACB9542099A47800966991 /* Kenney Rocket Square.ttf in Resources */,
+				A9ACB9582099A47800966991 /* Kenney Future Narrow.ttf in Resources */,
 				A9ACB91F2099A1F200966991 /* GameScene.sks in Resources */,
+				A9ACB9532099A47800966991 /* Kenney High.ttf in Resources */,
 				A9ACB92A2099A1F300966991 /* Assets.xcassets in Resources */,
+				A9ACB9772099B7AF00966991 /* switch2.mp3 in Resources */,
 				A9ACB92D2099A1F300966991 /* LaunchScreen.storyboard in Resources */,
+				A9ACB9522099A47800966991 /* Kenney Rocket.ttf in Resources */,
 				A9ACB9212099A1F200966991 /* Actions.sks in Resources */,
+				A9ACB9762099B7AF00966991 /* click2.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,8 +422,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9D4CFD7209AF515006461AF /* SKScene+SpriteUploader.swift in Sources */,
 				A9ACB9232099A1F200966991 /* GameScene.swift in Sources */,
+				A9ACB98D2099F0FC00966991 /* Touchable.swift in Sources */,
+				A9D4CFDB209AFA06006461AF /* GameSceneProtocol.swift in Sources */,
+				A9ACB98B2099F0D300966991 /* Updatable.swift in Sources */,
 				A9ACB9252099A1F200966991 /* GameViewController.swift in Sources */,
+				A9ACB9872099E74600966991 /* BirdNode.swift in Sources */,
+				A9D4CFD9209AF53E006461AF /* SKTextureAtlas+FrameUploader.swift in Sources */,
+				A9ACB97E2099C8C400966991 /* InfiniteSpriteScrollNode.swift in Sources */,
+				A9ACB99F209A0F4D00966991 /* GameSceneAdapter.swift in Sources */,
+				A9ACB99C209A0DE100966991 /* CGFloat+MathUtils.swift in Sources */,
+				A9ACB9992099F1D200966991 /* PhysicsCategories.swift in Sources */,
 				A9ACB91D2099A1F200966991 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
