@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class GameSceneAdapter: GameSceneProtocol {
+class GameSceneAdapter: NSObject, GameSceneProtocol {
     
     // MARK: - Properties
     
@@ -17,6 +17,26 @@ class GameSceneAdapter: GameSceneProtocol {
     let backgroundResourceName = "Background-Winter"
     let playerResourceName = "Bird Right"
     let floorDistance: CGFloat = 0
+    
+    private(set) var score: Int = 0
+    private(set) var scoreLabel: SKLabelNode?
+    private(set) var scoreSound = SKAction.playSoundFileNamed("Coin.wav", waitForCompletion: false)
+    private(set) var hitSound = SKAction.playSoundFileNamed("Hit_Hurt.wav", waitForCompletion: false)
+    
+    private(set) lazy var menuAudio: SKAudioNode = {
+        let audioNode = SKAudioNode(fileNamed: "POL-catch-them-all-short.wav")
+        audioNode.autoplayLooped = true
+        audioNode.name = "manu audio"
+        return audioNode
+    }()
+    
+    private(set) lazy var playingAudio: SKAudioNode = {
+        let audioNode = SKAudioNode(fileNamed: "POL-flight-master-short.wav")
+        audioNode.autoplayLooped = true
+        audioNode.name = "playing audio"
+        return audioNode
+    }()
+    
     
     // MARK: - Conformance to GameSceneProtocol
     
@@ -32,6 +52,7 @@ class GameSceneAdapter: GameSceneProtocol {
     // MARK: - Initializers
     
     required init?(with scene: SKScene) {
+        
         self.scene = scene
         
         guard let scene = self.scene else {
@@ -39,10 +60,18 @@ class GameSceneAdapter: GameSceneProtocol {
             return nil
         }
         
+        scoreLabel = scene.childNode(withName: "Score Label") as? SKLabelNode
+      
+        super.init()
+        
         prepareWorld(for: scene)
         prepareInfiniteBackgroundScroller(for: scene)
         preparePlayer(for: scene)
         launchPipeFactory(for: scene)
+        
+        // Game state - Playing
+        SKAction.play()
+        scene.addChild(playingAudio)
     }
 
     // MARK: - Helpers
@@ -57,6 +86,8 @@ class GameSceneAdapter: GameSceneProtocol {
         
         scene.physicsBody?.categoryBitMask = boundary.rawValue
         scene.physicsBody?.collisionBitMask = player.rawValue
+        
+        scene.physicsWorld.contactDelegate = self
     }
     
     private func preparePlayer(for scene: SKScene) {
@@ -133,6 +164,52 @@ class GameSceneAdapter: GameSceneProtocol {
         let sequenceAction = SKAction.sequence([waitAction, producePipeAction])
         let infinitePipeProducer = SKAction.repeatForever(sequenceAction)
         scene.run(infinitePipeProducer)
+    }
+    
+}
+
+
+extension GameSceneAdapter: SKPhysicsContactDelegate {
+    
+    func didBegin(_ contact: SKPhysicsContact) {
+        let collision:UInt32 = (contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask)
+        let player = PhysicsCategories.player.rawValue
+        
+        if collision == (player | PhysicsCategories.gap.rawValue) {
+            score += 1
+            scoreLabel?.text = "Score \(score)"
+            scene?.run(scoreSound)
+        }
+        
+        if collision == (player | PhysicsCategories.pipe.rawValue) {
+            // game over state, the player has touched pipe
+            scoreLabel?.text = "Dead by Pipe"
+            deadState()
+            hit()
+        }
+        
+        if collision == (player | PhysicsCategories.boundary.rawValue) {
+            // game over state, the player has touched the boundary of the world (floor)
+            // player's position needs to be set to the default one
+            scoreLabel?.text = "Deap by Falling"
+            deadState()
+            hit()
+        }
+
+    }
+ 
+    func deadState() {
+        if let playingAudioNodeName = playingAudio.name {
+            scene?.childNode(withName: playingAudioNodeName)?.removeFromParent()
+        }
+        if scene?.childNode(withName: menuAudio.name!) == nil {
+            scene?.addChild(menuAudio)
+            SKAction.play()
+        }
+    }
+    
+    func hit() {
+        scene?.run(hitSound)
     }
     
 }
