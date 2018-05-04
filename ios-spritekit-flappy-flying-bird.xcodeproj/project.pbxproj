@@ -46,6 +46,8 @@
 		A9D4CFD7209AF515006461AF /* SKScene+SpriteUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4CFD6209AF515006461AF /* SKScene+SpriteUploader.swift */; };
 		A9D4CFD9209AF53E006461AF /* SKTextureAtlas+FrameUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4CFD8209AF53E006461AF /* SKTextureAtlas+FrameUploader.swift */; };
 		A9D4CFDB209AFA06006461AF /* GameSceneProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4CFDA209AFA06006461AF /* GameSceneProtocol.swift */; };
+		A9D4CFDD209B3A50006461AF /* PipeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4CFDC209B3A4F006461AF /* PipeNode.swift */; };
+		A9D4CFE0209B4040006461AF /* PipeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4CFDF209B4040006461AF /* PipeFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +104,8 @@
 		A9D4CFD6209AF515006461AF /* SKScene+SpriteUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKScene+SpriteUploader.swift"; sourceTree = "<group>"; };
 		A9D4CFD8209AF53E006461AF /* SKTextureAtlas+FrameUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKTextureAtlas+FrameUploader.swift"; sourceTree = "<group>"; };
 		A9D4CFDA209AFA06006461AF /* GameSceneProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSceneProtocol.swift; sourceTree = "<group>"; };
+		A9D4CFDC209B3A4F006461AF /* PipeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipeNode.swift; sourceTree = "<group>"; };
+		A9D4CFDF209B4040006461AF /* PipeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipeFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +153,7 @@
 				A9ACB9932099F16800966991 /* Storyboards */,
 				A9ACB9922099F15E00966991 /* View Controllers */,
 				A9ACB99D209A0F3D00966991 /* Adapeters */,
+				A9D4CFDE209B402A006461AF /* Factories */,
 				A9ACB99A209A0DD100966991 /* Extensions */,
 				A9ACB9902099F13700966991 /* Scenes */,
 				A9ACB98F2099F12000966991 /* Assets */,
@@ -223,6 +228,7 @@
 			children = (
 				A9ACB97D2099C8C400966991 /* InfiniteSpriteScrollNode.swift */,
 				A9ACB9862099E74600966991 /* BirdNode.swift */,
+				A9D4CFDC209B3A4F006461AF /* PipeNode.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -297,6 +303,14 @@
 				A9ACB99E209A0F4D00966991 /* GameSceneAdapter.swift */,
 			);
 			path = Adapeters;
+			sourceTree = "<group>";
+		};
+		A9D4CFDE209B402A006461AF /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				A9D4CFDF209B4040006461AF /* PipeFactory.swift */,
+			);
+			path = Factories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -425,6 +439,7 @@
 				A9D4CFD7209AF515006461AF /* SKScene+SpriteUploader.swift in Sources */,
 				A9ACB9232099A1F200966991 /* GameScene.swift in Sources */,
 				A9ACB98D2099F0FC00966991 /* Touchable.swift in Sources */,
+				A9D4CFDD209B3A50006461AF /* PipeNode.swift in Sources */,
 				A9D4CFDB209AFA06006461AF /* GameSceneProtocol.swift in Sources */,
 				A9ACB98B2099F0D300966991 /* Updatable.swift in Sources */,
 				A9ACB9252099A1F200966991 /* GameViewController.swift in Sources */,
@@ -435,6 +450,7 @@
 				A9ACB99C209A0DE100966991 /* CGFloat+MathUtils.swift in Sources */,
 				A9ACB9992099F1D200966991 /* PhysicsCategories.swift in Sources */,
 				A9ACB91D2099A1F200966991 /* AppDelegate.swift in Sources */,
+				A9D4CFE0209B4040006461AF /* PipeFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
