@@ -16,7 +16,7 @@ class GameSceneAdapter: GameSceneProtocol {
     let playerSize = CGSize(width: 100, height: 100)
     let backgroundResourceName = "Background-Winter"
     let playerResourceName = "Bird Right"
-    let floorDistance: CGFloat = 70
+    let floorDistance: CGFloat = 0
     
     // MARK: - Conformance to GameSceneProtocol
     
@@ -24,6 +24,10 @@ class GameSceneAdapter: GameSceneProtocol {
     
     var updatables = [Updatable]()
     var touchables = [Touchable]()
+    
+    // MARK: - Private properties
+    
+    private(set) var infiniteBackgroundNode: InfiniteSpriteScrollNode?
     
     // MARK: - Initializers
     
@@ -38,6 +42,7 @@ class GameSceneAdapter: GameSceneProtocol {
         prepareWorld(for: scene)
         prepareInfiniteBackgroundScroller(for: scene)
         preparePlayer(for: scene)
+        launchPipeFactory(for: scene)
     }
 
     // MARK: - Helpers
@@ -66,11 +71,68 @@ class GameSceneAdapter: GameSceneProtocol {
     }
     
     private func prepareInfiniteBackgroundScroller(for scene: SKScene) {
-        let infiniteBackgroundNode = InfiniteSpriteScrollNode(fileName: backgroundResourceName, scaleFactor: CGPoint(x: 2.98, y: 2.98))
-        infiniteBackgroundNode.zPosition = 0
+        infiniteBackgroundNode = InfiniteSpriteScrollNode(fileName: backgroundResourceName, scaleFactor: CGPoint(x: 2.98, y: 2.98))
+        infiniteBackgroundNode!.zPosition = 0
         
-        scene.addChild(infiniteBackgroundNode)
-        updatables.append(infiniteBackgroundNode)
+        scene.addChild(infiniteBackgroundNode!)
+        updatables.append(infiniteBackgroundNode!)
+    }
+    
+    private func launchPipeFactory(for scene: SKScene) {
+        
+        let topPipeName = "top-pipe"
+        let bottomPipeName = "bottom-pipe"
+        let thresholdPipeName = "threshold-pipe"
+        
+        let cleanUpBottomPipeAction = SKAction.run { [weak self] in
+            self?.infiniteBackgroundNode?.childNode(withName: bottomPipeName)?.removeFromParent()
+        }
+        let cleanUpTopPipeAction = SKAction.run { [weak self] in
+            self?.infiniteBackgroundNode?.childNode(withName: topPipeName)?.removeFromParent()
+        }
+        let cleanUpThresholdPipeAction = SKAction.run { [weak self] in
+            self?.infiniteBackgroundNode?.childNode(withName: thresholdPipeName)?.removeFromParent()
+        }
+        
+        let waitAction = SKAction.wait(forDuration: 3.0)
+        
+        let pipeMoveDuration: TimeInterval = 4.0
+        
+        let producePipeAction = SKAction.run { [weak self] in
+            
+            guard let pipes = PipeFactory.produce(sceneSize: scene.size) else {
+                return
+            }
+            let scrollingNode = self?.infiniteBackgroundNode
+            pipes.bottom.name = bottomPipeName
+            pipes.top.name = topPipeName
+            pipes.threshold.name = thresholdPipeName
+            
+            scrollingNode?.addChild(pipes.top)
+            scrollingNode?.addChild(pipes.bottom)
+            scrollingNode?.addChild(pipes.threshold)
+            
+            // Construct move actions for pipes
+            let bottom = pipes.bottom
+            let top = pipes.top
+            let threshold = pipes.threshold
+            
+            let pipeBottomMoveAction = SKAction.move(to: CGPoint(x: -bottom.size.width, y: bottom.position.y), duration: pipeMoveDuration)
+            let pipeTopMoveAction = SKAction.move(to: CGPoint(x: -top.size.width, y: top.position.y), duration: pipeMoveDuration)
+            let pipeThresholdMoveAction = SKAction.move(to: CGPoint(x: -threshold.size.width, y: threshold.position.y), duration: pipeMoveDuration - 0.4)
+            
+            let pipeBottomMoveSequence = SKAction.sequence([pipeBottomMoveAction, cleanUpBottomPipeAction])
+            let pipeTopMoveSequence = SKAction.sequence([pipeTopMoveAction, cleanUpTopPipeAction])
+            let pipeThresholdMoveSequence = SKAction.sequence([pipeThresholdMoveAction, cleanUpThresholdPipeAction])
+            
+            bottom.run(pipeBottomMoveSequence)
+            top.run(pipeTopMoveSequence)
+            threshold.run(pipeThresholdMoveSequence)
+        }
+        
+        let sequenceAction = SKAction.sequence([waitAction, producePipeAction])
+        let infinitePipeProducer = SKAction.repeatForever(sequenceAction)
+        scene.run(infinitePipeProducer)
     }
     
 }
