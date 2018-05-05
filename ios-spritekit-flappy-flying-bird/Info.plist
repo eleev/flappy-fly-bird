@@ -24,9 +24,7 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Kenney Future Narrow.ttf</string>
-		<string>Kenney Pixel Square.ttf</string>
-		<string>Kenney Pixel.ttf</string>
+		<string>Pixel Digivolve.otf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
