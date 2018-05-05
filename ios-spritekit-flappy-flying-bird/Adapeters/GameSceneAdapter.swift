@@ -20,6 +20,7 @@ class GameSceneAdapter: NSObject, GameSceneProtocol {
     
     private(set) var score: Int = 0
     private(set) var scoreLabel: SKLabelNode?
+    
     private(set) var scoreSound = SKAction.playSoundFileNamed("Coin.wav", waitForCompletion: false)
     private(set) var hitSound = SKAction.playSoundFileNamed("Hit_Hurt.wav", waitForCompletion: false)
     
@@ -35,6 +36,14 @@ class GameSceneAdapter: NSObject, GameSceneProtocol {
         audioNode.autoplayLooped = true
         audioNode.name = "playing audio"
         return audioNode
+    }()
+    
+    private(set) lazy var pauseButton: ButtonNode = {
+        let size = CGSize(width: 240, height: 100)
+        let button = ButtonNode(spriteNames: (idle: "blue_button04", pressed: "blue_button05"), labels: (idle: "Pause", pressed: "Resume"), fontSize: 36, size: size)
+        button.name = "Pause Button"
+        button.zPosition = 100
+        return button
     }()
     
     
@@ -61,7 +70,7 @@ class GameSceneAdapter: NSObject, GameSceneProtocol {
         }
         
         scoreLabel = scene.childNode(withName: "Score Label") as? SKLabelNode
-      
+        
         super.init()
         
         prepareWorld(for: scene)
@@ -72,6 +81,11 @@ class GameSceneAdapter: NSObject, GameSceneProtocol {
         // Game state - Playing
         SKAction.play()
         scene.addChild(playingAudio)
+        
+        // UI
+        pauseButton.position = CGPoint(x: scene.size.width - pauseButton.size.width / 2 - 48, y: scene.size.height - pauseButton.size.height / 2 - 48)
+//        touchables += [pauseButton]
+        scene.addChild(pauseButton)
     }
 
     // MARK: - Helpers
