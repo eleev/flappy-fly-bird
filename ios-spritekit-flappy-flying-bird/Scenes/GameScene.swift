@@ -17,11 +17,18 @@ class GameScene: SKScene {
     
     // MARK: - Properties
     
+    lazy var stateMachine: GKStateMachine = GKStateMachine(states: [
+        PlayingState(scene: self),
+        GameOverState(scene: sceneAdapeter!),
+        PausedState(scene: self, adapter: sceneAdapeter!)
+        ])
+    
     var entities = [GKEntity]()
     var graphs = [String : GKGraph]()
     
     private var lastUpdateTime : TimeInterval = 0
-    
+    let maximumUpdateDeltaTime: TimeInterval = 1.0 / 60.0
+
     var sceneAdapeter: GameSceneAdapter?
     
     // MARK: - Lifecycle
@@ -31,6 +38,7 @@ class GameScene: SKScene {
         
         self.lastUpdateTime = 0
         sceneAdapeter = GameSceneAdapter(with: self)
+        sceneAdapeter?.stateMahcine = stateMachine
     }
     
     override func didMove(to view: SKView) {
@@ -68,8 +76,59 @@ class GameScene: SKScene {
     // MARK: - Updates
     
     override func update(_ currentTime: TimeInterval) {
+        super.update(currentTime)
+        
+        // Don't perform any updates if the scene isn't in a view.
+        guard view != nil else { return }
+        
+        // Calculate the amount of time since `update` was last called.
+        var deltaTime = currentTime - lastUpdateTime
+        
+        // If more than `maximumUpdateDeltaTime` has passed, clamp to the maximum; otherwise use `deltaTime`.
+        deltaTime = deltaTime > lastUpdateTime ? maximumUpdateDeltaTime : deltaTime
+        
+        // The current time will be used as the last update time in the next execution of the method.
+        lastUpdateTime = currentTime
+        
+        // Don't evaluate any updates if the `worldNode` is paused. Pausing a subsection of the node tree allows the `camera` and `overlay` nodes to remain interactive.
+        if self.isPaused { return }
+        
+        // Updateh state machine
+        stateMachine.update(deltaTime: deltaTime)
+
+        // Update all the updatables
         sceneAdapeter?.updatables.forEach { updatable in
             updatable.update(currentTime)
+        }
+    }
+}
+
+
+// MARK: - Conformance to ButtonNodeResponderType
+extension GameScene: ButtonNodeResponderType {
+    
+    func buttonTriggered(button: ButtonNode) {
+        guard let identifier = button.buttonIdentifier else {
+            return
+        }
+        
+        switch identifier {
+        case .pause:
+            debugPrint(#function + " entered Pause State")
+            sceneAdapeter?.stateMahcine?.enter(PausedState.self)
+        case .resume:
+            debugPrint(#function + " entered Playing State")
+            sceneAdapeter?.stateMahcine?.enter(PlayingState.self)
+        case .home:
+            // Head to Home - Title Screen
+            debugPrint("Go home!")
+        case .retry:
+            // Reset and enter PlayingState
+            sceneAdapeter?.stateMahcine?.enter(PlayingState.self)
+        case .scores, .settings, .cancel, .play:
+            // Cannot be executed from here
+            debugPrint("Cannot be executed from here")
+            
         }
     }
 }
