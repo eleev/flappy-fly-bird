@@ -7,6 +7,17 @@
 //
 
 import SpriteKit
+import GameplayKit
+
+extension SKScene {
+    
+    /// Searches the scene for all `ButtonNode`s.
+    func findAllButtonsInScene() -> [ButtonNode] {
+        return ButtonIdentifier.allButtonIdentifiers.compactMap { buttonIdentifier in
+            childNode(withName: "//\(buttonIdentifier.rawValue)") as? ButtonNode
+        }
+    }
+}
 
 class GameSceneAdapter: NSObject, GameSceneProtocol {
     
@@ -38,21 +49,42 @@ class GameSceneAdapter: NSObject, GameSceneProtocol {
         return audioNode
     }()
     
-    private(set) lazy var pauseButton: ButtonNode = {
-        let size = CGSize(width: 240, height: 100)
-        let button = ButtonNode(spriteNames: (idle: "blue_button04", pressed: "blue_button05"), labels: (idle: "Pause", pressed: "Resume"), fontSize: 36, size: size)
-        button.name = "Pause Button"
-        button.zPosition = 100
-        return button
-    }()
-    
-    
     // MARK: - Conformance to GameSceneProtocol
     
     weak var scene: SKScene?
+    var stateMahcine: GKStateMachine?
     
     var updatables = [Updatable]()
     var touchables = [Touchable]()
+    
+    /// All buttons currently in the scene. Updated by assigning the result of `findAllButtonsInScene()`.
+    var buttons = [ButtonNode]()
+    
+    /// The current scene overlay (if any) that is displayed over this scene.
+    var overlay: SceneOverlay? {
+        didSet {
+            // Clear the `buttons` in preparation for new buttons in the overlay.
+            buttons = []
+            
+            if let overlay = overlay, let scene = scene {
+                debugPrint(#function + " added overaly")
+                overlay.backgroundNode.removeFromParent()
+                scene.addChild(overlay.backgroundNode)
+                
+                // Animate the overlay in.
+                overlay.backgroundNode.alpha = 1.0
+                overlay.backgroundNode.run(SKAction.fadeIn(withDuration: 0.25))
+//                overlay.updateScale()
+                
+                buttons = scene.findAllButtonsInScene()
+            }
+            
+            // Animate the old overlay out.
+            oldValue?.backgroundNode.run(SKAction.fadeOut(withDuration: 0.25)) {
+                oldValue?.backgroundNode.removeFromParent()
+            }
+        }
+    }
     
     // MARK: - Private properties
     
@@ -69,7 +101,10 @@ class GameSceneAdapter: NSObject, GameSceneProtocol {
             return nil
         }
         
-        scoreLabel = scene.childNode(withName: "Score Label") as? SKLabelNode
+        // Get acces to the score node and then get the score label since it is a child node
+        if let scoreNode = scene.childNode(withName: "world")?.childNode(withName: "Score Node") {
+            scoreLabel = scoreNode.childNode(withName: "Score Label") as? SKLabelNode
+        }
         
         super.init()
         
@@ -82,10 +117,12 @@ class GameSceneAdapter: NSObject, GameSceneProtocol {
         SKAction.play()
         scene.addChild(playingAudio)
         
-        // UI
-        pauseButton.position = CGPoint(x: scene.size.width - pauseButton.size.width / 2 - 48, y: scene.size.height - pauseButton.size.height / 2 - 48)
-//        touchables += [pauseButton]
-        scene.addChild(pauseButton)
+        stateMahcine?.enter(PlayingState.self)
+    }
+    
+    convenience init?(with scene: SKScene, stateMachine: GKStateMachine) {
+        self.init(with: scene)
+        self.stateMahcine = stateMachine
     }
 
     // MARK: - Helpers
@@ -197,7 +234,7 @@ extension GameSceneAdapter: SKPhysicsContactDelegate {
         
         if collision == (player | PhysicsCategories.pipe.rawValue) {
             // game over state, the player has touched pipe
-            scoreLabel?.text = "Dead by Pipe"
+//            scoreLabel?.text = "Dead by Pipe"
             deadState()
             hit()
         }
@@ -205,7 +242,7 @@ extension GameSceneAdapter: SKPhysicsContactDelegate {
         if collision == (player | PhysicsCategories.boundary.rawValue) {
             // game over state, the player has touched the boundary of the world (floor)
             // player's position needs to be set to the default one
-            scoreLabel?.text = "Deap by Falling"
+//            scoreLabel?.text = "Deap by Falling"
             deadState()
             hit()
         }
