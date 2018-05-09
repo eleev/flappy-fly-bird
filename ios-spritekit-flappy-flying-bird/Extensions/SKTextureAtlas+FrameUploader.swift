@@ -6,7 +6,8 @@
 //  Copyright © 2018 Astemir Eleev. All rights reserved.
 //
 
-import SpriteKit
+import SpriteKit.SKTextureAtlas
+import SpriteKit.SKTexture
 
 extension SKTextureAtlas {
     

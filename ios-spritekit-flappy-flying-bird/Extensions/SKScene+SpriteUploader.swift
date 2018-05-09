@@ -6,7 +6,8 @@
 //  Copyright © 2018 Astemir Eleev. All rights reserved.
 //
 
-import SpriteKit
+import SpriteKit.SKScene
+import SpriteKit.SKNode
 
 extension SKScene {
     
