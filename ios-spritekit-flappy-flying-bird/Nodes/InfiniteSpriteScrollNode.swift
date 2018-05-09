@@ -93,9 +93,6 @@ extension InfiniteSpriteScrollNode: Updatable {
     // MARK: - Conformance to the Updtable protocol
 
     func update(_ currentTime: TimeInterval) {
-//        delta = (lastUpdateTime == 0.0) ? 0.0 : currentTime - lastUpdateTime
-//        lastUpdateTime = currentTime
-        
         let computedUpdatable = computeUpdatable(currentTime: currentTime)
         delta = computedUpdatable.delta
         lastUpdateTime = computedUpdatable.lastUpdateTime
