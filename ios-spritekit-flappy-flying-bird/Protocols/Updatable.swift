@@ -14,6 +14,7 @@ protocol Updatable: class {
     
     var delta: TimeInterval { get }
     var lastUpdateTime: TimeInterval { get }
+    var shouldUpdate: Bool { get set }
     
     // MARK: - Methods
     
