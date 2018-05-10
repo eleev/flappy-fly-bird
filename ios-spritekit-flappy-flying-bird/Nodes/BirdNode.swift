@@ -7,6 +7,7 @@
 //
 
 import SpriteKit
+import UIKit
 
 class BirdNode: SKSpriteNode, Updatable {
     
@@ -14,14 +15,26 @@ class BirdNode: SKSpriteNode, Updatable {
     
     var delta: TimeInterval = 0
     var lastUpdateTime: TimeInterval = 0
+    var shouldUpdate: Bool = true {
+        didSet {
+            if shouldUpdate {
+                animate(with: animationTimeInterval)
+            } else {
+                self.removeAllActions()
+            }
+        }
+    }
     
     // MARK: - Properties
     
     var flyTextures: [SKTexture]? = nil
+    private(set) var animationTimeInterval: TimeInterval = 0
+    private let impact = UIImpactFeedbackGenerator(style: .medium)
     
     // MARK: - Initializers
     
     convenience init(animationTimeInterval: TimeInterval, withTextureAtlas named: String, size: CGSize) {
+        
         var textures = [SKTexture]()
         
         // upload the texture atlas
@@ -34,6 +47,8 @@ class BirdNode: SKSpriteNode, Updatable {
         }
         
         self.init(texture: textures.first, color: .clear, size: size)
+        self.animationTimeInterval = animationTimeInterval
+
         preparePhysicsBody()
         
         // attach texture atrlas and prepare animation
@@ -93,8 +108,9 @@ extension BirdNode: Touchable {
     // MARK: - Conformance to Touchable protocol
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        impact.impactOccurred()
         // Apply an impulse to the DY value of the physics body of the bird
-        physicsBody?.applyImpulse(CGVector(dx: 0, dy: 25))
+        physicsBody?.applyImpulse(CGVector(dx: 0, dy: 75))
     }
 }
 
