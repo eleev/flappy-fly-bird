@@ -11,4 +11,77 @@ import SpriteKit
 
 class GameOverState: GKState {
     
+    // MARK: - Properites
+    
+    var overlaySceneFileName: String {
+        return "FailedScene"
+    }
+    
+    unowned var levelScene: GameSceneAdapter
+    var overlay: SceneOverlay!
+    
+    // MARK: - Utility Properties
+    
+    private(set) var currentScoreLabel: SKLabelNode?
+    
+    // MARK: - Intializers
+    
+    init(scene: GameSceneAdapter) {
+        self.levelScene = scene
+        super.init()
+     
+        overlay = SceneOverlay(overlaySceneFileName: overlaySceneFileName, zPosition: 100)
+        currentScoreLabel = overlay.contentNode.childNode(withName: "Current Score") as? SKLabelNode
+    }
+   
+    // MARK: GKState Life Cycle
+    
+    override func didEnter(from previousState: GKState?) {
+        super.didEnter(from: previousState)
+        
+        // Update the score label
+        currentScoreLabel?.text = "Current Score: \(levelScene.score)"
+        
+        // Hide the overlay and the game scene HUD
+        levelScene.overlay = overlay
+        levelScene.isHUDHidden = true
+        
+        // Stop any updates
+        levelScene.bird?.shouldUpdate = false
+        
+        // Remove all actions related to the scene, including the generation of new pipes
+        levelScene.scene?.removeAllActions()
+        
+        // Reset the number of scores
+        levelScene.score = 0
+        
+        // Find a playing audio node and remove it
+        if let playingAudioNodeName = levelScene.playingAudio.name {
+            levelScene.scene?.childNode(withName: playingAudioNodeName)?.removeFromParent()
+        }
+        // Add a manu audio node and start playing it
+        if levelScene.scene?.childNode(withName: levelScene.menuAudio.name!) == nil {
+            levelScene.scene?.addChild(levelScene.menuAudio)
+            SKAction.play()
+        }
+    }
+    
+    override func willExit(to nextState: GKState) {
+        super.willExit(to: nextState)
+        
+        // Only remove the overlay scene when the next state is Playing state
+        if nextState is PlayingState {
+            debugPrint("GameOverSate: will exit")
+            // Remove the overlay node
+            levelScene.overlay = nil
+            // Reveal the game scene HUD
+            levelScene.isHUDHidden = false
+        }
+    }
+    
+    // MARK: Convenience
+    
+    override func isValidNextState(_ stateClass: AnyClass) -> Bool {
+        return true
+    }
 }
