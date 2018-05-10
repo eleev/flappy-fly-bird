@@ -10,12 +10,15 @@ import SpriteKit
 
 class TitleScene: SKScene, ButtonNodeResponderType {
     
+    let selection = UISelectionFeedbackGenerator()
+
     // MARK: - Conformance to ButtonNodeResponderType
     
     func buttonTriggered(button: ButtonNode) {
         guard let identifier = button.buttonIdentifier else {
             return
         }
+        selection.selectionChanged()
         
         switch identifier {
         case .play:
