@@ -15,34 +15,20 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
-        // including entities and graphs.
-        
-        
-//        if let scene = GKScene(fileNamed: "TitleScene") {
         if let scene = SKScene(fileNamed: "TitleScene") as? TitleScene {
+
+            // Set the scale mode to scale to fit the window
+            scene.scaleMode = .aspectFit
             
-            // Get the SKScene from the loaded GKScene
-//            if let sceneNode = scene. as! TitleScene? {
-            
-                // Copy gameplay related content over to the scene
-//                sceneNode.entities = scene.entities
-//                sceneNode.graphs = scene.graphs
+            // Present the scene
+            if let view = self.view as! SKView? {
+                view.presentScene(scene)
                 
-                // Set the scale mode to scale to fit the window
-                scene.scaleMode = .aspectFit
-                
-                // Present the scene
-                if let view = self.view as! SKView? {
-                    view.presentScene(scene)
-                    
-                    view.ignoresSiblingOrder = true
-                    
-                    view.showsFPS = true
-                    view.showsNodeCount = true
-                    view.showsPhysics = true
-                }
-//            }
+                view.ignoresSiblingOrder = true
+//                view.showsFPS = true
+//                view.showsNodeCount = true
+//                view.showsPhysics = true
+            }
         }
     }
 
@@ -51,16 +37,7 @@ class GameViewController: UIViewController {
     }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        if UIDevice.current.userInterfaceIdiom == .phone {
-            return .allButUpsideDown
-        } else {
-            return .all
-        }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Release any cached data, images, etc that aren't in use.
+        return .portrait
     }
 
     override var prefersStatusBarHidden: Bool {
