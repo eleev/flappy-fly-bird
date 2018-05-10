@@ -27,7 +27,6 @@ class PausedState: GKState {
         self.levelScene = scene
         self.adapter = adapter
         super.init()
-        // Look up for the pause button in order to be able to hide it when the state changes back and forth
         overlay = SceneOverlay(overlaySceneFileName: overlaySceneFileName, zPosition: 1000)
     }
     
@@ -38,6 +37,7 @@ class PausedState: GKState {
         
         levelScene.isPaused = true
         adapter.overlay = overlay
+        adapter.isHUDHidden = true
     }
     
     override func willExit(to nextState: GKState) {
@@ -45,13 +45,10 @@ class PausedState: GKState {
         
         levelScene.isPaused = false
         adapter.overlay = nil
+        adapter.isHUDHidden = false
     }
     
     // MARK: Convenience
-    
-    func button(withIdentifier identifier: ButtonIdentifier) -> ButtonNode? {
-        return overlay.contentNode.childNode(withName: "//\(identifier.rawValue)") as? ButtonNode
-    }
     
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
         return true
