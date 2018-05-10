@@ -11,6 +11,8 @@ import SpriteKit
 
 class InfiniteSpriteScrollNode: SKNode {
     
+    var shouldUpdate: Bool = true
+    
     // MARK: - Constants
     
     let key = "background"
@@ -89,7 +91,7 @@ class InfiniteSpriteScrollNode: SKNode {
 
 // MARK: - Extension that adds support for Updatable protocol
 extension InfiniteSpriteScrollNode: Updatable {
-
+    
     // MARK: - Conformance to the Updtable protocol
 
     func update(_ currentTime: TimeInterval) {
