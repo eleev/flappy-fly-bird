@@ -18,7 +18,7 @@ class GameScene: SKScene {
     // MARK: - Properties
     
     lazy var stateMachine: GKStateMachine = GKStateMachine(states: [
-        PlayingState(scene: self),
+        PlayingState(adapter: sceneAdapeter!),
         GameOverState(scene: sceneAdapeter!),
         PausedState(scene: self, adapter: sceneAdapeter!)
         ])
@@ -30,7 +30,8 @@ class GameScene: SKScene {
     let maximumUpdateDeltaTime: TimeInterval = 1.0 / 60.0
 
     var sceneAdapeter: GameSceneAdapter?
-    
+    let selection = UISelectionFeedbackGenerator()
+
     // MARK: - Lifecycle
     
     override func sceneDidLoad() {
@@ -39,6 +40,7 @@ class GameScene: SKScene {
         self.lastUpdateTime = 0
         sceneAdapeter = GameSceneAdapter(with: self)
         sceneAdapeter?.stateMahcine = stateMachine
+        sceneAdapeter?.stateMahcine?.enter(PlayingState.self)
     }
     
     override func didMove(to view: SKView) {
@@ -97,9 +99,9 @@ class GameScene: SKScene {
         stateMachine.update(deltaTime: deltaTime)
 
         // Update all the updatables
-        sceneAdapeter?.updatables.forEach { updatable in
-            updatable.update(currentTime)
-        }
+        sceneAdapeter?.updatables.filter({ return $0.shouldUpdate }).forEach({ (activeUpdatable) in
+            activeUpdatable.update(currentTime)
+        })
     }
 }
 
@@ -111,6 +113,7 @@ extension GameScene: ButtonNodeResponderType {
         guard let identifier = button.buttonIdentifier else {
             return
         }
+        selection.selectionChanged()
         
         switch identifier {
         case .pause:
@@ -122,10 +125,16 @@ extension GameScene: ButtonNodeResponderType {
         case .home:
             // Head to Home - Title Screen
             debugPrint("Go home!")
+            guard let gameScene = GameScene(fileNamed: "TitleScene") else {
+                return
+            }
+            gameScene.scaleMode = .aspectFit
+            self.view?.presentScene(gameScene, transition: SKTransition.fade(withDuration: 1.0))
         case .retry:
             // Reset and enter PlayingState
+            debugPrint(#function + " entered again Playing State")
             sceneAdapeter?.stateMahcine?.enter(PlayingState.self)
-        case .scores, .settings, .cancel, .play:
+        default:
             // Cannot be executed from here
             debugPrint("Cannot be executed from here")
             
