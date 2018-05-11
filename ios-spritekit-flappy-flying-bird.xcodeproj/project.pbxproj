@@ -36,6 +36,10 @@
 		A9ACB9992099F1D200966991 /* PhysicsCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ACB9982099F1D200966991 /* PhysicsCategories.swift */; };
 		A9ACB99C209A0DE100966991 /* CGFloat+MathUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ACB99B209A0DE100966991 /* CGFloat+MathUtils.swift */; };
 		A9ACB99F209A0F4D00966991 /* GameSceneAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ACB99E209A0F4D00966991 /* GameSceneAdapter.swift */; };
+		A9B14F1820A57575005221BA /* PrePlayScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9B14F1720A57575005221BA /* PrePlayScene.sks */; };
+		A9B14F1B20A5796E005221BA /* clock-tick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A9B14F1920A5796E005221BA /* clock-tick.mp3 */; };
+		A9B14F1C20A5796E005221BA /* clock-final-tick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A9B14F1A20A5796E005221BA /* clock-final-tick.mp3 */; };
+		A9B14F1F20A588BB005221BA /* TouchToFlyScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9B14F1E20A588BB005221BA /* TouchToFlyScene.sks */; };
 		A9B9C729209EE31C0045548D /* TitleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B9C728209EE31C0045548D /* TitleScene.swift */; };
 		A9B9C72B209EE3290045548D /* TitleScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9B9C72A209EE3290045548D /* TitleScene.sks */; };
 		A9CA8F6D209C9130004CB9D4 /* Coin.wav in Resources */ = {isa = PBXBuildFile; fileRef = A9CA8F6C209C9130004CB9D4 /* Coin.wav */; };
@@ -97,6 +101,10 @@
 		A9ACB9982099F1D200966991 /* PhysicsCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsCategories.swift; sourceTree = "<group>"; };
 		A9ACB99B209A0DE100966991 /* CGFloat+MathUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+MathUtils.swift"; sourceTree = "<group>"; };
 		A9ACB99E209A0F4D00966991 /* GameSceneAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSceneAdapter.swift; sourceTree = "<group>"; };
+		A9B14F1720A57575005221BA /* PrePlayScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PrePlayScene.sks; sourceTree = "<group>"; };
+		A9B14F1920A5796E005221BA /* clock-tick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "clock-tick.mp3"; sourceTree = "<group>"; };
+		A9B14F1A20A5796E005221BA /* clock-final-tick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "clock-final-tick.mp3"; sourceTree = "<group>"; };
+		A9B14F1E20A588BB005221BA /* TouchToFlyScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TouchToFlyScene.sks; sourceTree = "<group>"; };
 		A9B9C728209EE31C0045548D /* TitleScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleScene.swift; sourceTree = "<group>"; };
 		A9B9C72A209EE3290045548D /* TitleScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TitleScene.sks; sourceTree = "<group>"; };
 		A9CA8F6C209C9130004CB9D4 /* Coin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Coin.wav; sourceTree = "<group>"; };
@@ -226,6 +234,8 @@
 				A9ACB9722099B7AF00966991 /* rollover2.mp3 */,
 				A9ACB9712099B7AF00966991 /* switch2.mp3 */,
 				A9ACB96F2099B7AF00966991 /* switch3.mp3 */,
+				A9B14F1A20A5796E005221BA /* clock-final-tick.mp3 */,
+				A9B14F1920A5796E005221BA /* clock-tick.mp3 */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -325,6 +335,15 @@
 			path = Adapeters;
 			sourceTree = "<group>";
 		};
+		A9B14F1D20A58889005221BA /* Utility Overlay */ = {
+			isa = PBXGroup;
+			children = (
+				A9B14F1720A57575005221BA /* PrePlayScene.sks */,
+				A9B14F1E20A588BB005221BA /* TouchToFlyScene.sks */,
+			);
+			path = "Utility Overlay";
+			sourceTree = "<group>";
+		};
 		A9CA8F6B209C9129004CB9D4 /* Game */ = {
 			isa = PBXGroup;
 			children = (
@@ -354,6 +373,7 @@
 		A9CC5C3E20A0361700040E61 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				A9B14F1D20A58889005221BA /* Utility Overlay */,
 				A9B9C72A209EE3290045548D /* TitleScene.sks */,
 				A9ACB91E2099A1F200966991 /* GameScene.sks */,
 				A9CC5C3920A02D0A00040E61 /* PauseScene.sks */,
@@ -465,11 +485,15 @@
 				A9ACB9772099B7AF00966991 /* switch2.mp3 in Resources */,
 				A9CC5C3A20A02D0A00040E61 /* PauseScene.sks in Resources */,
 				A9B9C72B209EE3290045548D /* TitleScene.sks in Resources */,
+				A9B14F1820A57575005221BA /* PrePlayScene.sks in Resources */,
 				A9ACB92D2099A1F300966991 /* LaunchScreen.storyboard in Resources */,
+				A9B14F1C20A5796E005221BA /* clock-final-tick.mp3 in Resources */,
 				A9CA8F72209C9549004CB9D4 /* POL-catch-them-all-short.wav in Resources */,
 				A92E72EC209D84AE0015F647 /* Pixel Digivolve.otf in Resources */,
+				A9B14F1B20A5796E005221BA /* clock-tick.mp3 in Resources */,
 				A9ACB9762099B7AF00966991 /* click2.mp3 in Resources */,
 				A9CA8F6F209C9233004CB9D4 /* POL-flight-master-short.wav in Resources */,
+				A9B14F1F20A588BB005221BA /* TouchToFlyScene.sks in Resources */,
 				A9CC5C3D20A030A900040E61 /* FailedScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
