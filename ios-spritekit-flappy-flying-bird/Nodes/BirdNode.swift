@@ -25,6 +25,18 @@ class BirdNode: SKSpriteNode, Updatable {
         }
     }
     
+    var isAffectedByGravity: Bool = true {
+        didSet {
+            self.physicsBody?.affectedByGravity = isAffectedByGravity
+        }
+    }
+    
+    var shouldAcceptTouches: Bool = true {
+        didSet {
+            self.isUserInteractionEnabled = shouldAcceptTouches
+        }
+    }
+    
     // MARK: - Properties
     
     var flyTextures: [SKTexture]? = nil
@@ -108,9 +120,13 @@ extension BirdNode: Touchable {
     // MARK: - Conformance to Touchable protocol
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if !shouldAcceptTouches { return }
+        
         impact.impactOccurred()
+        
+        isAffectedByGravity = true
         // Apply an impulse to the DY value of the physics body of the bird
-        physicsBody?.applyImpulse(CGVector(dx: 0, dy: 75))
+        physicsBody?.applyImpulse(CGVector(dx: 0, dy: 95))
     }
 }
 
