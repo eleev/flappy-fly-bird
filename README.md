@@ -8,7 +8,7 @@
 # Roadmap
 
 # Author 
-[Astemir Eleev](https://github.com/jVirus
+[Astemir Eleev](https://github.com/jVirus)
 
 # Licence
 
