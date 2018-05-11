@@ -28,7 +28,7 @@ struct PipeFactory {
         }
         
         // Threshold node - basically gap for the player bird
-        let threshold = SKSpriteNode(color: .clear, size: CGSize(width: 20, height: CGFloat.range(min: 150, max: 500)))
+        let threshold = SKSpriteNode(color: .clear, size: CGSize(width: 20, height: CGFloat.range(min: 150, max: 400)))
         threshold.position = CGPoint(x: pipeX, y: (pipeBottom?.size.height)! + threshold.size.height / 2)
         
         threshold.physicsBody = SKPhysicsBody(rectangleOf: threshold.size)

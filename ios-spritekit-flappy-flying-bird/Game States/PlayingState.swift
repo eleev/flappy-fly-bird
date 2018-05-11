@@ -114,7 +114,7 @@ class PlayingState: GKState {
         
         let waitAction = SKAction.wait(forDuration: 3.0)
         
-        let pipeMoveDuration: TimeInterval = 4.0
+        let pipeMoveDuration: TimeInterval = 4.5
         
         let producePipeAction = SKAction.run { [weak self] in
             

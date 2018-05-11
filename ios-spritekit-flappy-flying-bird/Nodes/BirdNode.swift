@@ -104,7 +104,7 @@ class BirdNode: SKSpriteNode, Updatable {
         
         let velocityX = physicsBody.velocity.dx
         let velocityY = physicsBody.velocity.dy
-        let threshold: CGFloat = 280
+        let threshold: CGFloat = 300
         
         if velocityY > threshold {
             self.physicsBody?.velocity = CGVector(dx: velocityX, dy: threshold)
@@ -126,7 +126,7 @@ extension BirdNode: Touchable {
         
         isAffectedByGravity = true
         // Apply an impulse to the DY value of the physics body of the bird
-        physicsBody?.applyImpulse(CGVector(dx: 0, dy: 95))
+        physicsBody?.applyImpulse(CGVector(dx: 0, dy: 120))
     }
 }
 
