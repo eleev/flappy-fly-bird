@@ -36,15 +36,25 @@ class PlayingState: GKState {
     override func didEnter(from previousState: GKState?) {
         super.didEnter(from: previousState)
         
+        // Tell the bird that it needs to be resting until the user taps on a screen
+        adapter.bird?.isAffectedByGravity = false
+        // Start procuding the pipes as soon as the state was entered
         adapter.scene?.run(infinitePipeProducer, withKey: infinitePipeProducerKey)
         
+        // Change the audio song to the game scene theme
+        adapter.scene?.addChild(adapter.playingAudio)
+        SKAction.play()
+        
+        // Do nothing is the previous state was PausedState since we don't want to reset the bird's position and manu audio
         if previousState is PausedState {
             return
         }
         
+        // Otherwise check the adapter and the bird
         guard let scene = adapter.scene, let bird = adapter.bird else {
             return
         }
+        // If everything is allright then continue setting up the state
         
         // Remove the menu audio when the game is restarted
         if let menuAudio = scene.childNode(withName: adapter.menuAudio.name!) {
@@ -55,14 +65,11 @@ class PlayingState: GKState {
         bird.position = CGPoint(x: bird.size.width / 2 + 24, y: scene.size.height / 2)
         bird.zPosition = 10
         bird.shouldUpdate = true
-        
-        
-        SKAction.play()
-        scene.addChild(adapter.playingAudio)
     }
     
     override func willExit(to nextState: GKState) {
         super.willExit(to: nextState)
+        
         adapter.playingAudio.removeFromParent()
         adapter.scene?.removeAction(forKey: infinitePipeProducerKey)
     }
