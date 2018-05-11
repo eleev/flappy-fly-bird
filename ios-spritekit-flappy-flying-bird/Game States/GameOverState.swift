@@ -39,6 +39,9 @@ class GameOverState: GKState {
     override func didEnter(from previousState: GKState?) {
         super.didEnter(from: previousState)
         
+        // Disable interaction with the bird
+        levelScene.bird?.shouldAcceptTouches = false
+        
         // Update the score label
         currentScoreLabel?.text = "Current Score: \(levelScene.score)"
         
@@ -76,6 +79,8 @@ class GameOverState: GKState {
             levelScene.overlay = nil
             // Reveal the game scene HUD
             levelScene.isHUDHidden = false
+            // Enable the interactions with the bird
+            levelScene.bird?.shouldAcceptTouches = true
         }
     }
     
