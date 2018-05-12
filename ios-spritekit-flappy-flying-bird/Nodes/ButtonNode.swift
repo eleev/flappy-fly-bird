@@ -16,18 +16,19 @@ protocol ButtonNodeResponderType: class {
 
 /// The complete set of button identifiers supported in the app.
 enum ButtonIdentifier: String {
+    case play = "Play"
     case pause = "Pause"
     case resume = "Resume"
+    case menu = "Menu"
     case home = "Home"
     case settings = "Settings"
     case retry = "Retry"
     case cancel = "Cancel"
     case scores = "Scores"
-    case play = "Play"
     
     /// Convenience array of all available button identifiers.
     static let allButtonIdentifiers: [ButtonIdentifier] = [
-        .pause, .resume, .home, .settings, .retry, .cancel, .scores
+        .play, .pause, .resume, .menu, .settings, .home, .retry, .cancel, .scores
     ]
     
     /// The name of the texture to use for a button when the button is selected.
