@@ -117,22 +117,17 @@ extension GameScene: ButtonNodeResponderType {
         
         switch identifier {
         case .pause:
-            debugPrint(#function + " entered Pause State")
             sceneAdapeter?.stateMahcine?.enter(PausedState.self)
         case .resume:
-            debugPrint(#function + " entered Playing State")
             sceneAdapeter?.stateMahcine?.enter(PlayingState.self)
         case .home:
-            // Head to Home - Title Screen
-            debugPrint("Go home!")
             guard let gameScene = GameScene(fileNamed: "TitleScene") else {
                 return
             }
-            gameScene.scaleMode = .aspectFit
+            gameScene.scaleMode = RoutingUtilityScene.sceneScaleMode
             self.view?.presentScene(gameScene, transition: SKTransition.fade(withDuration: 1.0))
         case .retry:
             // Reset and enter PlayingState
-            debugPrint(#function + " entered again Playing State")
             sceneAdapeter?.stateMahcine?.enter(PlayingState.self)
         default:
             // Cannot be executed from here
