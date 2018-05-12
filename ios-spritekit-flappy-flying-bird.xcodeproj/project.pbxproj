@@ -55,6 +55,8 @@
 		A9D4CFDB209AFA06006461AF /* GameSceneProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4CFDA209AFA06006461AF /* GameSceneProtocol.swift */; };
 		A9D4CFDD209B3A50006461AF /* PipeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4CFDC209B3A4F006461AF /* PipeNode.swift */; };
 		A9D4CFE0209B4040006461AF /* PipeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4CFDF209B4040006461AF /* PipeFactory.swift */; };
+		A9EC755E20A6CB03007C42EC /* SettingsScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9EC755D20A6CB03007C42EC /* SettingsScene.sks */; };
+		A9EC756020A6D0F1007C42EC /* ScoreScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9EC755F20A6D0F1007C42EC /* ScoreScene.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +122,8 @@
 		A9D4CFDA209AFA06006461AF /* GameSceneProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSceneProtocol.swift; sourceTree = "<group>"; };
 		A9D4CFDC209B3A4F006461AF /* PipeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipeNode.swift; sourceTree = "<group>"; };
 		A9D4CFDF209B4040006461AF /* PipeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipeFactory.swift; sourceTree = "<group>"; };
+		A9EC755D20A6CB03007C42EC /* SettingsScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SettingsScene.sks; sourceTree = "<group>"; };
+		A9EC755F20A6D0F1007C42EC /* ScoreScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ScoreScene.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -373,11 +377,9 @@
 		A9CC5C3E20A0361700040E61 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				A9EC756220A6D10F007C42EC /* Main Scenes */,
+				A9EC756120A6D101007C42EC /* Game Overlay */,
 				A9B14F1D20A58889005221BA /* Utility Overlay */,
-				A9B9C72A209EE3290045548D /* TitleScene.sks */,
-				A9ACB91E2099A1F200966991 /* GameScene.sks */,
-				A9CC5C3920A02D0A00040E61 /* PauseScene.sks */,
-				A9CC5C3C20A030A900040E61 /* FailedScene.sks */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -388,6 +390,26 @@
 				A9D4CFDF209B4040006461AF /* PipeFactory.swift */,
 			);
 			path = Factories;
+			sourceTree = "<group>";
+		};
+		A9EC756120A6D101007C42EC /* Game Overlay */ = {
+			isa = PBXGroup;
+			children = (
+				A9CC5C3920A02D0A00040E61 /* PauseScene.sks */,
+				A9CC5C3C20A030A900040E61 /* FailedScene.sks */,
+			);
+			path = "Game Overlay";
+			sourceTree = "<group>";
+		};
+		A9EC756220A6D10F007C42EC /* Main Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				A9B9C72A209EE3290045548D /* TitleScene.sks */,
+				A9ACB91E2099A1F200966991 /* GameScene.sks */,
+				A9EC755D20A6CB03007C42EC /* SettingsScene.sks */,
+				A9EC755F20A6D0F1007C42EC /* ScoreScene.sks */,
+			);
+			path = "Main Scenes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -477,6 +499,7 @@
 				A9ACB9282099A1F200966991 /* Main.storyboard in Resources */,
 				A9ACB9972099F19E00966991 /* .gitignore in Resources */,
 				A9ACB9752099B7AF00966991 /* switch3.mp3 in Resources */,
+				A9EC755E20A6CB03007C42EC /* SettingsScene.sks in Resources */,
 				A9ACB9782099B7AF00966991 /* rollover2.mp3 in Resources */,
 				A9ACB9742099B7AF00966991 /* click1.mp3 in Resources */,
 				A9ACB91F2099A1F200966991 /* GameScene.sks in Resources */,
@@ -489,6 +512,7 @@
 				A9ACB92D2099A1F300966991 /* LaunchScreen.storyboard in Resources */,
 				A9B14F1C20A5796E005221BA /* clock-final-tick.mp3 in Resources */,
 				A9CA8F72209C9549004CB9D4 /* POL-catch-them-all-short.wav in Resources */,
+				A9EC756020A6D0F1007C42EC /* ScoreScene.sks in Resources */,
 				A92E72EC209D84AE0015F647 /* Pixel Digivolve.otf in Resources */,
 				A9B14F1B20A5796E005221BA /* clock-tick.mp3 in Resources */,
 				A9ACB9762099B7AF00966991 /* click2.mp3 in Resources */,
