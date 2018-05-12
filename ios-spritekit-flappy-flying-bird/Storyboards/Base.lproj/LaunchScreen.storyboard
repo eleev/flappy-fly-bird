@@ -48,22 +48,26 @@
                                 </variation>
                             </label>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="yAJ-pv-Edz">
-                                <rect key="frame" x="128" y="116" width="512" height="733"/>
+                                <rect key="frame" x="180" y="200" width="408" height="565"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.14901961389999999" green="0.14901961389999999" blue="0.14901961389999999" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="M6m-7y-Fxl" secondAttribute="bottom" constant="24" id="3C1-mA-Xl0"/>
-                            <constraint firstItem="ecT-KN-KbQ" firstAttribute="top" secondItem="yAJ-pv-Edz" secondAttribute="bottom" constant="96" id="4FH-q0-7DQ"/>
+                            <constraint firstItem="ecT-KN-KbQ" firstAttribute="top" secondItem="yAJ-pv-Edz" secondAttribute="bottom" constant="96" id="4FH-q0-7DQ">
+                                <variation key="heightClass=regular-widthClass=regular" constant="180"/>
+                            </constraint>
                             <constraint firstItem="M6m-7y-Fxl" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="HSF-oQ-5ci"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yAJ-pv-Edz" secondAttribute="trailing" constant="96" id="J2H-4X-UjB">
-                                <variation key="heightClass=regular-widthClass=regular" constant="128"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="180"/>
                             </constraint>
                             <constraint firstItem="ecT-KN-KbQ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Sd3-dm-aaH"/>
                             <constraint firstItem="yAJ-pv-Edz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="96" id="Tf5-gz-XlJ">
-                                <variation key="heightClass=regular-widthClass=regular" constant="128"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="180"/>
                             </constraint>
-                            <constraint firstItem="yAJ-pv-Edz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="96" id="dB0-if-Ydz"/>
+                            <constraint firstItem="yAJ-pv-Edz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="96" id="dB0-if-Ydz">
+                                <variation key="heightClass=regular-widthClass=regular" constant="180"/>
+                            </constraint>
                             <constraint firstItem="M6m-7y-Fxl" firstAttribute="top" secondItem="ecT-KN-KbQ" secondAttribute="bottom" constant="8" id="hBB-xH-MPO"/>
                             <constraint firstItem="yAJ-pv-Edz" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ypR-Ec-Ky0"/>
                         </constraints>
