@@ -1,13 +1,13 @@
 //
-//  TitleScene.swift
+//  SettingsScene.swift
 //  ios-spritekit-flappy-flying-bird
 //
-//  Created by Astemir Eleev on 06/05/2018.
+//  Created by Astemir Eleev on 12/05/2018.
 //  Copyright © 2018 Astemir Eleev. All rights reserved.
 //
 
 import SpriteKit
 
-class TitleScene: RoutingUtilityScene {
+class SettingsScene: RoutingUtilityScene {
     // Empty, inherits all the needed implementation
 }

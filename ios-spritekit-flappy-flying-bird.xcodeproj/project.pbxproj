@@ -57,6 +57,9 @@
 		A9D4CFE0209B4040006461AF /* PipeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4CFDF209B4040006461AF /* PipeFactory.swift */; };
 		A9EC755E20A6CB03007C42EC /* SettingsScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9EC755D20A6CB03007C42EC /* SettingsScene.sks */; };
 		A9EC756020A6D0F1007C42EC /* ScoreScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9EC755F20A6D0F1007C42EC /* ScoreScene.sks */; };
+		A9EC756420A6D3E9007C42EC /* SettingsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EC756320A6D3E9007C42EC /* SettingsScene.swift */; };
+		A9EC756620A6D829007C42EC /* ScoresScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EC756520A6D829007C42EC /* ScoresScene.swift */; };
+		A9EC756820A6E479007C42EC /* RoutingUtilityScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EC756720A6E479007C42EC /* RoutingUtilityScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +127,9 @@
 		A9D4CFDF209B4040006461AF /* PipeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipeFactory.swift; sourceTree = "<group>"; };
 		A9EC755D20A6CB03007C42EC /* SettingsScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SettingsScene.sks; sourceTree = "<group>"; };
 		A9EC755F20A6D0F1007C42EC /* ScoreScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ScoreScene.sks; sourceTree = "<group>"; };
+		A9EC756320A6D3E9007C42EC /* SettingsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScene.swift; sourceTree = "<group>"; };
+		A9EC756520A6D829007C42EC /* ScoresScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresScene.swift; sourceTree = "<group>"; };
+		A9EC756720A6E479007C42EC /* RoutingUtilityScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingUtilityScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,7 +304,10 @@
 			children = (
 				A9B9C728209EE31C0045548D /* TitleScene.swift */,
 				A9ACB9222099A1F200966991 /* GameScene.swift */,
+				A9EC756320A6D3E9007C42EC /* SettingsScene.swift */,
+				A9EC756520A6D829007C42EC /* ScoresScene.swift */,
 				A992D8B520A03B90003A9998 /* SceneOverlay.swift */,
+				A9EC756720A6E479007C42EC /* RoutingUtilityScene.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -536,6 +545,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9EC756820A6E479007C42EC /* RoutingUtilityScene.swift in Sources */,
 				A9D4CFD7209AF515006461AF /* SKScene+SpriteUploader.swift in Sources */,
 				A92E72EE209D87570015F647 /* ButtonNode.swift in Sources */,
 				A992D8B620A03B90003A9998 /* SceneOverlay.swift in Sources */,
@@ -557,8 +567,10 @@
 				A9ACB91D2099A1F200966991 /* AppDelegate.swift in Sources */,
 				A92E72E2209D815B0015F647 /* PlayingState.swift in Sources */,
 				A9CC5C31209EFA0600040E61 /* SKTexture+Gradient.swift in Sources */,
+				A9EC756420A6D3E9007C42EC /* SettingsScene.swift in Sources */,
 				A9D4CFE0209B4040006461AF /* PipeFactory.swift in Sources */,
 				A9B9C729209EE31C0045548D /* TitleScene.swift in Sources */,
+				A9EC756620A6D829007C42EC /* ScoresScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

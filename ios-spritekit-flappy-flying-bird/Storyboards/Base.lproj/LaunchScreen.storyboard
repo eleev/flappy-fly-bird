@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="ipad10_5" orientation="portrait">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,35 +20,62 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© Astemir Eleev" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6m-7y-Fxl">
-                                <rect key="frame" x="337" y="1066.5" width="160" height="21.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="© Astemir Eleev" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6m-7y-Fxl">
+                                <rect key="frame" x="295" y="976.5" width="178" height="23.5"/>
                                 <fontDescription key="fontDescription" name="PixelDigivolve" family="Pixel Digivolve" pointSize="18"/>
                                 <color key="textColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" name="PixelDigivolve" family="Pixel Digivolve" pointSize="16"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="PixelDigivolve" family="Pixel Digivolve" pointSize="20"/>
+                                </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Non Profitable, Open Source Game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecT-KN-KbQ">
-                                <rect key="frame" x="243" y="1036" width="349" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Non Profitable, Open Source Game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecT-KN-KbQ">
+                                <rect key="frame" x="190.5" y="945" width="387" height="23.5"/>
                                 <fontDescription key="fontDescription" name="PixelDigivolve" family="Pixel Digivolve" pointSize="18"/>
                                 <color key="textColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" name="PixelDigivolve" family="Pixel Digivolve" pointSize="16"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="PixelDigivolve" family="Pixel Digivolve" pointSize="20"/>
+                                </variation>
                             </label>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="yAJ-pv-Edz">
+                                <rect key="frame" x="128" y="116" width="512" height="733"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.14901961389999999" green="0.14901961389999999" blue="0.14901961389999999" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="M6m-7y-Fxl" secondAttribute="bottom" constant="24" id="3C1-mA-Xl0"/>
+                            <constraint firstItem="ecT-KN-KbQ" firstAttribute="top" secondItem="yAJ-pv-Edz" secondAttribute="bottom" constant="96" id="4FH-q0-7DQ"/>
                             <constraint firstItem="M6m-7y-Fxl" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="HSF-oQ-5ci"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yAJ-pv-Edz" secondAttribute="trailing" constant="96" id="J2H-4X-UjB">
+                                <variation key="heightClass=regular-widthClass=regular" constant="128"/>
+                            </constraint>
                             <constraint firstItem="ecT-KN-KbQ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Sd3-dm-aaH"/>
+                            <constraint firstItem="yAJ-pv-Edz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="96" id="Tf5-gz-XlJ">
+                                <variation key="heightClass=regular-widthClass=regular" constant="128"/>
+                            </constraint>
+                            <constraint firstItem="yAJ-pv-Edz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="96" id="dB0-if-Ydz"/>
                             <constraint firstItem="M6m-7y-Fxl" firstAttribute="top" secondItem="ecT-KN-KbQ" secondAttribute="bottom" constant="8" id="hBB-xH-MPO"/>
+                            <constraint firstItem="yAJ-pv-Edz" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ypR-Ec-Ky0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+            <point key="canvasLocation" x="51.798561151079141" y="374.46043165467626"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="LaunchScreen" width="879" height="748"/>
+    </resources>
 </document>
