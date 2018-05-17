@@ -9,5 +9,20 @@
 import SpriteKit
 
 class TitleScene: RoutingUtilityScene {
-    // Empty, inherits all the needed implementation
+    
+    // MARK: - Overrides
+    
+    override func didMove(to view: SKView) {
+        super.didMove(to: view)
+    
+        let isSoundOn = UserDefaults.standard.bool(for: .isSoundOn)
+        
+        if !isSoundOn {
+            let audioNode = childNode(withName: "Audio Node") as? SKAudioNode
+            audioNode?.isPaused = true
+            audioNode?.removeAllActions()
+            audioNode?.removeFromParent()
+        }
+        
+    }
 }
