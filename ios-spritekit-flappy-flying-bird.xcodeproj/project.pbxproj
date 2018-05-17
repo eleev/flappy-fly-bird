@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A903943420AD94F000376CC3 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A903943320AD94F000376CC3 /* UserDefaults.swift */; };
 		A92E72E2209D815B0015F647 /* PlayingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92E72E1209D815B0015F647 /* PlayingState.swift */; };
 		A92E72E4209D81820015F647 /* GameOverState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92E72E3209D81820015F647 /* GameOverState.swift */; };
 		A92E72E6209D818B0015F647 /* PausedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92E72E5209D818B0015F647 /* PausedState.swift */; };
@@ -73,6 +74,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A903943320AD94F000376CC3 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		A92E72E1209D815B0015F647 /* PlayingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingState.swift; sourceTree = "<group>"; };
 		A92E72E3209D81820015F647 /* GameOverState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverState.swift; sourceTree = "<group>"; };
 		A92E72E5209D818B0015F647 /* PausedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PausedState.swift; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				A9ACB9982099F1D200966991 /* PhysicsCategories.swift */,
+				A903943320AD94F000376CC3 /* UserDefaults.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -568,6 +571,7 @@
 				A92E72E2209D815B0015F647 /* PlayingState.swift in Sources */,
 				A9CC5C31209EFA0600040E61 /* SKTexture+Gradient.swift in Sources */,
 				A9EC756420A6D3E9007C42EC /* SettingsScene.swift in Sources */,
+				A903943420AD94F000376CC3 /* UserDefaults.swift in Sources */,
 				A9D4CFE0209B4040006461AF /* PipeFactory.swift in Sources */,
 				A9B9C729209EE31C0045548D /* TitleScene.swift in Sources */,
 				A9EC756620A6D829007C42EC /* ScoresScene.swift in Sources */,
