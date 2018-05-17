@@ -9,11 +9,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Pixel Digivolve.otf">
-            <string>PixelDigivolve</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -23,52 +18,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="airadventurelevel2" translatesAutoresizingMaskIntoConstraints="NO" id="eCY-Un-8Cj">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="© Astemir Eleev" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6m-7y-Fxl">
-                                <rect key="frame" x="295" y="976.5" width="178" height="23.5"/>
-                                <fontDescription key="fontDescription" name="PixelDigivolve" family="Pixel Digivolve" pointSize="18"/>
+                                <rect key="frame" x="311" y="972.5" width="146" height="27.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
                                 <color key="textColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact">
-                                    <fontDescription key="fontDescription" name="PixelDigivolve" family="Pixel Digivolve" pointSize="16"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="PixelDigivolve" family="Pixel Digivolve" pointSize="20"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Non Profitable, Open Source Game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecT-KN-KbQ">
-                                <rect key="frame" x="190.5" y="945" width="387" height="23.5"/>
-                                <fontDescription key="fontDescription" name="PixelDigivolve" family="Pixel Digivolve" pointSize="18"/>
+                                <rect key="frame" x="223" y="937" width="322.5" height="27.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
                                 <color key="textColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact">
-                                    <fontDescription key="fontDescription" name="PixelDigivolve" family="Pixel Digivolve" pointSize="16"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="PixelDigivolve" family="Pixel Digivolve" pointSize="20"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                 </variation>
                             </label>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="yAJ-pv-Edz">
-                                <rect key="frame" x="180" y="200" width="408" height="565"/>
+                                <rect key="frame" x="250" y="270" width="268" height="417"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.14901961389999999" green="0.14901961389999999" blue="0.14901961389999999" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="M6m-7y-Fxl" secondAttribute="bottom" constant="24" id="3C1-mA-Xl0"/>
-                            <constraint firstItem="ecT-KN-KbQ" firstAttribute="top" secondItem="yAJ-pv-Edz" secondAttribute="bottom" constant="96" id="4FH-q0-7DQ">
-                                <variation key="heightClass=regular-widthClass=regular" constant="180"/>
+                            <constraint firstItem="ecT-KN-KbQ" firstAttribute="top" secondItem="yAJ-pv-Edz" secondAttribute="bottom" constant="120" id="4FH-q0-7DQ">
+                                <variation key="heightClass=regular-widthClass=regular" constant="250"/>
                             </constraint>
                             <constraint firstItem="M6m-7y-Fxl" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="HSF-oQ-5ci"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yAJ-pv-Edz" secondAttribute="trailing" constant="96" id="J2H-4X-UjB">
-                                <variation key="heightClass=regular-widthClass=regular" constant="180"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yAJ-pv-Edz" secondAttribute="trailing" constant="120" id="J2H-4X-UjB">
+                                <variation key="heightClass=regular-widthClass=regular" constant="250"/>
                             </constraint>
+                            <constraint firstItem="eCY-Un-8Cj" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Qvy-xG-qmr"/>
                             <constraint firstItem="ecT-KN-KbQ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Sd3-dm-aaH"/>
-                            <constraint firstItem="yAJ-pv-Edz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="96" id="Tf5-gz-XlJ">
-                                <variation key="heightClass=regular-widthClass=regular" constant="180"/>
+                            <constraint firstItem="yAJ-pv-Edz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="Tf5-gz-XlJ">
+                                <variation key="heightClass=regular-widthClass=regular" constant="250"/>
                             </constraint>
-                            <constraint firstItem="yAJ-pv-Edz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="96" id="dB0-if-Ydz">
-                                <variation key="heightClass=regular-widthClass=regular" constant="180"/>
+                            <constraint firstItem="yAJ-pv-Edz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="dB0-if-Ydz">
+                                <variation key="heightClass=regular-widthClass=regular" constant="250"/>
                             </constraint>
+                            <constraint firstItem="eCY-Un-8Cj" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="gH8-af-csC"/>
                             <constraint firstItem="M6m-7y-Fxl" firstAttribute="top" secondItem="ecT-KN-KbQ" secondAttribute="bottom" constant="8" id="hBB-xH-MPO"/>
+                            <constraint firstItem="eCY-Un-8Cj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="m4k-Ho-hvb"/>
+                            <constraint firstItem="eCY-Un-8Cj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xk6-NN-sQ8"/>
                             <constraint firstItem="yAJ-pv-Edz" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ypR-Ec-Ky0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -76,10 +78,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="51.798561151079141" y="374.46043165467626"/>
+            <point key="canvasLocation" x="51.5625" y="374.4140625"/>
         </scene>
     </scenes>
     <resources>
         <image name="LaunchScreen" width="879" height="748"/>
+        <image name="airadventurelevel2" width="1920" height="1080"/>
     </resources>
 </document>
