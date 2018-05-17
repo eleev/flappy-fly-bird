@@ -8,6 +8,20 @@
 
 import SpriteKit
 
-class SettingsScene: RoutingUtilityScene {
-    // Empty, inherits all the needed implementation
+class SettingsScene: RoutingUtilityScene, ToggleButtonNodeResponderType {
+
+    // MARK: - Overrides
+    
+    override func didMove(to view: SKView) {
+        super.didMove(to: view)
+        
+        let soundButton = scene?.childNode(withName: "Sound") as? ToggleButtonNode
+        soundButton?.isOn = UserDefaults.standard.bool(for: .isSoundOn)
+    }
+    
+    // MARK: - Confrormance to ToggleButtonResponderType
+    
+    func toggleButtonTriggered(toggle: ToggleButtonNode) {
+        UserDefaults.standard.set(toggle.isOn, for: .isSoundOn)
+    }
 }
