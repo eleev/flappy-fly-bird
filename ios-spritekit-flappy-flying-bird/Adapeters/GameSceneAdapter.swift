@@ -25,9 +25,13 @@ class GameSceneAdapter: NSObject, GameSceneProtocol {
     
     let gravity: CGFloat = -5.0
     let playerSize = CGSize(width: 100, height: 100)
-    let backgroundResourceName = "Background-Winter"
+    let backgroundResourceName = "airadventurelevel4"//"Background-Winter"
     let playerResourceName = "Bird Right"
     let floorDistance: CGFloat = 0
+    
+    let isSoundOn: Bool = {
+        return UserDefaults.standard.bool(for: .isSoundOn)
+    }()
     
     var score: Int = 0
     private(set) var scoreLabel: SKLabelNode?
@@ -154,7 +158,7 @@ class GameSceneAdapter: NSObject, GameSceneProtocol {
     }
     
     private func prepareInfiniteBackgroundScroller(for scene: SKScene) {
-        infiniteBackgroundNode = InfiniteSpriteScrollNode(fileName: backgroundResourceName, scaleFactor: CGPoint(x: 2.98, y: 2.98))
+        infiniteBackgroundNode = InfiniteSpriteScrollNode(fileName: backgroundResourceName, scaleFactor: CGPoint(x: 1.25, y: 1.25))
         infiniteBackgroundNode!.zPosition = 0
         
         scene.addChild(infiniteBackgroundNode!)
@@ -173,7 +177,9 @@ extension GameSceneAdapter: SKPhysicsContactDelegate {
         if collision == (player | PhysicsCategories.gap.rawValue) {
             score += 1
             scoreLabel?.text = "Score \(score)"
-            scene?.run(scoreSound)
+            
+            if isSoundOn { scene?.run(scoreSound) }
+            
             notification.notificationOccurred(.success)
         }
         
@@ -204,7 +210,7 @@ extension GameSceneAdapter: SKPhysicsContactDelegate {
     
     func hit() {
         impact.impactOccurred()
-        scene?.run(hitSound)
+        if isSoundOn { scene?.run(hitSound)}
     }
     
 }
