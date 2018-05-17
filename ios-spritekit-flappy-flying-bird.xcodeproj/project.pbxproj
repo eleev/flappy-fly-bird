@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		A903943420AD94F000376CC3 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A903943320AD94F000376CC3 /* UserDefaults.swift */; };
+		A903943620AD9D1200376CC3 /* SnowParticleEffect.sks in Resources */ = {isa = PBXBuildFile; fileRef = A903943520AD9D1200376CC3 /* SnowParticleEffect.sks */; };
+		A903943A20AD9E7900376CC3 /* RainParticleEffect.sks in Resources */ = {isa = PBXBuildFile; fileRef = A903943820AD9E7900376CC3 /* RainParticleEffect.sks */; };
+		A903943B20AD9E7900376CC3 /* Particles.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A903943920AD9E7900376CC3 /* Particles.xcassets */; };
+		A903943F20ADB24000376CC3 /* ToggleButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A903943E20ADB24000376CC3 /* ToggleButtonNode.swift */; };
 		A92E72E2209D815B0015F647 /* PlayingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92E72E1209D815B0015F647 /* PlayingState.swift */; };
 		A92E72E4209D81820015F647 /* GameOverState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92E72E3209D81820015F647 /* GameOverState.swift */; };
 		A92E72E6209D818B0015F647 /* PausedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92E72E5209D818B0015F647 /* PausedState.swift */; };
@@ -75,6 +79,10 @@
 
 /* Begin PBXFileReference section */
 		A903943320AD94F000376CC3 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		A903943520AD9D1200376CC3 /* SnowParticleEffect.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SnowParticleEffect.sks; sourceTree = "<group>"; };
+		A903943820AD9E7900376CC3 /* RainParticleEffect.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RainParticleEffect.sks; sourceTree = "<group>"; };
+		A903943920AD9E7900376CC3 /* Particles.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Particles.xcassets; sourceTree = "<group>"; };
+		A903943E20ADB24000376CC3 /* ToggleButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButtonNode.swift; sourceTree = "<group>"; };
 		A92E72E1209D815B0015F647 /* PlayingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingState.swift; sourceTree = "<group>"; };
 		A92E72E3209D81820015F647 /* GameOverState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverState.swift; sourceTree = "<group>"; };
 		A92E72E5209D818B0015F647 /* PausedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PausedState.swift; sourceTree = "<group>"; };
@@ -100,7 +108,7 @@
 		A9ACB9702099B7AF00966991 /* click2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = click2.mp3; sourceTree = "<group>"; };
 		A9ACB9712099B7AF00966991 /* switch2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = switch2.mp3; sourceTree = "<group>"; };
 		A9ACB9722099B7AF00966991 /* rollover2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rollover2.mp3; sourceTree = "<group>"; };
-		A9ACB97D2099C8C400966991 /* InfiniteSpriteScrollNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InfiniteSpriteScrollNode.swift; path = "ios-spritekit-flappy-flying-bird/Nodes/InfiniteSpriteScrollNode.swift"; sourceTree = SOURCE_ROOT; };
+		A9ACB97D2099C8C400966991 /* InfiniteSpriteScrollNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InfiniteSpriteScrollNode.swift; path = "ios-spritekit-flappy-flying-bird/Nodes/Game Componens/InfiniteSpriteScrollNode.swift"; sourceTree = SOURCE_ROOT; };
 		A9ACB9862099E74600966991 /* BirdNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdNode.swift; sourceTree = "<group>"; };
 		A9ACB98A2099F0D300966991 /* Updatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updatable.swift; sourceTree = "<group>"; };
 		A9ACB98C2099F0FC00966991 /* Touchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Touchable.swift; sourceTree = "<group>"; };
@@ -152,6 +160,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A903943720AD9D1A00376CC3 /* Particles */ = {
+			isa = PBXGroup;
+			children = (
+				A903943520AD9D1200376CC3 /* SnowParticleEffect.sks */,
+				A903943820AD9E7900376CC3 /* RainParticleEffect.sks */,
+				A903943920AD9E7900376CC3 /* Particles.xcassets */,
+			);
+			path = Particles;
+			sourceTree = "<group>";
+		};
+		A903943C20ADAB0100376CC3 /* UI Components */ = {
+			isa = PBXGroup;
+			children = (
+				A92E72ED209D87570015F647 /* ButtonNode.swift */,
+				A903943E20ADB24000376CC3 /* ToggleButtonNode.swift */,
+			);
+			path = "UI Components";
+			sourceTree = "<group>";
+		};
+		A903943D20ADAB0A00376CC3 /* Game Componens */ = {
+			isa = PBXGroup;
+			children = (
+				A9ACB97D2099C8C400966991 /* InfiniteSpriteScrollNode.swift */,
+				A9ACB9862099E74600966991 /* BirdNode.swift */,
+				A9D4CFDC209B3A4F006461AF /* PipeNode.swift */,
+			);
+			path = "Game Componens";
+			sourceTree = "<group>";
+		};
 		A92E72DC209D80FA0015F647 /* Game States */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,10 +300,8 @@
 		A9ACB9882099F0B600966991 /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
-				A9ACB97D2099C8C400966991 /* InfiniteSpriteScrollNode.swift */,
-				A92E72ED209D87570015F647 /* ButtonNode.swift */,
-				A9ACB9862099E74600966991 /* BirdNode.swift */,
-				A9D4CFDC209B3A4F006461AF /* PipeNode.swift */,
+				A903943D20ADAB0A00376CC3 /* Game Componens */,
+				A903943C20ADAB0100376CC3 /* UI Components */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -293,6 +328,7 @@
 		A9ACB98F2099F12000966991 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				A903943720AD9D1A00376CC3 /* Particles */,
 				A9ACB96C2099B46E00966991 /* Actions */,
 				A9CC5C3E20A0361700040E61 /* Scenes */,
 				A9ACB9292099A1F300966991 /* Assets.xcassets */,
@@ -507,6 +543,7 @@
 			files = (
 				A9CA8F6D209C9130004CB9D4 /* Coin.wav in Resources */,
 				A9ACB96B2099B42300966991 /* Actions.sks in Resources */,
+				A903943620AD9D1200376CC3 /* SnowParticleEffect.sks in Resources */,
 				A9ACB9732099B7AF00966991 /* rollover1.mp3 in Resources */,
 				A9ACB9282099A1F200966991 /* Main.storyboard in Resources */,
 				A9ACB9972099F19E00966991 /* .gitignore in Resources */,
@@ -520,6 +557,7 @@
 				A9ACB9772099B7AF00966991 /* switch2.mp3 in Resources */,
 				A9CC5C3A20A02D0A00040E61 /* PauseScene.sks in Resources */,
 				A9B9C72B209EE3290045548D /* TitleScene.sks in Resources */,
+				A903943A20AD9E7900376CC3 /* RainParticleEffect.sks in Resources */,
 				A9B14F1820A57575005221BA /* PrePlayScene.sks in Resources */,
 				A9ACB92D2099A1F300966991 /* LaunchScreen.storyboard in Resources */,
 				A9B14F1C20A5796E005221BA /* clock-final-tick.mp3 in Resources */,
@@ -529,6 +567,7 @@
 				A9B14F1B20A5796E005221BA /* clock-tick.mp3 in Resources */,
 				A9ACB9762099B7AF00966991 /* click2.mp3 in Resources */,
 				A9CA8F6F209C9233004CB9D4 /* POL-flight-master-short.wav in Resources */,
+				A903943B20AD9E7900376CC3 /* Particles.xcassets in Resources */,
 				A9B14F1F20A588BB005221BA /* TouchToFlyScene.sks in Resources */,
 				A9CC5C3D20A030A900040E61 /* FailedScene.sks in Resources */,
 			);
@@ -573,6 +612,7 @@
 				A9EC756420A6D3E9007C42EC /* SettingsScene.swift in Sources */,
 				A903943420AD94F000376CC3 /* UserDefaults.swift in Sources */,
 				A9D4CFE0209B4040006461AF /* PipeFactory.swift in Sources */,
+				A903943F20ADB24000376CC3 /* ToggleButtonNode.swift in Sources */,
 				A9B9C729209EE31C0045548D /* TitleScene.swift in Sources */,
 				A9EC756620A6D829007C42EC /* ScoresScene.swift in Sources */,
 			);
