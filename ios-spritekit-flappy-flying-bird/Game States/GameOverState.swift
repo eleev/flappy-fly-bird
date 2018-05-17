@@ -42,8 +42,11 @@ class GameOverState: GKState {
         // Disable interaction with the bird
         levelScene.bird?.shouldAcceptTouches = false
         
+        // Update the scores
+        updateScores()
+        
         // Update the score label
-        currentScoreLabel?.text = "Current Score: \(levelScene.score)"
+        updasteOverlayPresentation()
         
         // Hide the overlay and the game scene HUD
         levelScene.overlay = overlay
@@ -58,14 +61,16 @@ class GameOverState: GKState {
         // Reset the number of scores
         levelScene.score = 0
         
-        // Find a playing audio node and remove it
-        if let playingAudioNodeName = levelScene.playingAudio.name {
-            levelScene.scene?.childNode(withName: playingAudioNodeName)?.removeFromParent()
-        }
-        // Add a manu audio node and start playing it
-        if levelScene.scene?.childNode(withName: levelScene.menuAudio.name!) == nil {
-            levelScene.scene?.addChild(levelScene.menuAudio)
-            SKAction.play()
+        if levelScene.isSoundOn {
+            // Find a playing audio node and remove it
+            if let playingAudioNodeName = levelScene.playingAudio.name {
+                levelScene.scene?.childNode(withName: playingAudioNodeName)?.removeFromParent()
+            }
+            // Add a manu audio node and start playing it
+            if levelScene.scene?.childNode(withName: levelScene.menuAudio.name!) == nil {
+                levelScene.scene?.addChild(levelScene.menuAudio)
+                SKAction.play()
+            }
         }
     }
     
@@ -88,5 +93,32 @@ class GameOverState: GKState {
     
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
         return true
+    }
+}
+
+extension GameOverState {
+    
+    fileprivate func updateScores() {
+        let bestScore = UserDefaults.standard.integer(for: .bestScore)
+        let currentScore = levelScene.score
+        
+        if currentScore > bestScore {
+            // Update the best score
+            UserDefaults.standard.set(currentScore, for: .bestScore)
+        }
+        UserDefaults.standard.set(currentScore, for: .lastScore)
+    }
+    
+    fileprivate func updasteOverlayPresentation() {
+        let contentNode = overlay.contentNode
+        
+        if let bestScoreLabel = contentNode.childNode(withName: "Best Score") as? SKLabelNode {
+            let bestScore = UserDefaults.standard.integer(for: .bestScore)
+            bestScoreLabel.text = "Best Score: \(bestScore)"
+        }
+        
+        if let currentScore = contentNode.childNode(withName: "Current Score") as? SKLabelNode {
+            currentScore.text = "Current Score: \(levelScene.score)"
+        }
     }
 }
