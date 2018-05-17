@@ -9,5 +9,19 @@
 import SpriteKit
 
 class ScoresScene: RoutingUtilityScene {
-   // Empty, inherits all the needed implementation
+    
+    override func didMove(to view: SKView) {
+        super.didMove(to: view)
+        // Read the scores from UserDefaults
+        
+        if let bestScoreLabel = self.scene?.childNode(withName: "Best Score Label") as? SKLabelNode {
+            let bestScore = UserDefaults.standard.integer(for: .bestScore)
+            bestScoreLabel.text = "Best: \(bestScore)"
+        }
+        
+        if let lastScoreLabel = self.scene?.childNode(withName: "Last Score Label") as? SKLabelNode {
+            let lastScore = UserDefaults.standard.integer(for: .lastScore)
+            lastScoreLabel.text = "Last: \(lastScore)"
+        }
+    }
 }
