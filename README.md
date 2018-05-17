@@ -12,10 +12,11 @@
 - Utilizes `SpriteKit` editor 
 - Uses `CoreGraphics` to construct `tile-based` pipes
 - Suported both `iPhone` and `iPad`
+- Scores and settings `persistence`
 
 # Roadmap
 - Support for `Game Center` for leaderboards
-- Addition for game bunuses
+- Addition for game bonuses
 - New pipe types
 
 # Author 
