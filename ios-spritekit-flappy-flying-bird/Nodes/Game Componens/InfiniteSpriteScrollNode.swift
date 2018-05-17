@@ -33,6 +33,8 @@ class InfiniteSpriteScrollNode: SKNode {
     init(fileName: String, scaleFactor scale: CGPoint = CGPoint(x: 1.0, y: 1.0), speed: TimeInterval = 100) {
         self.backgroundSpeed = speed
         
+        let yShift: CGFloat = 5.0
+        
         tiles = [SKSpriteNode]()
         background = SKNode()
         let texture = SKTexture(imageNamed: fileName)
@@ -45,7 +47,7 @@ class InfiniteSpriteScrollNode: SKNode {
             tile.yScale = scale.y
             tile.anchorPoint = .zero
 
-            tile.position = CGPoint(x: CGFloat(x) * width * scale.x, y: 0.0)
+            tile.position = CGPoint(x: CGFloat(x) * width * scale.x, y: yShift)
             tile.name = key
             tile.zPosition = 0
             background.addChild(tile)

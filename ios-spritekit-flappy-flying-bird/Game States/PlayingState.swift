@@ -41,9 +41,11 @@ class PlayingState: GKState {
         // Start procuding the pipes as soon as the state was entered
         adapter.scene?.run(infinitePipeProducer, withKey: infinitePipeProducerKey)
         
-        // Change the audio song to the game scene theme
-        adapter.scene?.addChild(adapter.playingAudio)
-        SKAction.play()
+        if adapter.isSoundOn {
+            // Change the audio song to the game scene theme
+            adapter.scene?.addChild(adapter.playingAudio)
+            SKAction.play()
+        }
         
         // Do nothing is the previous state was PausedState since we don't want to reset the bird's position and manu audio
         if previousState is PausedState {
@@ -56,9 +58,12 @@ class PlayingState: GKState {
         }
         // If everything is allright then continue setting up the state
         
-        // Remove the menu audio when the game is restarted
-        if let menuAudio = scene.childNode(withName: adapter.menuAudio.name!) {
-            menuAudio.removeFromParent()
+        
+        if adapter.isSoundOn {
+            // Remove the menu audio when the game is restarted
+            if let menuAudio = scene.childNode(withName: adapter.menuAudio.name!) {
+                menuAudio.removeFromParent()
+            }
         }
         
         // Initial posiion of the Bird
@@ -70,8 +75,10 @@ class PlayingState: GKState {
     override func willExit(to nextState: GKState) {
         super.willExit(to: nextState)
         
-        adapter.playingAudio.removeFromParent()
-        adapter.scene?.removeAction(forKey: infinitePipeProducerKey)
+        if adapter.isSoundOn {
+            adapter.playingAudio.removeFromParent()
+            adapter.scene?.removeAction(forKey: infinitePipeProducerKey)
+        }
     }
     
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
