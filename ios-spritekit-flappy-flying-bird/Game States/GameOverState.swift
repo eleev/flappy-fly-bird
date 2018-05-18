@@ -39,6 +39,11 @@ class GameOverState: GKState {
     override func didEnter(from previousState: GKState?) {
         super.didEnter(from: previousState)
         
+        if previousState is PlayingState {
+            // Clean up the pipes from the previous run
+            levelScene.removePipes()
+        }
+        
         // Disable interaction with the bird
         levelScene.bird?.shouldAcceptTouches = false
         

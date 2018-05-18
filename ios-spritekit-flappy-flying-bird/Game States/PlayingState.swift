@@ -79,6 +79,14 @@ class PlayingState: GKState {
             adapter.playingAudio.removeFromParent()
             adapter.scene?.removeAction(forKey: infinitePipeProducerKey)
         }
+
+        if nextState is GameOverState {
+            // Clean up the pipes from the previous run
+            adapter.removePipes()
+
+            // Reset the score label
+            adapter.resetScores()
+        }
     }
     
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
@@ -157,7 +165,6 @@ class PlayingState: GKState {
         
         let sequenceAction = SKAction.sequence([waitAction, producePipeAction])
         infinitePipeProducer = SKAction.repeatForever(sequenceAction)
-        
     }
 }
 
