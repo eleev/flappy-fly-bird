@@ -111,7 +111,7 @@ class BirdNode: SKSpriteNode, Updatable {
         }
         
         let velocityValue = velocityY * (velocityY < 0 ? 0.003 : 0.001)
-        zRotation = velocityValue.clamp(min: -1, max: 0.0)
+        zRotation = velocityValue.clamp(min: -1, max: 1.0)
     }
     
 }
@@ -126,7 +126,7 @@ extension BirdNode: Touchable {
         
         isAffectedByGravity = true
         // Apply an impulse to the DY value of the physics body of the bird
-        physicsBody?.applyImpulse(CGVector(dx: 0, dy: 130))
+        physicsBody?.applyImpulse(CGVector(dx: 0, dy: 120))
     }
 }
 
