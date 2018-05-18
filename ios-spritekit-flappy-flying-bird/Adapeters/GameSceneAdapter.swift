@@ -72,6 +72,12 @@ class GameSceneAdapter: NSObject, GameSceneProtocol {
             // Clear the `buttons` in preparation for new buttons in the overlay.
             buttons = []
             
+            // Animate the old overlay out.
+            oldValue?.backgroundNode.run(SKAction.fadeOut(withDuration: 0.25)) {
+                debugPrint(#function + " remove old overlay")
+                oldValue?.backgroundNode.removeFromParent()
+            }
+            
             if let overlay = overlay, let scene = scene {
                 debugPrint(#function + " added overaly")
                 overlay.backgroundNode.removeFromParent()
@@ -82,12 +88,6 @@ class GameSceneAdapter: NSObject, GameSceneProtocol {
                 overlay.backgroundNode.run(SKAction.fadeIn(withDuration: 0.25))
                 
                 buttons = scene.findAllButtonsInScene()
-            }
-            
-            // Animate the old overlay out.
-            oldValue?.backgroundNode.run(SKAction.fadeOut(withDuration: 0.25)) {
-                debugPrint(#function + " remove old overlay")
-                oldValue?.backgroundNode.removeFromParent()
             }
         }
     }
@@ -140,8 +140,19 @@ class GameSceneAdapter: NSObject, GameSceneProtocol {
         self.init(with: scene)
         self.stateMahcine = stateMachine
     }
-
+    
     // MARK: - Helpers
+    
+    func resetScores() {
+        score = 0
+        scoreLabel?.text = "Score 0"
+    }
+    
+    func removePipes() {
+        infiniteBackgroundNode?.childNode(withName: "top-pipe")?.removeFromParent()
+        infiniteBackgroundNode?.childNode(withName: "bottom-pipe")?.removeFromParent()
+        infiniteBackgroundNode?.childNode(withName: "threshold-pipe")?.removeFromParent()
+    }
     
     private func prepareWorld(for scene: SKScene) {
         scene.physicsWorld.gravity = CGVector(dx: 0.0, dy: gravity)
