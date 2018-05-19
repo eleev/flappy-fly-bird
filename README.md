@@ -13,7 +13,7 @@
 
 
 # Caution 
-There were user graphical resources such as `audio`, `music` and `images`. Those resources are for non commertial use. If you want to reuse the development in commertial projects you **must remove all the assets**.
+There were user graphical resources such as `audio`, `music` and `images`. Those resources are for non commercial use. If you want to reuse the development in commercial projects you **must remove all the assets**.
 
 # Features
 - `Infinite` side-scrolling game 
@@ -21,13 +21,13 @@ There were user graphical resources such as `audio`, `music` and `images`. Those
 - Uses `state machines`
 - Utilizes `SpriteKit` editor 
 - Uses `CoreGraphics` to construct `tile-based` pipes
-- Suported both `iPhone` and `iPad`
-- Scores and settings `persistence`
+- Suported both `iPhone` and `iPad`screens
+- Uses simple technique for `persistence` (for `Scores` and `Settings`)
 
 # Roadmap
-- Support for `Game Center` for leaderboards
-- Addition for game bonuses
+- Game bonuses: another good example of `GameplayKit`usage
 - New pipe types
+- Level opening and bird dying animation
 
 # Author 
 [Astemir Eleev](https://github.com/jVirus)
