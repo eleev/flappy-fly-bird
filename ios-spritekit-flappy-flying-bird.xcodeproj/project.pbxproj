@@ -18,6 +18,12 @@
 		A92E72EC209D84AE0015F647 /* Pixel Digivolve.otf in Resources */ = {isa = PBXBuildFile; fileRef = A92E72EB209D84AE0015F647 /* Pixel Digivolve.otf */; };
 		A92E72EE209D87570015F647 /* ButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92E72ED209D87570015F647 /* ButtonNode.swift */; };
 		A992D8B620A03B90003A9998 /* SceneOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = A992D8B520A03B90003A9998 /* SceneOverlay.swift */; };
+		A9A3139920B0006400B36175 /* TitleScene iPad.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9A3139820B0006400B36175 /* TitleScene iPad.sks */; };
+		A9A3139D20B0226D00B36175 /* SettingsScene iPad.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9A3139C20B0226D00B36175 /* SettingsScene iPad.sks */; };
+		A9A3139F20B022B100B36175 /* ScoreScene iPad.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9A3139E20B022B100B36175 /* ScoreScene iPad.sks */; };
+		A9A313A120B0239100B36175 /* GameScene iPad.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9A313A020B0239100B36175 /* GameScene iPad.sks */; };
+		A9A313A320B0263C00B36175 /* PauseScene iPad.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9A313A220B0263C00B36175 /* PauseScene iPad.sks */; };
+		A9A313A520B026E000B36175 /* FailedScene iPad.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9A313A420B026E000B36175 /* FailedScene iPad.sks */; };
 		A9ACB91D2099A1F200966991 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ACB91C2099A1F200966991 /* AppDelegate.swift */; };
 		A9ACB91F2099A1F200966991 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9ACB91E2099A1F200966991 /* GameScene.sks */; };
 		A9ACB9232099A1F200966991 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ACB9222099A1F200966991 /* GameScene.swift */; };
@@ -89,6 +95,12 @@
 		A92E72EB209D84AE0015F647 /* Pixel Digivolve.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pixel Digivolve.otf"; sourceTree = "<group>"; };
 		A92E72ED209D87570015F647 /* ButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonNode.swift; sourceTree = "<group>"; };
 		A992D8B520A03B90003A9998 /* SceneOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneOverlay.swift; sourceTree = "<group>"; };
+		A9A3139820B0006400B36175 /* TitleScene iPad.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "TitleScene iPad.sks"; sourceTree = "<group>"; };
+		A9A3139C20B0226D00B36175 /* SettingsScene iPad.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "SettingsScene iPad.sks"; sourceTree = "<group>"; };
+		A9A3139E20B022B100B36175 /* ScoreScene iPad.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "ScoreScene iPad.sks"; sourceTree = "<group>"; };
+		A9A313A020B0239100B36175 /* GameScene iPad.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "GameScene iPad.sks"; sourceTree = "<group>"; };
+		A9A313A220B0263C00B36175 /* PauseScene iPad.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "PauseScene iPad.sks"; sourceTree = "<group>"; };
+		A9A313A420B026E000B36175 /* FailedScene iPad.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "FailedScene iPad.sks"; sourceTree = "<group>"; };
 		A9ACB9192099A1F200966991 /* ios-spritekit-flappy-flying-bird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-spritekit-flappy-flying-bird.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9ACB91C2099A1F200966991 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9ACB91E2099A1F200966991 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -444,7 +456,9 @@
 			isa = PBXGroup;
 			children = (
 				A9CC5C3920A02D0A00040E61 /* PauseScene.sks */,
+				A9A313A220B0263C00B36175 /* PauseScene iPad.sks */,
 				A9CC5C3C20A030A900040E61 /* FailedScene.sks */,
+				A9A313A420B026E000B36175 /* FailedScene iPad.sks */,
 			);
 			path = "Game Overlay";
 			sourceTree = "<group>";
@@ -453,9 +467,13 @@
 			isa = PBXGroup;
 			children = (
 				A9B9C72A209EE3290045548D /* TitleScene.sks */,
+				A9A3139820B0006400B36175 /* TitleScene iPad.sks */,
 				A9ACB91E2099A1F200966991 /* GameScene.sks */,
+				A9A313A020B0239100B36175 /* GameScene iPad.sks */,
 				A9EC755D20A6CB03007C42EC /* SettingsScene.sks */,
+				A9A3139C20B0226D00B36175 /* SettingsScene iPad.sks */,
 				A9EC755F20A6D0F1007C42EC /* ScoreScene.sks */,
+				A9A3139E20B022B100B36175 /* ScoreScene iPad.sks */,
 			);
 			path = "Main Scenes";
 			sourceTree = "<group>";
@@ -551,9 +569,11 @@
 				A9EC755E20A6CB03007C42EC /* SettingsScene.sks in Resources */,
 				A9ACB9782099B7AF00966991 /* rollover2.mp3 in Resources */,
 				A9ACB9742099B7AF00966991 /* click1.mp3 in Resources */,
+				A9A3139920B0006400B36175 /* TitleScene iPad.sks in Resources */,
 				A9ACB91F2099A1F200966991 /* GameScene.sks in Resources */,
 				A9CA8F74209C954E004CB9D4 /* Hit_Hurt.wav in Resources */,
 				A9ACB92A2099A1F300966991 /* Assets.xcassets in Resources */,
+				A9A313A320B0263C00B36175 /* PauseScene iPad.sks in Resources */,
 				A9ACB9772099B7AF00966991 /* switch2.mp3 in Resources */,
 				A9CC5C3A20A02D0A00040E61 /* PauseScene.sks in Resources */,
 				A9B9C72B209EE3290045548D /* TitleScene.sks in Resources */,
@@ -562,9 +582,13 @@
 				A9ACB92D2099A1F300966991 /* LaunchScreen.storyboard in Resources */,
 				A9B14F1C20A5796E005221BA /* clock-final-tick.mp3 in Resources */,
 				A9CA8F72209C9549004CB9D4 /* POL-catch-them-all-short.wav in Resources */,
+				A9A313A120B0239100B36175 /* GameScene iPad.sks in Resources */,
 				A9EC756020A6D0F1007C42EC /* ScoreScene.sks in Resources */,
+				A9A3139D20B0226D00B36175 /* SettingsScene iPad.sks in Resources */,
 				A92E72EC209D84AE0015F647 /* Pixel Digivolve.otf in Resources */,
+				A9A313A520B026E000B36175 /* FailedScene iPad.sks in Resources */,
 				A9B14F1B20A5796E005221BA /* clock-tick.mp3 in Resources */,
+				A9A3139F20B022B100B36175 /* ScoreScene iPad.sks in Resources */,
 				A9ACB9762099B7AF00966991 /* click2.mp3 in Resources */,
 				A9CA8F6F209C9233004CB9D4 /* POL-flight-master-short.wav in Resources */,
 				A903943B20AD9E7900376CC3 /* Particles.xcassets in Resources */,
