@@ -14,7 +14,7 @@ class PausedState: GKState {
     // MARK: - Properites
     
     var overlaySceneFileName: String {
-        return "PauseScene"
+        return Scenes.pause.getName()
     }
     
     unowned var levelScene: SKScene

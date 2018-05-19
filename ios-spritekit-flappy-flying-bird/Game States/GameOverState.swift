@@ -14,7 +14,7 @@ class GameOverState: GKState {
     // MARK: - Properites
     
     var overlaySceneFileName: String {
-        return "FailedScene"
+        return Scenes.failed.getName()
     }
     
     unowned var levelScene: GameSceneAdapter
