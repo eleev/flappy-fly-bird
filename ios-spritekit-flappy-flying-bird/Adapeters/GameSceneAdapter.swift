@@ -168,8 +168,10 @@ class GameSceneAdapter: NSObject, GameSceneProtocol {
         scene.physicsWorld.contactDelegate = self
     }
     
-    private func prepareInfiniteBackgroundScroller(for scene: SKScene) {
-        infiniteBackgroundNode = InfiniteSpriteScrollNode(fileName: backgroundResourceName, scaleFactor: CGPoint(x: 1.25, y: 1.25))
+    private func prepareInfiniteBackgroundScroller(for scene: SKScene) {        
+        let scaleFactor = NodeScale.gameBackgroundScale.getValue()
+        
+        infiniteBackgroundNode = InfiniteSpriteScrollNode(fileName: backgroundResourceName, scaleFactor: CGPoint(x: scaleFactor, y: scaleFactor))
         infiniteBackgroundNode!.zPosition = 0
         
         scene.addChild(infiniteBackgroundNode!)
