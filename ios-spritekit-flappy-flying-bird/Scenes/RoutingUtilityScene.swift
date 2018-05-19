@@ -26,35 +26,32 @@ class RoutingUtilityScene: SKScene, ButtonNodeResponderType {
             return
         }
         selection.selectionChanged()
+    
+        var sceneToPresent: SKScene?
+        var transition: SKTransition?
+        let sceneScaleMode: SKSceneScaleMode = RoutingUtilityScene.sceneScaleMode
         
         switch identifier {
         case .play:
-            guard let gameScene = GameScene(fileNamed: "GameScene") else {
-                return
-            }
-            gameScene.scaleMode = RoutingUtilityScene.sceneScaleMode
-            self.view?.presentScene(gameScene, transition: SKTransition.fade(withDuration: 1.0))
+            let sceneId = Scenes.game.getName()
+            sceneToPresent = GameScene(fileNamed: sceneId)
+            
+            transition = SKTransition.fade(withDuration: 1.0)
         case .settings:
-            guard let settingsScene = SettingsScene(fileNamed: "SettingsScene") else {
-                return
-            }
+            let sceneId = Scenes.setting.getName()
+            sceneToPresent = SettingsScene(fileNamed: sceneId)
+            
             RoutingUtilityScene.lastPushTransitionDirection = .down
-            settingsScene.scaleMode = RoutingUtilityScene.sceneScaleMode
-            self.view?.presentScene(settingsScene, transition: SKTransition.push(with: .down, duration: 1.0))
-            
+            transition = SKTransition.push(with: .down, duration: 1.0)
         case .scores:
-            guard let scoresScene = ScoresScene(fileNamed: "ScoreScene") else {
-                return
-            }
-            RoutingUtilityScene.lastPushTransitionDirection = .up
-            scoresScene.scaleMode = RoutingUtilityScene.sceneScaleMode
-            self.view?.presentScene(scoresScene, transition: SKTransition.push(with: .up, duration: 1.0))
+            let sceneId = Scenes.score.getName()
+            sceneToPresent = ScoresScene(fileNamed: sceneId)
             
+            RoutingUtilityScene.lastPushTransitionDirection = .up
+            transition = SKTransition.push(with: .up, duration: 1.0)
         case .menu:
-            guard let titleScene = TitleScene(fileNamed: "TitleScene") else {
-                return
-            }
-            titleScene.scaleMode = RoutingUtilityScene.sceneScaleMode
+            let sceneId = Scenes.title.getName()
+            sceneToPresent = TitleScene(fileNamed: sceneId)
             
             var pushDirection: SKTransitionDirection?
             
@@ -72,13 +69,19 @@ class RoutingUtilityScene: SKScene, ButtonNodeResponderType {
                 RoutingUtilityScene.lastPushTransitionDirection = pushDirection
             }
             if let pushDirection = pushDirection {
-                
-                self.view?.presentScene(titleScene, transition: SKTransition.push(with: pushDirection, duration: 1.0))
+                transition = SKTransition.push(with: pushDirection, duration: 1.0)
             } else {
-                self.view?.presentScene(titleScene, transition: SKTransition.fade(withDuration: 1.0))
+                transition = SKTransition.fade(withDuration: 1.0)
             }
         default:
             debugPrint(#function + "triggered button node action that is not supported by the TitleScene class")
         }
+        
+        guard let presentationScene = sceneToPresent, let unwrappedTransition = transition  else {
+            return
+        }
+        
+        presentationScene.scaleMode = sceneScaleMode
+        self.view?.presentScene(presentationScene, transition: unwrappedTransition)
     }
 }

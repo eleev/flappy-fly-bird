@@ -121,7 +121,8 @@ extension GameScene: ButtonNodeResponderType {
         case .resume:
             sceneAdapeter?.stateMahcine?.enter(PlayingState.self)
         case .home:
-            guard let gameScene = GameScene(fileNamed: "TitleScene") else {
+            let sceneId = Scenes.title.getName()
+            guard let gameScene = GameScene(fileNamed: sceneId) else {
                 return
             }
             gameScene.scaleMode = RoutingUtilityScene.sceneScaleMode
