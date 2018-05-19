@@ -144,7 +144,6 @@ class GameSceneAdapter: NSObject, GameSceneProtocol {
     // MARK: - Helpers
     
     func resetScores() {
-        score = 0
         scoreLabel?.text = "Score 0"
     }
     
@@ -168,7 +167,7 @@ class GameSceneAdapter: NSObject, GameSceneProtocol {
         scene.physicsWorld.contactDelegate = self
     }
     
-    private func prepareInfiniteBackgroundScroller(for scene: SKScene) {        
+    private func prepareInfiniteBackgroundScroller(for scene: SKScene) {
         let scaleFactor = NodeScale.gameBackgroundScale.getValue()
         
         infiniteBackgroundNode = InfiniteSpriteScrollNode(fileName: backgroundResourceName, scaleFactor: CGPoint(x: scaleFactor, y: scaleFactor))
