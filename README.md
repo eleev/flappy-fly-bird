@@ -3,10 +3,14 @@
 
 # Demo 
 
-![Main Menu](/resources/img-01.PNG =200x300)
-![Settings](/resources/img-02.PNG =200x300)
-![Scores](/resources/img-03.PNG =200x300)
-![Gameplay](/resources/img-04.PNG =200x300)
+## Screens
+<img src="/resources/img-01.PNG" width="30%"> <img src="/resources/img-02.PNG" width="30%">
+
+<img src="/resources/img-03.PNG" width="30%"> <img src="/resources/img-04.PNG" width="30%">
+
+## Gifs
+<img src="/resources/intro.gif" width="45%"> <img src="/resources/gameplay.gif" width="45%">
+
 
 # Caution 
 There were user graphical resources such as `audio`, `music` and `images`. Those resources are for non commertial use. If you want to reuse the development in commertial projects you **must remove all the assets**.
