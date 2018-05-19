@@ -33,4 +33,4 @@ There were user graphical resources such as `audio`, `music` and `images`. Those
 [Astemir Eleev](https://github.com/jVirus)
 
 # Licence
-
+The project is availabe under the (BSD 3-Clause "New" or "Revised" License)[https://github.com/jVirus/ios-spritekit-flappy-flying-bird/blob/master/LICENSE]. Remember: you must not use any of the `assets` in commercial purposes.
