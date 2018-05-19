@@ -13,7 +13,7 @@
 
 
 # Caution 
-There were user graphical resources such as `audio`, `music` and `images`. Those resources are for non commercial use. If you want to reuse the development in commercial projects you **must remove all the assets**.
+There were used graphical resources such as `audio`, `music` and `images`. Those resources are for non commercial use. If you want to reuse the developments in your projects you **must remove all the assets**.
 
 # Features
 - `Infinite` side-scrolling game 
