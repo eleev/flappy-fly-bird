@@ -1,5 +1,5 @@
 # ios-spritekit-flappy-flying-bird
-🐦 Flappy Flying Bird is a SpriteKit game written using the latest verion of Swift programming language and GameplayKit.
+🐦 `Flappy Fly-Bird` is a `SpriteKit` game written using the latest verion of `Swift` programming language and `GameplayKit`.
 
 # Demo 
 
