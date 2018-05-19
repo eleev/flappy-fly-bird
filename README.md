@@ -25,9 +25,13 @@ There were user graphical resources such as `audio`, `music` and `images`. Those
 - Uses simple technique for `persistence` (for `Scores` and `Settings`)
 
 # Roadmap
-- Game bonuses: another good example of `GameplayKit`usage
-- New pipe types
-- Level opening and bird dying animation
+- [ ] New unlockable, playable characters with unique visual effects
+- [ ] Achievement system: will be used to unlock new playable characters and visual effects
+- [ ] Addition of custom effects when player stars new run and the character dies
+- [ ] Custom scene transitions
+- [ ] Game bonuses: another good example of `GameplayKit`usage
+- [ ] New pipe types
+- [ ] Level opening and bird dying animation
 
 # Author 
 [Astemir Eleev](https://github.com/jVirus)
