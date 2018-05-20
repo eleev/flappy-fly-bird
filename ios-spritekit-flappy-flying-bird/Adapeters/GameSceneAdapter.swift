@@ -177,8 +177,12 @@ class GameSceneAdapter: NSObject, GameSceneProtocol {
         updatables.append(infiniteBackgroundNode!)
     }
     
+    func advanceSnowEmitter(for duration: TimeInterval) {
+        let snowParticleEmitter = scene?.childNode(withName: "Snow Particle Emitter") as? SKEmitterNode
+        snowParticleEmitter?.safeAdvanceSimulationTime(duration)
+    }
+    
 }
-
 
 extension GameSceneAdapter: SKPhysicsContactDelegate {
     
@@ -224,5 +228,5 @@ extension GameSceneAdapter: SKPhysicsContactDelegate {
         impact.impactOccurred()
         if isSoundOn { scene?.run(hitSound)}
     }
-    
+
 }

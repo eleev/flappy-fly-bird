@@ -29,6 +29,7 @@ class PlayingState: GKState {
         }
         preparePlayer(for: scene)
         launchPipeFactory(for: scene)
+        adapter.advanceSnowEmitter(for: 15)
     }
     
     // MARK: - Lifecycle

@@ -23,6 +23,5 @@ class TitleScene: RoutingUtilityScene {
             audioNode?.removeAllActions()
             audioNode?.removeFromParent()
         }
-        
     }
 }
