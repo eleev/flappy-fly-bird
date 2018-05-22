@@ -201,9 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				A9ACB97D2099C8C400966991 /* InfiniteSpriteScrollNode.swift */,
-				A9ACB9862099E74600966991 /* BirdNode.swift */,
 				A9D4CFDC209B3A4F006461AF /* PipeNode.swift */,
-				A90292DF20B1909A0043C9B2 /* NyancatNode.swift */,
 			);
 			path = "Game Componens";
 			sourceTree = "<group>";
@@ -319,6 +317,7 @@
 		A9ACB9882099F0B600966991 /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
+				A9B9F83720B44AC300FC0BDA /* Playables */,
 				A903943D20ADAB0A00376CC3 /* Game Componens */,
 				A903943C20ADAB0100376CC3 /* UI Components */,
 			);
@@ -415,6 +414,15 @@
 				A9B14F1E20A588BB005221BA /* TouchToFlyScene.sks */,
 			);
 			path = "Utility Overlay";
+			sourceTree = "<group>";
+		};
+		A9B9F83720B44AC300FC0BDA /* Playables */ = {
+			isa = PBXGroup;
+			children = (
+				A9ACB9862099E74600966991 /* BirdNode.swift */,
+				A90292DF20B1909A0043C9B2 /* NyancatNode.swift */,
+			);
+			path = Playables;
 			sourceTree = "<group>";
 		};
 		A9CA8F6B209C9129004CB9D4 /* Game */ = {
