@@ -98,11 +98,12 @@ class PlayingState: GKState {
     
     private func preparePlayer(for scene: SKScene) {
         adapter.bird = BirdNode(animationTimeInterval: 0.1, withTextureAtlas: adapter.playerResourceName, size: adapter.playerSize)
+        
         guard let bird = adapter.bird else {
             debugPrint(#function + " could, not unwrap BirdNode, the execution will be aborted")
             return
         }
-        bird.position = CGPoint(x: bird.size.width / 2 + 24, y: scene.size.height / 2)
+        bird.position = CGPoint(x: bird.size.width / 2 + 50 * 2, y: scene.size.height / 2)
         bird.zPosition = 10
         
         scene.addChild(bird)
