@@ -9,9 +9,48 @@
 import SpriteKit
 
 // TODO: Needs to be refactored
-class NyancatNode: SKSpriteNode {
+class NyancatNode: SKSpriteNode, Updatable {
+    
+    // MARK: - Conformance to Updatable protocol
+    
+    var delta: TimeInterval = 0
+    var lastUpdateTime: TimeInterval = 0
+    var shouldUpdate: Bool = true {
+        didSet {
+//            if shouldUpdate {
+//                animate(with: animationTimeInterval)
+//
+//            } else {
+//                self.removeAllActions()
+//            }
+        }
+    }
+    
+    var isAffectedByGravity: Bool = true {
+        didSet {
+            self.physicsBody?.affectedByGravity = isAffectedByGravity
+        }
+    }
+    
+    var shouldAcceptTouches: Bool = true {
+        didSet {
+            self.isUserInteractionEnabled = shouldAcceptTouches
+        }
+    }
+    
+    private let impact = UIImpactFeedbackGenerator(style: .medium)
     
     // MARK: - Initializers
+    
+    override init(texture: SKTexture?, color: UIColor, size: CGSize) {
+        super.init(texture: texture, color: color, size: size)
+        
+        self.xScale = 0.2
+        self.yScale = 0.2
+        
+        commonInit()
+        preparePhysicsBody()
+    }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -20,6 +59,7 @@ class NyancatNode: SKSpriteNode {
         self.yScale = 0.2
         
         commonInit()
+        preparePhysicsBody()
     }
     
     // MAKR: - Utils
@@ -87,7 +127,7 @@ class NyancatNode: SKSpriteNode {
         ]
         
         var yMultiplier : CGFloat = 0.5
-        for rainbowColor in rainbowColors{
+        for rainbowColor in rainbowColors {
             let emitter = RainbowParticle(
                 childOf: self,
                 target: nyanCat,
@@ -101,8 +141,60 @@ class NyancatNode: SKSpriteNode {
             emitter.zPosition = 10
             yMultiplier -= 0.15
         }
-
-        
         
     }
+    
+    
+    fileprivate func preparePhysicsBody() {
+        physicsBody = SKPhysicsBody(circleOfRadius: size.width / 2.5)
+//        let texture = SKTexture(imageNamed: "Nyancat")
+//        physicsBody = SKPhysicsBody(texture: texture, size: texture.size())
+        
+        physicsBody?.categoryBitMask = PhysicsCategories.player.rawValue
+        physicsBody?.contactTestBitMask = PhysicsCategories.pipe.rawValue | PhysicsCategories.gap.rawValue | PhysicsCategories.boundary.rawValue
+        physicsBody?.collisionBitMask = PhysicsCategories.pipe.rawValue | PhysicsCategories.boundary.rawValue
+        
+        physicsBody?.allowsRotation = false
+        physicsBody?.restitution = 0.0
+    }
+    
+    // MARK: - Conformance to Updatable protocol
+    
+    func update(_ timeInterval: CFTimeInterval) {
+        delta = lastUpdateTime == 0.0 ? 0.0 : timeInterval - lastUpdateTime
+        lastUpdateTime = timeInterval
+        
+        guard let physicsBody = physicsBody else {
+            return
+        }
+        
+        let velocityX = physicsBody.velocity.dx
+        let velocityY = physicsBody.velocity.dy
+        let threshold: CGFloat = 350
+        
+        if velocityY > threshold {
+            self.physicsBody?.velocity = CGVector(dx: velocityX, dy: threshold)
+        }
+        
+        let velocityValue = velocityY * (velocityY < 0 ? 0.003 : 0.001)
+        zRotation = velocityValue.clamp(min: -1, max: 1.0)
+    }
+    
 }
+
+
+extension NyancatNode: Touchable {
+    // MARK: - Conformance to Touchable protocol
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if !shouldAcceptTouches { return }
+        
+        impact.impactOccurred()
+        
+        isAffectedByGravity = true
+        // Apply an impulse to the DY value of the physics body of the bird
+        physicsBody?.applyImpulse(CGVector(dx: 0, dy: 120))
+    }
+}
+
+
