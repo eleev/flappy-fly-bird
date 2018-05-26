@@ -69,6 +69,8 @@
 		A9D4CFDD209B3A50006461AF /* PipeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4CFDC209B3A4F006461AF /* PipeNode.swift */; };
 		A9D4CFE0209B4040006461AF /* PipeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4CFDF209B4040006461AF /* PipeFactory.swift */; };
 		A9E14DAF20B1764B0075D725 /* SKEmitterNode+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E14DAE20B1764B0075D725 /* SKEmitterNode+Utils.swift */; };
+		A9EBCCAA20B9785400BB08A3 /* CharactersScene iPad.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9EBCCA820B9785400BB08A3 /* CharactersScene iPad.sks */; };
+		A9EBCCAB20B9785400BB08A3 /* CharactersScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9EBCCA920B9785400BB08A3 /* CharactersScene.sks */; };
 		A9EC755E20A6CB03007C42EC /* SettingsScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9EC755D20A6CB03007C42EC /* SettingsScene.sks */; };
 		A9EC756020A6D0F1007C42EC /* ScoreScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9EC755F20A6D0F1007C42EC /* ScoreScene.sks */; };
 		A9EC756420A6D3E9007C42EC /* SettingsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EC756320A6D3E9007C42EC /* SettingsScene.swift */; };
@@ -153,6 +155,8 @@
 		A9D4CFDC209B3A4F006461AF /* PipeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipeNode.swift; sourceTree = "<group>"; };
 		A9D4CFDF209B4040006461AF /* PipeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipeFactory.swift; sourceTree = "<group>"; };
 		A9E14DAE20B1764B0075D725 /* SKEmitterNode+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKEmitterNode+Utils.swift"; sourceTree = "<group>"; };
+		A9EBCCA820B9785400BB08A3 /* CharactersScene iPad.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "CharactersScene iPad.sks"; sourceTree = "<group>"; };
+		A9EBCCA920B9785400BB08A3 /* CharactersScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CharactersScene.sks; sourceTree = "<group>"; };
 		A9EC755D20A6CB03007C42EC /* SettingsScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SettingsScene.sks; sourceTree = "<group>"; };
 		A9EC755F20A6D0F1007C42EC /* ScoreScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ScoreScene.sks; sourceTree = "<group>"; };
 		A9EC756320A6D3E9007C42EC /* SettingsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScene.swift; sourceTree = "<group>"; };
@@ -491,6 +495,8 @@
 				A9A3139C20B0226D00B36175 /* SettingsScene iPad.sks */,
 				A9EC755F20A6D0F1007C42EC /* ScoreScene.sks */,
 				A9A3139E20B022B100B36175 /* ScoreScene iPad.sks */,
+				A9EBCCA920B9785400BB08A3 /* CharactersScene.sks */,
+				A9EBCCA820B9785400BB08A3 /* CharactersScene iPad.sks */,
 			);
 			path = "Main Scenes";
 			sourceTree = "<group>";
@@ -577,6 +583,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9CA8F6D209C9130004CB9D4 /* Coin.wav in Resources */,
+				A9EBCCAB20B9785400BB08A3 /* CharactersScene.sks in Resources */,
 				A9ACB96B2099B42300966991 /* Actions.sks in Resources */,
 				A903943620AD9D1200376CC3 /* SnowParticleEffect.sks in Resources */,
 				A9ACB9732099B7AF00966991 /* rollover1.mp3 in Resources */,
@@ -591,6 +598,7 @@
 				A9CA8F74209C954E004CB9D4 /* Hit_Hurt.wav in Resources */,
 				A9ACB92A2099A1F300966991 /* Assets.xcassets in Resources */,
 				A9A313A320B0263C00B36175 /* PauseScene iPad.sks in Resources */,
+				A9EBCCAA20B9785400BB08A3 /* CharactersScene iPad.sks in Resources */,
 				A9ACB9772099B7AF00966991 /* switch2.mp3 in Resources */,
 				A9CC5C3A20A02D0A00040E61 /* PauseScene.sks in Resources */,
 				A9B9C72B209EE3290045548D /* TitleScene.sks in Resources */,
