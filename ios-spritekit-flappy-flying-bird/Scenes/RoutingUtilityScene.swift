@@ -49,6 +49,14 @@ class RoutingUtilityScene: SKScene, ButtonNodeResponderType {
             
             RoutingUtilityScene.lastPushTransitionDirection = .up
             transition = SKTransition.push(with: .up, duration: 1.0)
+            
+        case .characters:
+            let sceneId = Scenes.characters.getName()
+            sceneToPresent = CharactersScene(fileNamed: sceneId)
+            debugPrint("created CharactersScene instance")
+            
+            RoutingUtilityScene.lastPushTransitionDirection = .right
+            transition = SKTransition.push(with: .right, duration: 1.0)
         case .menu:
             let sceneId = Scenes.title.getName()
             sceneToPresent = TitleScene(fileNamed: sceneId)
@@ -83,5 +91,6 @@ class RoutingUtilityScene: SKScene, ButtonNodeResponderType {
         
         presentationScene.scaleMode = sceneScaleMode
         self.view?.presentScene(presentationScene, transition: unwrappedTransition)
+        debugPrint("presented CharactersScene instance")
     }
 }
