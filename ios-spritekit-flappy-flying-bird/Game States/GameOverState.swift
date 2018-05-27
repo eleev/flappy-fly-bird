@@ -45,7 +45,7 @@ class GameOverState: GKState {
         }
         
         // Disable interaction with the bird
-        levelScene.bird?.shouldAcceptTouches = false
+        levelScene.playerCharacter?.shouldAcceptTouches = false
         
         // Update the scores
         updateScores()
@@ -58,7 +58,7 @@ class GameOverState: GKState {
         levelScene.isHUDHidden = true
         
         // Stop any updates
-        levelScene.bird?.shouldUpdate = false
+        levelScene.playerCharacter?.shouldUpdate = false
         
         // Remove all actions related to the scene, including the generation of new pipes
         levelScene.scene?.removeAllActions()
@@ -90,7 +90,7 @@ class GameOverState: GKState {
             // Reveal the game scene HUD
             levelScene.isHUDHidden = false
             // Enable the interactions with the bird
-            levelScene.bird?.shouldAcceptTouches = true
+            levelScene.playerCharacter?.shouldAcceptTouches = true
         }
     }
     

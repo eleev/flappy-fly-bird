@@ -10,6 +10,10 @@ import UIKit
 
 protocol Touchable: class {
     
+    // MARK: - Properties
+    
+    var shouldAcceptTouches: Bool { get set }
+    
     // MARK: - Methods
     
     func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)

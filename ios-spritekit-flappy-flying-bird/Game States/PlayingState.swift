@@ -38,7 +38,7 @@ class PlayingState: GKState {
         super.didEnter(from: previousState)
         
         // Tell the bird that it needs to be resting until the user taps on a screen
-        adapter.bird?.isAffectedByGravity = false
+        adapter.playerCharacter?.isAffectedByGravity = false
         // Start procuding the pipes as soon as the state was entered
         adapter.scene?.run(infinitePipeProducer, withKey: infinitePipeProducerKey)
         
@@ -54,7 +54,7 @@ class PlayingState: GKState {
         }
         
         // Otherwise check the adapter and the bird
-        guard let scene = adapter.scene, let bird = adapter.bird else {
+        guard let scene = adapter.scene, let bird = adapter.playerCharacter else {
             return
         }
         // If everything is allright then continue setting up the state
@@ -97,19 +97,33 @@ class PlayingState: GKState {
     // MARK: - Methods
     
     private func preparePlayer(for scene: SKScene) {
-        adapter.bird = BirdNode(animationTimeInterval: 0.1, withTextureAtlas: adapter.playerResourceName, size: adapter.playerSize)
+        let character = UserDefaults.standard.playableCharacter(for: .character) ?? .bird
         
-        guard let bird = adapter.bird else {
+        switch character {
+        case .bird:
+            adapter.playerCharacter = BirdNode(animationTimeInterval: 0.1, withTextureAtlas: adapter.playerResourceName, size: adapter.playerSize)
+        case .nyancatAnim:
+//            adapter.playerCharacter = NyancatNode(size: adapter.playerSize)
+            guard let scene = adapter.scene else {
+                return
+            }
+            var size = adapter.playerSize
+            size.height -= 40
+            adapter.playerCharacter = NyancatNode(size: size, parentScene: scene)
+        }
+        
+        guard let playableCharacter = adapter.playerCharacter else {
             debugPrint(#function + " could, not unwrap BirdNode, the execution will be aborted")
             return
         }
-        bird.position = CGPoint(x: bird.size.width / 2 + 50 * 2, y: scene.size.height / 2)
-        bird.zPosition = 10
+        playableCharacter.position = CGPoint(x: playableCharacter.size.width / 2 + 50 * 2, y: scene.size.height / 2)
+        playableCharacter.zPosition = 10
         
-        scene.addChild(bird)
         
-        adapter.updatables.append(bird)
-        adapter.touchables.append(bird)
+        scene.addChild(playableCharacter)
+        
+        adapter.updatables.append(playableCharacter)
+        adapter.touchables.append(playableCharacter)
     }
     
     private func launchPipeFactory(for scene: SKScene) {

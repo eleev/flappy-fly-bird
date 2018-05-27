@@ -8,8 +8,7 @@
 
 import SpriteKit
 
-// TODO: Needs to be refactored
-class NyancatNode: SKSpriteNode, Updatable {
+class NyancatNode: SKSpriteNode, Updatable, Playable {
     
     // MARK: - Conformance to Updatable protocol
     
@@ -17,12 +16,9 @@ class NyancatNode: SKSpriteNode, Updatable {
     var lastUpdateTime: TimeInterval = 0
     var shouldUpdate: Bool = true {
         didSet {
-//            if shouldUpdate {
-//                animate(with: animationTimeInterval)
-//
-//            } else {
-//                self.removeAllActions()
-//            }
+            if shouldUpdate {
+                prepareRainbowEffect()
+            }
         }
     }
     
@@ -38,15 +34,56 @@ class NyancatNode: SKSpriteNode, Updatable {
         }
     }
     
+    override var position: CGPoint {
+        didSet {
+            var yMultiplier : CGFloat = 0.5
+
+            rainbowParticles.forEach { particle in
+                let position = CGPoint(x: self.calculateAccumulatedFrame().width * -0.32 + self.position.x,
+                y: self.calculateAccumulatedFrame().height * yMultiplier + self.position.y)
+                particle.position = position
+                
+                yMultiplier -= 0.15
+            }
+        }
+    }
+    
     private let impact = UIImpactFeedbackGenerator(style: .medium)
+    private weak var parentScene: SKScene?
+    private var rainbowParticles: [RainbowParticle] = []
+    
+    class RainbowParticle: SKEmitterNode {
+        
+        // MARK: - Initailzier
+        
+        init(childOf: SKNode, target: SKNode, color: SKColor, position: CGPoint) {
+            super.init()
+            
+            particleLifetime = 10
+            particleBlendMode = SKBlendMode.alpha
+            particleBirthRate = 100
+            particleSpeed = 150
+            emissionAngle = 3.141516
+            targetNode = target
+            particleSize = CGSize(width: 10, height: 10)
+            particleColor = color
+            self.position = position
+            
+            childOf.addChild(self)
+        }
+        
+        required init?(coder aDecoder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    
     
     // MARK: - Initializers
     
-    override init(texture: SKTexture?, color: UIColor, size: CGSize) {
-        super.init(texture: texture, color: color, size: size)
+    init(size: CGSize, parentScene: SKScene) {
+        super.init(texture: nil, color: .clear, size: size)
         
-        self.xScale = 0.2
-        self.yScale = 0.2
+        self.parentScene = parentScene
         
         commonInit()
         preparePhysicsBody()
@@ -55,8 +92,9 @@ class NyancatNode: SKSpriteNode, Updatable {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        self.xScale = 0.2
-        self.yScale = 0.2
+        // Remove the texture that was set in the editor, so there are no visual issues during the runtime
+        self.texture = nil
+        self.color = .clear
         
         commonInit()
         preparePhysicsBody()
@@ -65,57 +103,20 @@ class NyancatNode: SKSpriteNode, Updatable {
     // MAKR: - Utils
     
     private func commonInit() {
-        let midPoint = CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0)
-        
-        // Create the cat sprite node
-        let nyanCat = SKSpriteNode(imageNamed: "Nyancat")
-        nyanCat.position = midPoint
-        nyanCat.setScale(10.0)
-        nyanCat.run(SKAction.repeatForever(SKAction.sequence([
-            SKAction.moveBy(x: 0, y: 100, duration: 0.15),
-            SKAction.moveBy(x: 0, y: -100, duration: 0.15)
+        self.texture = SKTexture(imageNamed: "Nyancat")
+        name = "nyancatAnim"
+        run(SKAction.repeatForever(SKAction.sequence([
+            SKAction.moveBy(x: 0, y: 20, duration: 0.15),
+            SKAction.moveBy(x: 0, y: -20, duration: 0.15)
             ])))
-        nyanCat.zPosition = 10
-        self.addChild(nyanCat)
-
-        // Star dust particle system
-        // TODO: needs to be refactored
-//        let emitter = SKEmitterNode()
-//        emitter.particleLifetime = 40
-//        emitter.particleBlendMode = SKBlendMode.alpha
-//        emitter.particleBirthRate = 3
-//        emitter.particleSize = CGSize(width: 4,height: 4)
-//        emitter.particleColor = SKColor(red: 100, green: 100, blue: 255, alpha: 1)
-//        emitter.position = CGPoint(x:frame.size.width,y:midPoint.y)
-//        emitter.particleSpeed = 16
-//        emitter.particleSpeedRange = 100
-//        emitter.particlePositionRange = CGVector(dx: 0, dy: frame.size.height)
-//        emitter.emissionAngle = 3.14
-//        emitter.advanceSimulationTime(40)
-//        emitter.particleAlpha = 0.5
-//        emitter.particleAlphaRange = 0.5
-//        self.addChild(emitter)
+        zPosition = 10
         
+        prepareRainbowEffect()
+    }
+    
+    private func prepareRainbowEffect() {
         
-        class RainbowParticle : SKEmitterNode {
-            init(childOf:SKNode,target:SKNode, color:SKColor, position:CGPoint){
-                super.init()
-                self.particleLifetime = 10
-                self.particleBlendMode = SKBlendMode.alpha
-                self.particleBirthRate = 80
-                self.particleSpeed = 100
-                self.emissionAngle = 3.14151692
-                self.targetNode = target
-                self.particleSize = CGSize(width: 6, height: 6)
-                self.particleColor = color
-                self.position = position
-                childOf.addChild(self)
-            }
-            
-            required init?(coder aDecoder: NSCoder) {
-                fatalError("init(coder:) has not been implemented")
-            }
-        }
+        // Rainbow colors
         
         let rainbowColors = [
             SKColor(red: 255/255, green: 43/255, blue: 14/255, alpha: 1),
@@ -123,32 +124,37 @@ class NyancatNode: SKSpriteNode, Updatable {
             SKColor(red: 255/255, green: 244/255, blue: 5/255, alpha: 1),
             SKColor(red: 51/255, green: 234/255, blue: 5/255, alpha: 1),
             SKColor(red: 8/255, green: 163/255, blue: 255/255, alpha: 1),
-            SKColor(red: 8122255, green: 85/255, blue: 255/255, alpha: 1)
+            SKColor(red: 225/255, green: 85/255, blue: 255/255, alpha: 1)
         ]
         
+        guard let parentScene = parentScene else {
+            return
+        }
+        
         var yMultiplier : CGFloat = 0.5
-        for rainbowColor in rainbowColors {
+        for (index, rainbowColor) in rainbowColors.enumerated() {
+            
             let emitter = RainbowParticle(
-                childOf: self,
-                target: nyanCat,
+                childOf: parentScene,
+                target: self,
                 color: rainbowColor,
                 position:
                 CGPoint(
-                    x: nyanCat.calculateAccumulatedFrame().width * -0.32 + nyanCat.position.x,
-                    y: nyanCat.calculateAccumulatedFrame().height * yMultiplier + nyanCat.position.y
+                    x: self.calculateAccumulatedFrame().width * -0.32 + self.position.x,
+                    y: self.calculateAccumulatedFrame().height * yMultiplier + self.position.y
                 )
             )
-            emitter.zPosition = 10
+            emitter.name = "emitter-\(index)"
+            emitter.zPosition = self.zPosition - 1
             yMultiplier -= 0.15
+            
+            rainbowParticles += [emitter]
         }
-        
     }
     
     
     fileprivate func preparePhysicsBody() {
-        physicsBody = SKPhysicsBody(circleOfRadius: size.width / 2.5)
-//        let texture = SKTexture(imageNamed: "Nyancat")
-//        physicsBody = SKPhysicsBody(texture: texture, size: texture.size())
+        physicsBody = SKPhysicsBody(rectangleOf: frame.size)
         
         physicsBody?.categoryBitMask = PhysicsCategories.player.rawValue
         physicsBody?.contactTestBitMask = PhysicsCategories.pipe.rawValue | PhysicsCategories.gap.rawValue | PhysicsCategories.boundary.rawValue
@@ -173,11 +179,11 @@ class NyancatNode: SKSpriteNode, Updatable {
         let threshold: CGFloat = 350
         
         if velocityY > threshold {
-            self.physicsBody?.velocity = CGVector(dx: velocityX, dy: threshold)
+            physicsBody.velocity = CGVector(dx: velocityX, dy: threshold)
         }
         
-        let velocityValue = velocityY * (velocityY < 0 ? 0.003 : 0.001)
-        zRotation = velocityValue.clamp(min: -1, max: 1.0)
+        let velocityValue = velocityY * (velocityY < 0 ? 0.004 : 0.002)
+        zRotation = velocityValue.clamp(min: -1, max: 1.5)
     }
     
 }
@@ -193,8 +199,10 @@ extension NyancatNode: Touchable {
         
         isAffectedByGravity = true
         // Apply an impulse to the DY value of the physics body of the bird
-        physicsBody?.applyImpulse(CGVector(dx: 0, dy: 120))
+        physicsBody?.applyImpulse(CGVector(dx: 0, dy: 100))
     }
 }
+
+
 
 

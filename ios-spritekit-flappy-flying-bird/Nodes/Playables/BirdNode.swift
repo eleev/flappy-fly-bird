@@ -9,7 +9,7 @@
 import SpriteKit
 import UIKit
 
-class BirdNode: SKSpriteNode, Updatable {
+class BirdNode: SKSpriteNode, Updatable, Playable {
     
     // MARK: - Conformance to Updatable protocol
     

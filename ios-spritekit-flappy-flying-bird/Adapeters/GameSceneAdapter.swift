@@ -39,7 +39,9 @@ class GameSceneAdapter: NSObject, GameSceneProtocol {
     private(set) var scoreSound = SKAction.playSoundFileNamed("Coin.wav", waitForCompletion: false)
     private(set) var hitSound = SKAction.playSoundFileNamed("Hit_Hurt.wav", waitForCompletion: false)
     
-    var bird: BirdNode?
+//    var bird: BirdNode?
+    typealias PlayableCharacter = (Updatable & Touchable & Playable & SKNode)
+    var playerCharacter: PlayableCharacter?
     
     private(set) lazy var menuAudio: SKAudioNode = {
         let audioNode = SKAudioNode(fileNamed: "POL-catch-them-all-short.wav")
