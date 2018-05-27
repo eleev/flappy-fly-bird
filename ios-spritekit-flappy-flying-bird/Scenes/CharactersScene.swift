@@ -31,9 +31,17 @@ class CharactersScene: RoutingUtilityScene {
         
         playableCharacters[.nyancatAnim] = nyancatNode
         
-        
         let playableCharacter = UserDefaults.standard.playableCharacter(for: .character) ?? .bird
         select(playableCharacter: playableCharacter)
+        
+        
+        // TEST: Animated GIF Node
+        /*
+        let animatedGamecat = SKSpriteNode(withAnimatedGif: "animated-gamecat-nyan", correctAspectRatioFor: 200)
+        animatedGamecat.position = .zero
+        animatedGamecat.zPosition = 10
+        self.addChild(animatedGamecat)
+         */
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
