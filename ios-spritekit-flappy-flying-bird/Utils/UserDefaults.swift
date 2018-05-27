@@ -27,6 +27,17 @@ extension UserDefaults {
     func set(_ bool: Bool, for setting: Setting) {
         set(bool, forKey: setting.rawValue)
     }
+    
+    func playableCharacter(for setting: Setting) -> PlayableCharacter? {
+        guard let rawPlayableCharacter = self.string(forKey: setting.rawValue) else {
+            return nil
+        }
+        return PlayableCharacter(rawValue: rawPlayableCharacter)
+    }
+    
+    func set(_ playableCharacter: PlayableCharacter, for setting: Setting) {
+        set(playableCharacter.rawValue, forKey: setting.rawValue)
+    }
 }
 
 
@@ -37,6 +48,7 @@ enum Setting: String {
     case bestScore
     case lastScore
     case isSoundOn
+    case character
     
     // MARK: - Methods
     
@@ -44,7 +56,14 @@ enum Setting: String {
         UserDefaults.standard.register(defaults: [
             Setting.bestScore.rawValue: 0,
             Setting.lastScore.rawValue: 0,
-            Setting.isSoundOn.rawValue: true
+            Setting.isSoundOn.rawValue: true,
+            Setting.character.rawValue: PlayableCharacter.bird.rawValue
             ])
     }
+}
+
+
+enum PlayableCharacter: String {
+    case bird = "bird"
+    case nyancatAnim = "nyancatAnim"
 }
