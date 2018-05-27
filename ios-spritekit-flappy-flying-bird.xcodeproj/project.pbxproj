@@ -18,6 +18,13 @@
 		A92E72E6209D818B0015F647 /* PausedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92E72E5209D818B0015F647 /* PausedState.swift */; };
 		A92E72EC209D84AE0015F647 /* Pixel Digivolve.otf in Resources */ = {isa = PBXBuildFile; fileRef = A92E72EB209D84AE0015F647 /* Pixel Digivolve.otf */; };
 		A92E72EE209D87570015F647 /* ButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92E72ED209D87570015F647 /* ButtonNode.swift */; };
+		A950485820BADB7A0020ECD9 /* SKSpriteNode+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = A950485720BADB7A0020ECD9 /* SKSpriteNode+GIF.swift */; };
+		A950485A20BAE2170020ECD9 /* animated-nyan-hip.gif in Resources */ = {isa = PBXBuildFile; fileRef = A950485920BAE2170020ECD9 /* animated-nyan-hip.gif */; };
+		A950486120BAE29C0020ECD9 /* animated-gamecat-nyan.gif in Resources */ = {isa = PBXBuildFile; fileRef = A950485C20BAE29C0020ECD9 /* animated-gamecat-nyan.gif */; };
+		A950486220BAE29C0020ECD9 /* animated-nyan-squirrel.gif in Resources */ = {isa = PBXBuildFile; fileRef = A950485D20BAE29C0020ECD9 /* animated-nyan-squirrel.gif */; };
+		A950486320BAE29C0020ECD9 /* animated-nyancoin.gif in Resources */ = {isa = PBXBuildFile; fileRef = A950485E20BAE29C0020ECD9 /* animated-nyancoin.gif */; };
+		A950486420BAE29C0020ECD9 /* animated-jazz-nyan.gif in Resources */ = {isa = PBXBuildFile; fileRef = A950485F20BAE29C0020ECD9 /* animated-jazz-nyan.gif */; };
+		A950486520BAE29C0020ECD9 /* animated-lifealope-nyan.gif in Resources */ = {isa = PBXBuildFile; fileRef = A950486020BAE29C0020ECD9 /* animated-lifealope-nyan.gif */; };
 		A992D8B620A03B90003A9998 /* SceneOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = A992D8B520A03B90003A9998 /* SceneOverlay.swift */; };
 		A9A3139920B0006400B36175 /* TitleScene iPad.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9A3139820B0006400B36175 /* TitleScene iPad.sks */; };
 		A9A3139D20B0226D00B36175 /* SettingsScene iPad.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9A3139C20B0226D00B36175 /* SettingsScene iPad.sks */; };
@@ -63,6 +70,7 @@
 		A9CC5C3720A0216500040E61 /* ControlInputDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CC5C3620A0216500040E61 /* ControlInputDirection.swift */; };
 		A9CC5C3A20A02D0A00040E61 /* PauseScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9CC5C3920A02D0A00040E61 /* PauseScene.sks */; };
 		A9CC5C3D20A030A900040E61 /* FailedScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9CC5C3C20A030A900040E61 /* FailedScene.sks */; };
+		A9D0897920B97CA800BE2896 /* CharactersScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D0897820B97CA800BE2896 /* CharactersScene.swift */; };
 		A9D4CFD7209AF515006461AF /* SKScene+SpriteUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4CFD6209AF515006461AF /* SKScene+SpriteUploader.swift */; };
 		A9D4CFD9209AF53E006461AF /* SKTextureAtlas+FrameUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4CFD8209AF53E006461AF /* SKTextureAtlas+FrameUploader.swift */; };
 		A9D4CFDB209AFA06006461AF /* GameSceneProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4CFDA209AFA06006461AF /* GameSceneProtocol.swift */; };
@@ -100,6 +108,13 @@
 		A92E72E5209D818B0015F647 /* PausedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PausedState.swift; sourceTree = "<group>"; };
 		A92E72EB209D84AE0015F647 /* Pixel Digivolve.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pixel Digivolve.otf"; sourceTree = "<group>"; };
 		A92E72ED209D87570015F647 /* ButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonNode.swift; sourceTree = "<group>"; };
+		A950485720BADB7A0020ECD9 /* SKSpriteNode+GIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKSpriteNode+GIF.swift"; sourceTree = "<group>"; };
+		A950485920BAE2170020ECD9 /* animated-nyan-hip.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "animated-nyan-hip.gif"; sourceTree = "<group>"; };
+		A950485C20BAE29C0020ECD9 /* animated-gamecat-nyan.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "animated-gamecat-nyan.gif"; sourceTree = "<group>"; };
+		A950485D20BAE29C0020ECD9 /* animated-nyan-squirrel.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "animated-nyan-squirrel.gif"; sourceTree = "<group>"; };
+		A950485E20BAE29C0020ECD9 /* animated-nyancoin.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "animated-nyancoin.gif"; sourceTree = "<group>"; };
+		A950485F20BAE29C0020ECD9 /* animated-jazz-nyan.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "animated-jazz-nyan.gif"; sourceTree = "<group>"; };
+		A950486020BAE29C0020ECD9 /* animated-lifealope-nyan.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "animated-lifealope-nyan.gif"; sourceTree = "<group>"; };
 		A992D8B520A03B90003A9998 /* SceneOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneOverlay.swift; sourceTree = "<group>"; };
 		A9A3139820B0006400B36175 /* TitleScene iPad.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "TitleScene iPad.sks"; sourceTree = "<group>"; };
 		A9A3139C20B0226D00B36175 /* SettingsScene iPad.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "SettingsScene iPad.sks"; sourceTree = "<group>"; };
@@ -149,6 +164,7 @@
 		A9CC5C3620A0216500040E61 /* ControlInputDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlInputDirection.swift; sourceTree = "<group>"; };
 		A9CC5C3920A02D0A00040E61 /* PauseScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PauseScene.sks; sourceTree = "<group>"; };
 		A9CC5C3C20A030A900040E61 /* FailedScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FailedScene.sks; sourceTree = "<group>"; };
+		A9D0897820B97CA800BE2896 /* CharactersScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersScene.swift; sourceTree = "<group>"; };
 		A9D4CFD6209AF515006461AF /* SKScene+SpriteUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKScene+SpriteUploader.swift"; sourceTree = "<group>"; };
 		A9D4CFD8209AF53E006461AF /* SKTextureAtlas+FrameUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKTextureAtlas+FrameUploader.swift"; sourceTree = "<group>"; };
 		A9D4CFDA209AFA06006461AF /* GameSceneProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSceneProtocol.swift; sourceTree = "<group>"; };
@@ -218,6 +234,19 @@
 				A92E72E5209D818B0015F647 /* PausedState.swift */,
 			);
 			path = "Game States";
+			sourceTree = "<group>";
+		};
+		A950485B20BAE2500020ECD9 /* Animated Players */ = {
+			isa = PBXGroup;
+			children = (
+				A950485C20BAE29C0020ECD9 /* animated-gamecat-nyan.gif */,
+				A950485F20BAE29C0020ECD9 /* animated-jazz-nyan.gif */,
+				A950486020BAE29C0020ECD9 /* animated-lifealope-nyan.gif */,
+				A950485D20BAE29C0020ECD9 /* animated-nyan-squirrel.gif */,
+				A950485E20BAE29C0020ECD9 /* animated-nyancoin.gif */,
+				A950485920BAE2170020ECD9 /* animated-nyan-hip.gif */,
+			);
+			path = "Animated Players";
 			sourceTree = "<group>";
 		};
 		A992D8B720A0A54F003A9998 /* Sound */ = {
@@ -351,6 +380,7 @@
 		A9ACB98F2099F12000966991 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				A950485B20BAE2500020ECD9 /* Animated Players */,
 				A903943720AD9D1A00376CC3 /* Particles */,
 				A9ACB96C2099B46E00966991 /* Actions */,
 				A9CC5C3E20A0361700040E61 /* Scenes */,
@@ -368,6 +398,7 @@
 				A9ACB9222099A1F200966991 /* GameScene.swift */,
 				A9EC756320A6D3E9007C42EC /* SettingsScene.swift */,
 				A9EC756520A6D829007C42EC /* ScoresScene.swift */,
+				A9D0897820B97CA800BE2896 /* CharactersScene.swift */,
 				A992D8B520A03B90003A9998 /* SceneOverlay.swift */,
 				A9EC756720A6E479007C42EC /* RoutingUtilityScene.swift */,
 			);
@@ -399,6 +430,7 @@
 				A9D4CFD8209AF53E006461AF /* SKTextureAtlas+FrameUploader.swift */,
 				A9CC5C30209EFA0600040E61 /* SKTexture+Gradient.swift */,
 				A9E14DAE20B1764B0075D725 /* SKEmitterNode+Utils.swift */,
+				A950485720BADB7A0020ECD9 /* SKSpriteNode+GIF.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -589,11 +621,13 @@
 				A9ACB9732099B7AF00966991 /* rollover1.mp3 in Resources */,
 				A9ACB9282099A1F200966991 /* Main.storyboard in Resources */,
 				A9ACB9972099F19E00966991 /* .gitignore in Resources */,
+				A950486520BAE29C0020ECD9 /* animated-lifealope-nyan.gif in Resources */,
 				A9ACB9752099B7AF00966991 /* switch3.mp3 in Resources */,
 				A9EC755E20A6CB03007C42EC /* SettingsScene.sks in Resources */,
 				A9ACB9782099B7AF00966991 /* rollover2.mp3 in Resources */,
 				A9ACB9742099B7AF00966991 /* click1.mp3 in Resources */,
 				A9A3139920B0006400B36175 /* TitleScene iPad.sks in Resources */,
+				A950486420BAE29C0020ECD9 /* animated-jazz-nyan.gif in Resources */,
 				A9ACB91F2099A1F200966991 /* GameScene.sks in Resources */,
 				A9CA8F74209C954E004CB9D4 /* Hit_Hurt.wav in Resources */,
 				A9ACB92A2099A1F300966991 /* Assets.xcassets in Resources */,
@@ -606,15 +640,19 @@
 				A9B14F1820A57575005221BA /* PrePlayScene.sks in Resources */,
 				A9ACB92D2099A1F300966991 /* LaunchScreen.storyboard in Resources */,
 				A9B14F1C20A5796E005221BA /* clock-final-tick.mp3 in Resources */,
+				A950486120BAE29C0020ECD9 /* animated-gamecat-nyan.gif in Resources */,
 				A9CA8F72209C9549004CB9D4 /* POL-catch-them-all-short.wav in Resources */,
 				A9A313A120B0239100B36175 /* GameScene iPad.sks in Resources */,
 				A9EC756020A6D0F1007C42EC /* ScoreScene.sks in Resources */,
 				A9A3139D20B0226D00B36175 /* SettingsScene iPad.sks in Resources */,
+				A950486320BAE29C0020ECD9 /* animated-nyancoin.gif in Resources */,
 				A92E72EC209D84AE0015F647 /* Pixel Digivolve.otf in Resources */,
 				A9A313A520B026E000B36175 /* FailedScene iPad.sks in Resources */,
 				A9B14F1B20A5796E005221BA /* clock-tick.mp3 in Resources */,
+				A950486220BAE29C0020ECD9 /* animated-nyan-squirrel.gif in Resources */,
 				A9A3139F20B022B100B36175 /* ScoreScene iPad.sks in Resources */,
 				A9ACB9762099B7AF00966991 /* click2.mp3 in Resources */,
+				A950485A20BAE2170020ECD9 /* animated-nyan-hip.gif in Resources */,
 				A9CA8F6F209C9233004CB9D4 /* POL-flight-master-short.wav in Resources */,
 				A903943B20AD9E7900376CC3 /* Particles.xcassets in Resources */,
 				A9B14F1F20A588BB005221BA /* TouchToFlyScene.sks in Resources */,
@@ -666,6 +704,8 @@
 				A9D4CFE0209B4040006461AF /* PipeFactory.swift in Sources */,
 				A903943F20ADB24000376CC3 /* ToggleButtonNode.swift in Sources */,
 				A9B9C729209EE31C0045548D /* TitleScene.swift in Sources */,
+				A950485820BADB7A0020ECD9 /* SKSpriteNode+GIF.swift in Sources */,
+				A9D0897920B97CA800BE2896 /* CharactersScene.swift in Sources */,
 				A9EC756620A6D829007C42EC /* ScoresScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
