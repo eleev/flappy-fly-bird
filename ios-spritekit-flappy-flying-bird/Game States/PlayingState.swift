@@ -109,7 +109,7 @@ class PlayingState: GKState {
             }
             var size = adapter.playerSize
             size.height -= 40
-            adapter.playerCharacter = NyancatNode(size: size, parentScene: scene)
+            adapter.playerCharacter = NyancatRainbowNode(size: size, parentScene: scene)
         }
         
         guard let playableCharacter = adapter.playerCharacter else {

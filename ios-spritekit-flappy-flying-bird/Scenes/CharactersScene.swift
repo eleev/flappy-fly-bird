@@ -22,9 +22,9 @@ class CharactersScene: RoutingUtilityScene {
         
         playableCharacters[.bird] = childNode(withName: "bird") as? SKSpriteNode
         
-        let nyancatNode = childNode(withName: "nyancatAnim") as? NyancatNode
+        let nyancatNode = childNode(withName: "nyancatAnim") as? NyancatRainbowNode
         nyancatNode?.removeFromParent()
-        let newNyancatNode = NyancatNode(size: (nyancatNode?.size)!, parentScene: self)
+        let newNyancatNode = NyancatRainbowNode(size: (nyancatNode?.size)!, parentScene: self)
         newNyancatNode.position = (nyancatNode?.position)!
         newNyancatNode.isAffectedByGravity = false
         self.addChild(newNyancatNode)

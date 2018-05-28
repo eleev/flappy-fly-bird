@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class NyancatNode: SKSpriteNode, Updatable, Playable {
+class NyancatRainbowNode: SKSpriteNode, Updatable, Playable {
     
     // MARK: - Conformance to Updatable protocol
     
@@ -189,7 +189,7 @@ class NyancatNode: SKSpriteNode, Updatable, Playable {
 }
 
 
-extension NyancatNode: Touchable {
+extension NyancatRainbowNode: Touchable {
     // MARK: - Conformance to Touchable protocol
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

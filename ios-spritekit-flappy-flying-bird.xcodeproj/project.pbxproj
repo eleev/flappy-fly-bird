@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A90292E020B1909A0043C9B2 /* NyancatNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90292DF20B1909A0043C9B2 /* NyancatNode.swift */; };
+		A90292E020B1909A0043C9B2 /* NyancatRainbowNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90292DF20B1909A0043C9B2 /* NyancatRainbowNode.swift */; };
 		A903943420AD94F000376CC3 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A903943320AD94F000376CC3 /* UserDefaults.swift */; };
 		A903943620AD9D1200376CC3 /* SnowParticleEffect.sks in Resources */ = {isa = PBXBuildFile; fileRef = A903943520AD9D1200376CC3 /* SnowParticleEffect.sks */; };
 		A903943A20AD9E7900376CC3 /* RainParticleEffect.sks in Resources */ = {isa = PBXBuildFile; fileRef = A903943820AD9E7900376CC3 /* RainParticleEffect.sks */; };
@@ -97,7 +97,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A90292DF20B1909A0043C9B2 /* NyancatNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NyancatNode.swift; sourceTree = "<group>"; };
+		A90292DF20B1909A0043C9B2 /* NyancatRainbowNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NyancatRainbowNode.swift; sourceTree = "<group>"; };
 		A903943320AD94F000376CC3 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		A903943520AD9D1200376CC3 /* SnowParticleEffect.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SnowParticleEffect.sks; sourceTree = "<group>"; };
 		A903943820AD9E7900376CC3 /* RainParticleEffect.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RainParticleEffect.sks; sourceTree = "<group>"; };
@@ -456,7 +456,7 @@
 			isa = PBXGroup;
 			children = (
 				A9ACB9862099E74600966991 /* BirdNode.swift */,
-				A90292DF20B1909A0043C9B2 /* NyancatNode.swift */,
+				A90292DF20B1909A0043C9B2 /* NyancatRainbowNode.swift */,
 			);
 			path = Playables;
 			sourceTree = "<group>";
@@ -697,7 +697,7 @@
 				A9ACB9992099F1D200966991 /* PhysicsCategories.swift in Sources */,
 				A9ACB91D2099A1F200966991 /* AppDelegate.swift in Sources */,
 				A92E72E2209D815B0015F647 /* PlayingState.swift in Sources */,
-				A90292E020B1909A0043C9B2 /* NyancatNode.swift in Sources */,
+				A90292E020B1909A0043C9B2 /* NyancatRainbowNode.swift in Sources */,
 				A9CC5C31209EFA0600040E61 /* SKTexture+Gradient.swift in Sources */,
 				A9EC756420A6D3E9007C42EC /* SettingsScene.swift in Sources */,
 				A903943420AD94F000376CC3 /* UserDefaults.swift in Sources */,
