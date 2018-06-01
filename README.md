@@ -9,8 +9,12 @@
 
 <img src="/resources/img-03.PNG" width="30%"> <img src="/resources/img-04.PNG" width="30%">
 
+<img src="/resources/img-05.PNG" width="30%">
+
 ## Gifs
 <img src="/resources/intro.gif" width="45%"> <img src="/resources/gameplay.gif" width="45%">
+
+<img src="/resources/characters.gif" width="45%"> <img src="/resources/cat-gameplay.gif" width="45%">
 
 
 # Caution 
@@ -26,7 +30,8 @@ There were used graphical resources such as `audio`, `music` and `images`. Those
 - Uses simple technique for `persistence` (for `Scores` and `Settings`)
 
 # Roadmap
-- [ ] New unlockable, playable characters with unique visual effects
+- [x] New playable characters 
+- [ ] Unique visual effects for playable characters
 - [ ] Achievement system: will be used to unlock new playable characters and visual effects
 - [ ] Addition of custom effects when player stars new run and the character dies
 - [ ] Custom scene transitions
