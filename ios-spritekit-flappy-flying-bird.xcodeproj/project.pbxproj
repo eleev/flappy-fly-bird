@@ -70,6 +70,7 @@
 		A9CC5C3720A0216500040E61 /* ControlInputDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CC5C3620A0216500040E61 /* ControlInputDirection.swift */; };
 		A9CC5C3A20A02D0A00040E61 /* PauseScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9CC5C3920A02D0A00040E61 /* PauseScene.sks */; };
 		A9CC5C3D20A030A900040E61 /* FailedScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9CC5C3C20A030A900040E61 /* FailedScene.sks */; };
+		A9CCA26E20BBD5B5005795BD /* NyancatNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CCA26D20BBD5B5005795BD /* NyancatNode.swift */; };
 		A9D0897920B97CA800BE2896 /* CharactersScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D0897820B97CA800BE2896 /* CharactersScene.swift */; };
 		A9D4CFD7209AF515006461AF /* SKScene+SpriteUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4CFD6209AF515006461AF /* SKScene+SpriteUploader.swift */; };
 		A9D4CFD9209AF53E006461AF /* SKTextureAtlas+FrameUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4CFD8209AF53E006461AF /* SKTextureAtlas+FrameUploader.swift */; };
@@ -164,6 +165,7 @@
 		A9CC5C3620A0216500040E61 /* ControlInputDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlInputDirection.swift; sourceTree = "<group>"; };
 		A9CC5C3920A02D0A00040E61 /* PauseScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PauseScene.sks; sourceTree = "<group>"; };
 		A9CC5C3C20A030A900040E61 /* FailedScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FailedScene.sks; sourceTree = "<group>"; };
+		A9CCA26D20BBD5B5005795BD /* NyancatNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NyancatNode.swift; sourceTree = "<group>"; };
 		A9D0897820B97CA800BE2896 /* CharactersScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersScene.swift; sourceTree = "<group>"; };
 		A9D4CFD6209AF515006461AF /* SKScene+SpriteUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKScene+SpriteUploader.swift"; sourceTree = "<group>"; };
 		A9D4CFD8209AF53E006461AF /* SKTextureAtlas+FrameUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKTextureAtlas+FrameUploader.swift"; sourceTree = "<group>"; };
@@ -457,6 +459,7 @@
 			children = (
 				A9ACB9862099E74600966991 /* BirdNode.swift */,
 				A90292DF20B1909A0043C9B2 /* NyancatRainbowNode.swift */,
+				A9CCA26D20BBD5B5005795BD /* NyancatNode.swift */,
 			);
 			path = Playables;
 			sourceTree = "<group>";
@@ -682,6 +685,7 @@
 				A9ACB9232099A1F200966991 /* GameScene.swift in Sources */,
 				A9ACB98D2099F0FC00966991 /* Touchable.swift in Sources */,
 				A9D4CFDD209B3A50006461AF /* PipeNode.swift in Sources */,
+				A9CCA26E20BBD5B5005795BD /* NyancatNode.swift in Sources */,
 				A9CC5C3720A0216500040E61 /* ControlInputDirection.swift in Sources */,
 				A9D4CFDB209AFA06006461AF /* GameSceneProtocol.swift in Sources */,
 				A9ACB98B2099F0D300966991 /* Updatable.swift in Sources */,
