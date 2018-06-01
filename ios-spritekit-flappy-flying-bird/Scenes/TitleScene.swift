@@ -14,7 +14,9 @@ class TitleScene: RoutingUtilityScene {
     
     override func didMove(to view: SKView) {
         super.didMove(to: view)
-    
+        
+        loadSelectedPlayer()
+        
         let isSoundOn = UserDefaults.standard.bool(for: .isSoundOn)
         
         if !isSoundOn {
@@ -23,5 +25,38 @@ class TitleScene: RoutingUtilityScene {
             audioNode?.removeAllActions()
             audioNode?.removeFromParent()
         }
+    }
+    
+    // MARK: - Private methods
+    
+    private func loadSelectedPlayer() {
+        guard let targetNode = childNode(withName: "Animated Bird") else {
+            return
+        }
+        
+        let playableCharacter = UserDefaults.standard.playableCharacter(for: .character) ?? .bird
+        
+        let assetName = playableCharacter.getAssetName()
+        let playerSize = CGSize(width: 200, height: 200)
+        
+        switch playableCharacter {
+        case .bird:
+            let birdNode = BirdNode(animationTimeInterval: 0.1, withTextureAtlas: assetName, size: playerSize)
+            birdNode.isAffectedByGravity = false
+            birdNode.position = targetNode.position
+            birdNode.zPosition = targetNode.zPosition
+            scene?.addChild(birdNode)
+        case .coinCat, .gamecat, .hipCat, .jazzCat, .lifelopeCat:
+            let player = NyancatNode(animatedGif: assetName, correctAspectRatioFor: playerSize.width)
+            player.xScale = 1.0
+            player.yScale = 1.0
+            
+            player.isAffectedByGravity = false
+            player.position = targetNode.position
+            player.zPosition = targetNode.zPosition
+            scene?.addChild(player)
+        }
+        
+        targetNode.removeFromParent()
     }
 }
