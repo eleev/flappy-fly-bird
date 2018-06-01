@@ -44,9 +44,6 @@ extension SKSpriteNode {
                 return nil
             }
             
-            debugPrint("textures: " , textures)
-            debugPrint("delays: " , data.1)
-            
             let action = SKAction.repeatForever(SKAction.animate(with: textures, timePerFrame: data.1[0]))
             self.run(action)
             
@@ -111,9 +108,7 @@ extension SKSpriteNode {
         
         delay = delayObject as! Double
         
-        if delay < 0.01 {
-            delay = 0.01
-        }
+        if delay < 0.01 { delay = 0.01 }
 
         return delay
     }
