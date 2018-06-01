@@ -110,7 +110,7 @@ class BirdNode: SKSpriteNode, Updatable, Playable {
             self.physicsBody?.velocity = CGVector(dx: velocityX, dy: threshold)
         }
         
-        let velocityValue = velocityY * (velocityY < 0 ? 0.003 : 0.001)
+        let velocityValue = velocityY * (velocityY < 0 ? 0.004 : 0.002)
         zRotation = velocityValue.clamp(min: -1, max: 1.0)
     }
     
