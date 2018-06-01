@@ -26,7 +26,6 @@ class GameSceneAdapter: NSObject, GameSceneProtocol {
     let gravity: CGFloat = -5.0
     let playerSize = CGSize(width: 100, height: 100)
     let backgroundResourceName = "airadventurelevel4"//"Background-Winter"
-    let playerResourceName = "Bird Right"
     let floorDistance: CGFloat = 0
     
     let isSoundOn: Bool = {
