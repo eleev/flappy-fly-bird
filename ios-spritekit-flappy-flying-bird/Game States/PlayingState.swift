@@ -54,7 +54,7 @@ class PlayingState: GKState {
         }
         
         // Otherwise check the adapter and the bird
-        guard let scene = adapter.scene, let bird = adapter.playerCharacter else {
+        guard let scene = adapter.scene, let player = adapter.playerCharacter else {
             return
         }
         // If everything is allright then continue setting up the state
@@ -67,10 +67,11 @@ class PlayingState: GKState {
             }
         }
         
-        // Initial posiion of the Bird
-        bird.position = CGPoint(x: bird.size.width / 2 + 24, y: scene.size.height / 2)
-        bird.zPosition = 10
-        bird.shouldUpdate = true
+        // Initial posiion of the Player
+        
+        let character = UserDefaults.standard.playableCharacter(for: .character) ?? .bird
+        position(player: character, in: scene)
+        player.shouldUpdate = true
     }
     
     override func willExit(to nextState: GKState) {
@@ -98,32 +99,42 @@ class PlayingState: GKState {
     
     private func preparePlayer(for scene: SKScene) {
         let character = UserDefaults.standard.playableCharacter(for: .character) ?? .bird
+        let assetName = character.getAssetName()
         
         switch character {
         case .bird:
-            adapter.playerCharacter = BirdNode(animationTimeInterval: 0.1, withTextureAtlas: adapter.playerResourceName, size: adapter.playerSize)
-        case .nyancatAnim:
-//            adapter.playerCharacter = NyancatNode(size: adapter.playerSize)
-            guard let scene = adapter.scene else {
-                return
-            }
-            var size = adapter.playerSize
-            size.height -= 40
-            adapter.playerCharacter = NyancatRainbowNode(size: size, parentScene: scene)
+            adapter.playerCharacter = BirdNode(animationTimeInterval: 0.1, withTextureAtlas: assetName, size: adapter.playerSize)
+        case .coinCat, .gamecat, .hipCat, .jazzCat, .lifelopeCat:
+            let player = NyancatNode(animatedGif: assetName, correctAspectRatioFor: adapter.playerSize.width)
+            player.xScale = 0.4
+            player.yScale = 0.4
+            adapter.playerCharacter = player
         }
         
         guard let playableCharacter = adapter.playerCharacter else {
             debugPrint(#function + " could, not unwrap BirdNode, the execution will be aborted")
             return
         }
-        playableCharacter.position = CGPoint(x: playableCharacter.size.width / 2 + 50 * 2, y: scene.size.height / 2)
-        playableCharacter.zPosition = 10
-        
-        
+        position(player: character, in: scene)
         scene.addChild(playableCharacter)
         
         adapter.updatables.append(playableCharacter)
         adapter.touchables.append(playableCharacter)
+    }
+    
+    private func position(player: PlayableCharacter, in scene: SKScene) {
+        guard let playerNode = adapter.playerCharacter else {
+            return
+        }
+        
+        switch player {
+        case .bird:
+            playerNode.position = CGPoint(x: playerNode.size.width / 2 + 50, y: scene.size.height / 2)
+        case .coinCat, .gamecat, .hipCat, .jazzCat, .lifelopeCat:
+            playerNode.position = CGPoint(x: (playerNode.size.width / 2) - 20, y: scene.size.height / 2)
+        }
+        playerNode.zPosition = 10
+
     }
     
     private func launchPipeFactory(for scene: SKScene) {
