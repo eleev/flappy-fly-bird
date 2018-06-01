@@ -65,5 +65,28 @@ enum Setting: String {
 
 enum PlayableCharacter: String {
     case bird = "bird"
-    case nyancatAnim = "nyancatAnim"
+    case gamecat = "gameCat"
+    case jazzCat = "jazzCat"
+    case lifelopeCat = "lifelopeCat"
+    case coinCat = "coinCat"
+    case hipCat = "hipCat"
+}
+
+extension PlayableCharacter {
+    func getAssetName() -> String {
+        switch self {
+        case .bird:
+            return "Bird Right"
+        case .coinCat:
+            return "animated-nyancoin"
+        case .gamecat:
+            return "animated-gamecat-nyan"
+        case .hipCat:
+            return "animated-nyan-hip"
+        case .jazzCat:
+            return "animated-jazz-nyan"
+        case .lifelopeCat:
+            return "animated-lifealope-nyan"
+        }
+    }
 }
