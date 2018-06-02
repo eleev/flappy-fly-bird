@@ -90,6 +90,8 @@ class RoutingUtilityScene: SKScene, ButtonNodeResponderType {
         }
         
         presentationScene.scaleMode = sceneScaleMode
+        unwrappedTransition.pausesIncomingScene = false
+        unwrappedTransition.pausesOutgoingScene = false
         self.view?.presentScene(presentationScene, transition: unwrappedTransition)
         debugPrint("presented CharactersScene instance")
     }

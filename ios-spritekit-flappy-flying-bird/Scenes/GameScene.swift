@@ -126,7 +126,10 @@ extension GameScene: ButtonNodeResponderType {
                 return
             }
             gameScene.scaleMode = RoutingUtilityScene.sceneScaleMode
-            self.view?.presentScene(gameScene, transition: SKTransition.fade(withDuration: 1.0))
+            let transition = SKTransition.fade(withDuration: 1.0)
+            transition.pausesIncomingScene = false
+            transition.pausesOutgoingScene = false
+            self.view?.presentScene(gameScene, transition: transition)
         case .retry:
             // Reset and enter PlayingState
             sceneAdapeter?.stateMahcine?.enter(PlayingState.self)
