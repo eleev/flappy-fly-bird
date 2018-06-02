@@ -28,7 +28,11 @@ class PlayingState: GKState {
             return
         }
         preparePlayer(for: scene)
-        launchPipeFactory(for: scene)
+        
+        if let scene = adapter.scene, let target = adapter.infiniteBackgroundNode {
+            infinitePipeProducer = PipeFactory.launch(for: scene, targetNode: target)
+        }
+        
         adapter.advanceSnowEmitter(for: 15)
     }
     
@@ -136,62 +140,5 @@ class PlayingState: GKState {
         playerNode.zPosition = 10
 
     }
-    
-    private func launchPipeFactory(for scene: SKScene) {
-        
-        let topPipeName = "top-pipe"
-        let bottomPipeName = "bottom-pipe"
-        let thresholdPipeName = "threshold-pipe"
-        
-        let cleanUpBottomPipeAction = SKAction.run { [weak self] in
-            self?.adapter.infiniteBackgroundNode?.childNode(withName: bottomPipeName)?.removeFromParent()
-            
-        }
-        let cleanUpTopPipeAction = SKAction.run { [weak self] in
-            self?.adapter.infiniteBackgroundNode?.childNode(withName: topPipeName)?.removeFromParent()
-        }
-        let cleanUpThresholdPipeAction = SKAction.run { [weak self] in
-            self?.adapter.infiniteBackgroundNode?.childNode(withName: thresholdPipeName)?.removeFromParent()
-        }
-        
-        let waitAction = SKAction.wait(forDuration: 3.0)
-        
-        let pipeMoveDuration: TimeInterval = 4.5
-        
-        let producePipeAction = SKAction.run { [weak self] in
-            
-            guard let pipes = PipeFactory.produce(sceneSize: scene.size) else {
-                return
-            }
-            let scrollingNode = self?.adapter.infiniteBackgroundNode
-            pipes.bottom.name = bottomPipeName
-            pipes.top.name = topPipeName
-            pipes.threshold.name = thresholdPipeName
-            
-            scrollingNode?.addChild(pipes.top)
-            scrollingNode?.addChild(pipes.bottom)
-            scrollingNode?.addChild(pipes.threshold)
-            
-            // Construct move actions for pipes
-            let bottom = pipes.bottom
-            let top = pipes.top
-            let threshold = pipes.threshold
-            
-            let pipeBottomMoveAction = SKAction.move(to: CGPoint(x: -bottom.size.width, y: bottom.position.y), duration: pipeMoveDuration)
-            let pipeTopMoveAction = SKAction.move(to: CGPoint(x: -top.size.width, y: top.position.y), duration: pipeMoveDuration)
-            let pipeThresholdMoveAction = SKAction.move(to: CGPoint(x: -threshold.size.width, y: threshold.position.y), duration: pipeMoveDuration - 0.4)
-            
-            let pipeBottomMoveSequence = SKAction.sequence([pipeBottomMoveAction, cleanUpBottomPipeAction])
-            let pipeTopMoveSequence = SKAction.sequence([pipeTopMoveAction, cleanUpTopPipeAction])
-            let pipeThresholdMoveSequence = SKAction.sequence([pipeThresholdMoveAction, cleanUpThresholdPipeAction])
-            
-            bottom.run(pipeBottomMoveSequence)
-            top.run(pipeTopMoveSequence)
-            threshold.run(pipeThresholdMoveSequence)
-        }
-        
-        let sequenceAction = SKAction.sequence([waitAction, producePipeAction])
-        infinitePipeProducer = SKAction.repeatForever(sequenceAction)
-    }
+   
 }
-

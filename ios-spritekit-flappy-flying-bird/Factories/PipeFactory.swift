@@ -10,9 +10,57 @@ import SpriteKit
 
 struct PipeFactory {
 
+    // MARK: - Typealiases
+    
+    typealias PipeParts = (top: PipeNode, bottom: PipeNode, threshold: SKSpriteNode)
+    
     // MARK: - Factory Methods
     
-    static func produce(sceneSize: CGSize) -> (top: PipeNode, bottom: PipeNode, threshold: SKSpriteNode)? {
+    static func launch(for scene: SKScene, targetNode: SKNode) -> SKAction {
+        let pipeName = "pipe"
+        
+        let cleanUpAction = SKAction.run {
+            targetNode.childNode(withName: pipeName)?.removeFromParent()
+        }
+        let waitAction = SKAction.wait(forDuration: 3.0)
+        
+        let pipeMoveDuration: TimeInterval = 4.0
+        
+        let producePipeAction = SKAction.run {
+            guard let pipe = PipeFactory.produceStandardPipe(sceneSize: scene.size) else {
+                return
+            }
+            pipe.name = pipeName
+            targetNode.addChild(pipe)
+            
+            let moveAction = SKAction.move(to: CGPoint(x: -(pipe.size.width + scene.size.width), y: pipe.position.y), duration: pipeMoveDuration)
+            let sequence = SKAction.sequence([moveAction, cleanUpAction])
+            pipe.run(sequence)
+        }
+        
+        let sequce = SKAction.sequence([waitAction, producePipeAction])
+        return SKAction.repeatForever(sequce)
+    }
+    
+    
+    static func produceStandardPipe(sceneSize: CGSize) -> SKSpriteNode? {
+        guard let pipeParts = PipeFactory.standardPipeParts(for: sceneSize) else {
+            debugPrint(#function + " could not unwrap PipeParts type since it's nil")
+            return nil
+        }
+        
+        let pipeNode = SKSpriteNode(texture: nil, color: .clear, size: pipeParts.top.size)
+        pipeNode.addChild(pipeParts.top)
+        pipeNode.addChild(pipeParts.threshold)
+        pipeNode.addChild(pipeParts.bottom)
+        
+        return pipeNode
+    }
+    
+    
+    // MARK: - Pipe parts production
+    
+    private static func standardPipeParts(for sceneSize: CGSize) -> PipeParts? {
         
         let pipeWidth: CGFloat = 100
         let pipeX: CGFloat = sceneSize.width
@@ -48,7 +96,7 @@ struct PipeFactory {
             return nil
         }
         
-        return (top: unwrappedPipeTop, bottom: unwrappedPipeBottom, threshold: threshold)
+        return PipeParts(top: unwrappedPipeTop, bottom: unwrappedPipeBottom, threshold: threshold)
     }
-    
+
 }
