@@ -18,6 +18,11 @@
 		A92E72E6209D818B0015F647 /* PausedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92E72E5209D818B0015F647 /* PausedState.swift */; };
 		A92E72EC209D84AE0015F647 /* Pixel Digivolve.otf in Resources */ = {isa = PBXBuildFile; fileRef = A92E72EB209D84AE0015F647 /* Pixel Digivolve.otf */; };
 		A92E72EE209D87570015F647 /* ButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92E72ED209D87570015F647 /* ButtonNode.swift */; };
+		A935954420C2773F000FF0FA /* SKScene+ShaderTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A935954320C2773F000FF0FA /* SKScene+ShaderTransition.swift */; };
+		A935954B20C27B81000FF0FA /* retro_transition_fade_from_centre.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A935954720C27B80000FF0FA /* retro_transition_fade_from_centre.fsh */; };
+		A935954C20C27B81000FF0FA /* retro_transition_fade_from_top_left.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A935954820C27B81000FF0FA /* retro_transition_fade_from_top_left.fsh */; };
+		A935954D20C27B81000FF0FA /* retro_transition_fade_from_top.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A935954920C27B81000FF0FA /* retro_transition_fade_from_top.fsh */; };
+		A935954E20C27B81000FF0FA /* retro_transition_fade_to_centre.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A935954A20C27B81000FF0FA /* retro_transition_fade_to_centre.fsh */; };
 		A950485820BADB7A0020ECD9 /* SKSpriteNode+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = A950485720BADB7A0020ECD9 /* SKSpriteNode+GIF.swift */; };
 		A950485A20BAE2170020ECD9 /* animated-nyan-hip.gif in Resources */ = {isa = PBXBuildFile; fileRef = A950485920BAE2170020ECD9 /* animated-nyan-hip.gif */; };
 		A950486120BAE29C0020ECD9 /* animated-gamecat-nyan.gif in Resources */ = {isa = PBXBuildFile; fileRef = A950485C20BAE29C0020ECD9 /* animated-gamecat-nyan.gif */; };
@@ -109,6 +114,11 @@
 		A92E72E5209D818B0015F647 /* PausedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PausedState.swift; sourceTree = "<group>"; };
 		A92E72EB209D84AE0015F647 /* Pixel Digivolve.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pixel Digivolve.otf"; sourceTree = "<group>"; };
 		A92E72ED209D87570015F647 /* ButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonNode.swift; sourceTree = "<group>"; };
+		A935954320C2773F000FF0FA /* SKScene+ShaderTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKScene+ShaderTransition.swift"; sourceTree = "<group>"; };
+		A935954720C27B80000FF0FA /* retro_transition_fade_from_centre.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = retro_transition_fade_from_centre.fsh; sourceTree = "<group>"; };
+		A935954820C27B81000FF0FA /* retro_transition_fade_from_top_left.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = retro_transition_fade_from_top_left.fsh; sourceTree = "<group>"; };
+		A935954920C27B81000FF0FA /* retro_transition_fade_from_top.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = retro_transition_fade_from_top.fsh; sourceTree = "<group>"; };
+		A935954A20C27B81000FF0FA /* retro_transition_fade_to_centre.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = retro_transition_fade_to_centre.fsh; sourceTree = "<group>"; };
 		A950485720BADB7A0020ECD9 /* SKSpriteNode+GIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKSpriteNode+GIF.swift"; sourceTree = "<group>"; };
 		A950485920BAE2170020ECD9 /* animated-nyan-hip.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "animated-nyan-hip.gif"; sourceTree = "<group>"; };
 		A950485C20BAE29C0020ECD9 /* animated-gamecat-nyan.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "animated-gamecat-nyan.gif"; sourceTree = "<group>"; };
@@ -236,6 +246,25 @@
 				A92E72E5209D818B0015F647 /* PausedState.swift */,
 			);
 			path = "Game States";
+			sourceTree = "<group>";
+		};
+		A935954520C27B6B000FF0FA /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				A935954620C27B76000FF0FA /* Transitions */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
+		A935954620C27B76000FF0FA /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				A935954720C27B80000FF0FA /* retro_transition_fade_from_centre.fsh */,
+				A935954820C27B81000FF0FA /* retro_transition_fade_from_top_left.fsh */,
+				A935954920C27B81000FF0FA /* retro_transition_fade_from_top.fsh */,
+				A935954A20C27B81000FF0FA /* retro_transition_fade_to_centre.fsh */,
+			);
+			path = Transitions;
 			sourceTree = "<group>";
 		};
 		A950485B20BAE2500020ECD9 /* Animated Players */ = {
@@ -382,6 +411,7 @@
 		A9ACB98F2099F12000966991 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				A935954520C27B6B000FF0FA /* Shaders */,
 				A950485B20BAE2500020ECD9 /* Animated Players */,
 				A903943720AD9D1A00376CC3 /* Particles */,
 				A9ACB96C2099B46E00966991 /* Actions */,
@@ -433,6 +463,7 @@
 				A9CC5C30209EFA0600040E61 /* SKTexture+Gradient.swift */,
 				A9E14DAE20B1764B0075D725 /* SKEmitterNode+Utils.swift */,
 				A950485720BADB7A0020ECD9 /* SKSpriteNode+GIF.swift */,
+				A935954320C2773F000FF0FA /* SKScene+ShaderTransition.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -630,6 +661,7 @@
 				A9ACB9782099B7AF00966991 /* rollover2.mp3 in Resources */,
 				A9ACB9742099B7AF00966991 /* click1.mp3 in Resources */,
 				A9A3139920B0006400B36175 /* TitleScene iPad.sks in Resources */,
+				A935954D20C27B81000FF0FA /* retro_transition_fade_from_top.fsh in Resources */,
 				A950486420BAE29C0020ECD9 /* animated-jazz-nyan.gif in Resources */,
 				A9ACB91F2099A1F200966991 /* GameScene.sks in Resources */,
 				A9CA8F74209C954E004CB9D4 /* Hit_Hurt.wav in Resources */,
@@ -637,10 +669,12 @@
 				A9A313A320B0263C00B36175 /* PauseScene iPad.sks in Resources */,
 				A9EBCCAA20B9785400BB08A3 /* CharactersScene iPad.sks in Resources */,
 				A9ACB9772099B7AF00966991 /* switch2.mp3 in Resources */,
+				A935954B20C27B81000FF0FA /* retro_transition_fade_from_centre.fsh in Resources */,
 				A9CC5C3A20A02D0A00040E61 /* PauseScene.sks in Resources */,
 				A9B9C72B209EE3290045548D /* TitleScene.sks in Resources */,
 				A903943A20AD9E7900376CC3 /* RainParticleEffect.sks in Resources */,
 				A9B14F1820A57575005221BA /* PrePlayScene.sks in Resources */,
+				A935954C20C27B81000FF0FA /* retro_transition_fade_from_top_left.fsh in Resources */,
 				A9ACB92D2099A1F300966991 /* LaunchScreen.storyboard in Resources */,
 				A9B14F1C20A5796E005221BA /* clock-final-tick.mp3 in Resources */,
 				A950486120BAE29C0020ECD9 /* animated-gamecat-nyan.gif in Resources */,
@@ -652,6 +686,7 @@
 				A92E72EC209D84AE0015F647 /* Pixel Digivolve.otf in Resources */,
 				A9A313A520B026E000B36175 /* FailedScene iPad.sks in Resources */,
 				A9B14F1B20A5796E005221BA /* clock-tick.mp3 in Resources */,
+				A935954E20C27B81000FF0FA /* retro_transition_fade_to_centre.fsh in Resources */,
 				A950486220BAE29C0020ECD9 /* animated-nyan-squirrel.gif in Resources */,
 				A9A3139F20B022B100B36175 /* ScoreScene iPad.sks in Resources */,
 				A9ACB9762099B7AF00966991 /* click2.mp3 in Resources */,
@@ -702,6 +737,7 @@
 				A9ACB91D2099A1F200966991 /* AppDelegate.swift in Sources */,
 				A92E72E2209D815B0015F647 /* PlayingState.swift in Sources */,
 				A90292E020B1909A0043C9B2 /* NyancatRainbowNode.swift in Sources */,
+				A935954420C2773F000FF0FA /* SKScene+ShaderTransition.swift in Sources */,
 				A9CC5C31209EFA0600040E61 /* SKTexture+Gradient.swift in Sources */,
 				A9EC756420A6D3E9007C42EC /* SettingsScene.swift in Sources */,
 				A903943420AD94F000376CC3 /* UserDefaults.swift in Sources */,
