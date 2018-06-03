@@ -21,6 +21,8 @@
 There were used graphical resources such as `audio`, `music` and `images`. Those resources are for non commercial use. If you want to reuse the developments in your projects you **must remove all the assets**.
 
 # Features
+
+## v 1.0
 - `Infinite` side-scrolling game 
 - `Haptic feedback` on supported devides
 - Uses `state machines`
@@ -29,15 +31,19 @@ There were used graphical resources such as `audio`, `music` and `images`. Those
 - Suported both `iPhone` and `iPad`screens
 - Uses simple technique for `persistence` (for `Scores` and `Settings`)
 
+## v 1.3
+- `6` playable characters
+- `2` pipe types that make gameplay more unpredictable and enjoying
+
 # Roadmap
 - [x] New playable characters 
 - [ ] Unique visual effects for playable characters
 - [ ] Achievement system: will be used to unlock new playable characters and visual effects
-- [ ] Addition of custom effects when player stars new run and the character dies
+- [ ] Addition of custom effects when player starts new run and dies
 - [ ] Custom scene transitions
 - [ ] Game bonuses: another good example of `GameplayKit`usage
-- [ ] New pipe types
-- [ ] Level opening and bird dying animation
+- [x] New pipe types
+- [ ] Level opening animation
 
 # Author 
 [Astemir Eleev](https://github.com/jVirus)
