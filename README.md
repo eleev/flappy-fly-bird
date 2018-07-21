@@ -1,6 +1,6 @@
 # ios-spritekit-flappy-flying-bird [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
-🐦 `Flappy Fly-Bird` is a `iOS/SpriteKit` game written using the latest verion of `Swift` programming language and `GameplayKit`.
+🐦 `Flappy Fly-Bird` is an `iOS/SpriteKit` game written using the latest verion of `Swift` programming language and `GameplayKit`.
 
 # Demo 
 
