@@ -1,8 +1,17 @@
 # flappy-fly-bird [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
+[![Language](https://img.shields.io/badge/language-Swift-orange.svg)]()
+[![Framework](https://img.shields.io/badge/framework-SpriteKit-red.svg)]()
+[![Framework](https://img.shields.io/badge/framework-GameplayKit-purple.svg)]()
+[![Shaders](https://img.shields.io/badge/shaders-GLSL-green.svg)]()
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)]()
+
+**Last Update: 12/September/2018.**
+
+# ✍️ About 
 🐦 `Flappy Fly-Bird` is an `iOS/SpriteKit` game written using the latest verion of `Swift` programming language and `GameplayKit`.
 
-# Demo 
+# 📺 Demo 
 
 ## Screens
 <img src="/resources/img-01.PNG" width="30%"> <img src="/resources/img-02.PNG" width="30%">
@@ -16,11 +25,10 @@
 
 <img src="/resources/characters.gif" width="45%"> <img src="/resources/cat-gameplay.gif" width="45%">
 
-
-# Caution 
+# ☢️ Caution 
 There were used graphical resources such as `audio`, `music` and `images`. Those resources are for non commercial use. If you want to reuse the developments in your projects you **must remove all the assets**.
 
-# Features
+# 📝 Features
 
 ## v 1.0
 - `Infinite` side-scrolling game 
@@ -35,7 +43,7 @@ There were used graphical resources such as `audio`, `music` and `images`. Those
 - `6` playable characters
 - `2` pipe types that make gameplay more unpredictable and enjoying
 
-# Roadmap
+# 🗺 Roadmap
 - [x] New playable characters 
 - [ ] Unique visual effects for playable characters
 - [ ] Achievement system: will be used to unlock new playable characters and visual effects
@@ -45,8 +53,8 @@ There were used graphical resources such as `audio`, `music` and `images`. Those
 - [x] New pipe types
 - [ ] Level opening animation
 
-# Author 
+# 👨‍💻 Author 
 [Astemir Eleev](https://github.com/jVirus)
 
-# Licence
+# 🔖 Licence
 The project is availabe under the [BSD 3-Clause "New" or "Revised" License](https://github.com/jVirus/ios-spritekit-flappy-flying-bird/blob/master/LICENSE). Remember: you must not use any of the `assets` in commercial purposes.
