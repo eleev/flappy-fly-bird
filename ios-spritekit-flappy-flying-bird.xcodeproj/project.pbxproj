@@ -620,9 +620,11 @@
 				TargetAttributes = {
 					A9ACB9182099A1F200966991 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1000;
 					};
 					A9ACB9322099A1F300966991 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1000;
 						TestTargetID = A9ACB9182099A1F200966991;
 					};
 				};
@@ -919,7 +921,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.io.ios-spritekit-flappy-fly-bird";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -937,7 +939,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.io.ios-spritekit-flappy-fly-bird";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -957,7 +959,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.io.ios-spritekit-flappy-flying-birdTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios-spritekit-flappy-flying-bird.app/ios-spritekit-flappy-flying-bird";
 			};
@@ -978,7 +980,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.io.ios-spritekit-flappy-flying-birdTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios-spritekit-flappy-flying-bird.app/ios-spritekit-flappy-flying-bird";
 			};
