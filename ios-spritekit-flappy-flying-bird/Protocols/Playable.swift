@@ -12,6 +12,4 @@ import CoreGraphics
 protocol Playable: class {
     var isAffectedByGravity: Bool { get set }
     var size: CGSize { get set }
-    var position: CGPoint { get set }
-    var zPosition: CGFloat { get set }
 }
