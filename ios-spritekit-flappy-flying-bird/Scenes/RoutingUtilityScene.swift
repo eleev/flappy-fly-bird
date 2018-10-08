@@ -20,8 +20,6 @@ class RoutingUtilityScene: SKScene, ButtonNodeResponderType {
     // MARK: - Conformance to ButtonNodeResponderType
     
     func buttonTriggered(button: ButtonNode) {
-        debugPrint(#function + " button was triggered with identifier of : ", button.buttonIdentifier)
-        
         guard let identifier = button.buttonIdentifier else {
             return
         }
