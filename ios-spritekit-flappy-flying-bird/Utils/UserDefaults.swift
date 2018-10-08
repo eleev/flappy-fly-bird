@@ -38,6 +38,15 @@ extension UserDefaults {
     func set(_ playableCharacter: PlayableCharacter, for setting: Setting) {
         set(playableCharacter.rawValue, forKey: setting.rawValue)
     }
+    
+    func set(difficultyLevel level: Difficulty) {
+        set(level.rawValue, forKey: Setting.difficulty.rawValue)
+    }
+    
+    func getDifficultyLevel() -> Difficulty {
+        let value = double(forKey: Setting.difficulty.rawValue)
+        return Difficulty(rawValue: value) ?? .medium
+    }
 }
 
 
@@ -49,6 +58,7 @@ enum Setting: String {
     case lastScore
     case isSoundOn
     case character
+    case difficulty
     
     // MARK: - Methods
     
@@ -57,11 +67,17 @@ enum Setting: String {
             Setting.bestScore.rawValue: 0,
             Setting.lastScore.rawValue: 0,
             Setting.isSoundOn.rawValue: true,
-            Setting.character.rawValue: PlayableCharacter.bird.rawValue
+            Setting.character.rawValue: PlayableCharacter.bird.rawValue,
+            Setting.difficulty.rawValue: Difficulty.medium.rawValue
             ])
     }
 }
 
+enum Difficulty: Double {
+    case easy = 4.0
+    case medium = 3.5
+    case hard = 3.0
+}
 
 enum PlayableCharacter: String {
     case bird = "bird"
