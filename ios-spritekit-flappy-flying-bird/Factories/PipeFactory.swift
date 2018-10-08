@@ -35,7 +35,8 @@ struct PipeFactory {
         let cleanUpAction = SKAction.run {
             targetNode.childNode(withName: pipeName)?.removeFromParent()
         }
-        let waitAction = SKAction.wait(forDuration: 3.0)
+        
+        let waitAction = SKAction.wait(forDuration: UserDefaults.standard.getDifficultyLevel().rawValue)
         let pipeMoveDuration: TimeInterval = 4.5
 
         let producePipeAction = SKAction.run {
@@ -145,11 +146,11 @@ struct PipeFactory {
         }
         
         // Threshold node
-        let threshold = SKSpriteNode(color: .clear, size: CGSize(width: thresholdWidth, height: CGFloat.range(min: 800, max: 1100)))
+        let threshold = SKSpriteNode(color: .clear, size: CGSize(width: thresholdWidth, height: CGFloat.range(min: 700, max: 1200)))
         threshold.position = CGPoint(x: pipeX, y: (pipeBottom?.size.height)! + threshold.size.height / 2)
         
         threshold.physicsBody = SKPhysicsBody(rectangleOf: threshold.size)
-        threshold.physicsBody?.categoryBitMask =  PhysicsCategories.gap.rawValue
+        threshold.physicsBody?.categoryBitMask = PhysicsCategories.gap.rawValue
         threshold.physicsBody?.contactTestBitMask =  PhysicsCategories.player.rawValue
         threshold.physicsBody?.collisionBitMask = 0
         threshold.physicsBody?.isDynamic = false
