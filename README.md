@@ -6,7 +6,7 @@
 [![Shaders](https://img.shields.io/badge/shaders-GLSL-green.svg)]()
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)]()
 
-**Last Update: 20/September/2018.**
+**Last Update: 08/October/2018.**
 
 ![](logo-flappy_fly_bird.png)
 
@@ -45,6 +45,9 @@ There were used graphical resources such as `audio`, `music` and `images`. Those
 - `6` playable characters
 - `2` pipe types that make gameplay more unpredictable and enjoying
 
+## v 1.4
+-  Support for `Diffculty` setting
+
 # 🗺 Roadmap
 - [x] New playable characters 
 - [ ] Unique visual effects for playable characters
@@ -54,6 +57,7 @@ There were used graphical resources such as `audio`, `music` and `images`. Those
 - [ ] Game bonuses: another good example of `GameplayKit`usage
 - [x] New pipe types
 - [ ] Level opening animation
+- [x] Setting for game `Difficulty` 
 
 # 👨‍💻 Author 
 [Astemir Eleev](https://github.com/jVirus)
