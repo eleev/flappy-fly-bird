@@ -25,6 +25,7 @@
 		A935954D20C27B81000FF0FA /* retro_transition_fade_from_top.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A935954920C27B81000FF0FA /* retro_transition_fade_from_top.fsh */; };
 		A935954E20C27B81000FF0FA /* retro_transition_fade_to_centre.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A935954A20C27B81000FF0FA /* retro_transition_fade_to_centre.fsh */; };
 		A941362320C4067C007FD610 /* Bool+PipeRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A941362220C4067C007FD610 /* Bool+PipeRandom.swift */; };
+		A94A97F721A287890087C018 /* InfiniteSpriteScrollNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94A97F621A287890087C018 /* InfiniteSpriteScrollNode.swift */; };
 		A950485820BADB7A0020ECD9 /* SKSpriteNode+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = A950485720BADB7A0020ECD9 /* SKSpriteNode+GIF.swift */; };
 		A950485A20BAE2170020ECD9 /* animated-nyan-hip.gif in Resources */ = {isa = PBXBuildFile; fileRef = A950485920BAE2170020ECD9 /* animated-nyan-hip.gif */; };
 		A950486120BAE29C0020ECD9 /* animated-gamecat-nyan.gif in Resources */ = {isa = PBXBuildFile; fileRef = A950485C20BAE29C0020ECD9 /* animated-gamecat-nyan.gif */; };
@@ -54,7 +55,6 @@
 		A9ACB9762099B7AF00966991 /* click2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A9ACB9702099B7AF00966991 /* click2.mp3 */; };
 		A9ACB9772099B7AF00966991 /* switch2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A9ACB9712099B7AF00966991 /* switch2.mp3 */; };
 		A9ACB9782099B7AF00966991 /* rollover2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A9ACB9722099B7AF00966991 /* rollover2.mp3 */; };
-		A9ACB97E2099C8C400966991 /* InfiniteSpriteScrollNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ACB97D2099C8C400966991 /* InfiniteSpriteScrollNode.swift */; };
 		A9ACB9872099E74600966991 /* BirdNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ACB9862099E74600966991 /* BirdNode.swift */; };
 		A9ACB98B2099F0D300966991 /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ACB98A2099F0D300966991 /* Updatable.swift */; };
 		A9ACB98D2099F0FC00966991 /* Touchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ACB98C2099F0FC00966991 /* Touchable.swift */; };
@@ -123,6 +123,7 @@
 		A935954920C27B81000FF0FA /* retro_transition_fade_from_top.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = retro_transition_fade_from_top.fsh; sourceTree = "<group>"; };
 		A935954A20C27B81000FF0FA /* retro_transition_fade_to_centre.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = retro_transition_fade_to_centre.fsh; sourceTree = "<group>"; };
 		A941362220C4067C007FD610 /* Bool+PipeRandom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+PipeRandom.swift"; sourceTree = "<group>"; };
+		A94A97F621A287890087C018 /* InfiniteSpriteScrollNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfiniteSpriteScrollNode.swift; sourceTree = "<group>"; };
 		A950485720BADB7A0020ECD9 /* SKSpriteNode+GIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKSpriteNode+GIF.swift"; sourceTree = "<group>"; };
 		A950485920BAE2170020ECD9 /* animated-nyan-hip.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "animated-nyan-hip.gif"; sourceTree = "<group>"; };
 		A950485C20BAE29C0020ECD9 /* animated-gamecat-nyan.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "animated-gamecat-nyan.gif"; sourceTree = "<group>"; };
@@ -137,7 +138,7 @@
 		A9A313A020B0239100B36175 /* GameScene iPad.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "GameScene iPad.sks"; sourceTree = "<group>"; };
 		A9A313A220B0263C00B36175 /* PauseScene iPad.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "PauseScene iPad.sks"; sourceTree = "<group>"; };
 		A9A313A420B026E000B36175 /* FailedScene iPad.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "FailedScene iPad.sks"; sourceTree = "<group>"; };
-		A9ACB9192099A1F200966991 /* ios-spritekit-flappy-flying-bird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-spritekit-flappy-flying-bird.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9ACB9192099A1F200966991 /* flappy-fly-bird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "flappy-fly-bird.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9ACB91C2099A1F200966991 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9ACB91E2099A1F200966991 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		A9ACB9222099A1F200966991 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -146,7 +147,7 @@
 		A9ACB9292099A1F300966991 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9ACB92C2099A1F300966991 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9ACB92E2099A1F300966991 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A9ACB9332099A1F300966991 /* ios-spritekit-flappy-flying-birdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-spritekit-flappy-flying-birdTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9ACB9332099A1F300966991 /* flappy-fly-birdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "flappy-fly-birdTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9ACB9372099A1F300966991 /* ios_spritekit_flappy_flying_birdTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_spritekit_flappy_flying_birdTests.swift; sourceTree = "<group>"; };
 		A9ACB9392099A1F300966991 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9ACB96A2099B42300966991 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
@@ -156,7 +157,6 @@
 		A9ACB9702099B7AF00966991 /* click2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = click2.mp3; sourceTree = "<group>"; };
 		A9ACB9712099B7AF00966991 /* switch2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = switch2.mp3; sourceTree = "<group>"; };
 		A9ACB9722099B7AF00966991 /* rollover2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rollover2.mp3; sourceTree = "<group>"; };
-		A9ACB97D2099C8C400966991 /* InfiniteSpriteScrollNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InfiniteSpriteScrollNode.swift; path = "ios-spritekit-flappy-flying-bird/Nodes/Game Componens/InfiniteSpriteScrollNode.swift"; sourceTree = SOURCE_ROOT; };
 		A9ACB9862099E74600966991 /* BirdNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdNode.swift; sourceTree = "<group>"; };
 		A9ACB98A2099F0D300966991 /* Updatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updatable.swift; sourceTree = "<group>"; };
 		A9ACB98C2099F0FC00966991 /* Touchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Touchable.swift; sourceTree = "<group>"; };
@@ -237,7 +237,7 @@
 		A903943D20ADAB0A00376CC3 /* Game Componens */ = {
 			isa = PBXGroup;
 			children = (
-				A9ACB97D2099C8C400966991 /* InfiniteSpriteScrollNode.swift */,
+				A94A97F621A287890087C018 /* InfiniteSpriteScrollNode.swift */,
 				A9D4CFDC209B3A4F006461AF /* PipeNode.swift */,
 			);
 			path = "Game Componens";
@@ -298,8 +298,8 @@
 			isa = PBXGroup;
 			children = (
 				A9ACB9962099F19E00966991 /* .gitignore */,
-				A9ACB91B2099A1F200966991 /* ios-spritekit-flappy-flying-bird */,
-				A9ACB9362099A1F300966991 /* ios-spritekit-flappy-flying-birdTests */,
+				A9ACB91B2099A1F200966991 /* flappy-fly-bird */,
+				A9ACB9362099A1F300966991 /* flappy-fly-birdTests */,
 				A9ACB91A2099A1F200966991 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -307,13 +307,13 @@
 		A9ACB91A2099A1F200966991 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A9ACB9192099A1F200966991 /* ios-spritekit-flappy-flying-bird.app */,
-				A9ACB9332099A1F300966991 /* ios-spritekit-flappy-flying-birdTests.xctest */,
+				A9ACB9192099A1F200966991 /* flappy-fly-bird.app */,
+				A9ACB9332099A1F300966991 /* flappy-fly-birdTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A9ACB91B2099A1F200966991 /* ios-spritekit-flappy-flying-bird */ = {
+		A9ACB91B2099A1F200966991 /* flappy-fly-bird */ = {
 			isa = PBXGroup;
 			children = (
 				A9ACB91C2099A1F200966991 /* AppDelegate.swift */,
@@ -331,16 +331,16 @@
 				A9ACB9892099F0C100966991 /* Protocols */,
 				A9ACB9882099F0B600966991 /* Nodes */,
 			);
-			path = "ios-spritekit-flappy-flying-bird";
+			path = "flappy-fly-bird";
 			sourceTree = "<group>";
 		};
-		A9ACB9362099A1F300966991 /* ios-spritekit-flappy-flying-birdTests */ = {
+		A9ACB9362099A1F300966991 /* flappy-fly-birdTests */ = {
 			isa = PBXGroup;
 			children = (
 				A9ACB9372099A1F300966991 /* ios_spritekit_flappy_flying_birdTests.swift */,
 				A9ACB9392099A1F300966991 /* Info.plist */,
 			);
-			path = "ios-spritekit-flappy-flying-birdTests";
+			path = "flappy-fly-birdTests";
 			sourceTree = "<group>";
 		};
 		A9ACB9442099A47800966991 /* Fonts */ = {
@@ -576,9 +576,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A9ACB9182099A1F200966991 /* ios-spritekit-flappy-flying-bird */ = {
+		A9ACB9182099A1F200966991 /* flappy-fly-bird */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A9ACB93C2099A1F300966991 /* Build configuration list for PBXNativeTarget "ios-spritekit-flappy-flying-bird" */;
+			buildConfigurationList = A9ACB93C2099A1F300966991 /* Build configuration list for PBXNativeTarget "flappy-fly-bird" */;
 			buildPhases = (
 				A9ACB9152099A1F200966991 /* Sources */,
 				A9ACB9162099A1F200966991 /* Frameworks */,
@@ -588,14 +588,14 @@
 			);
 			dependencies = (
 			);
-			name = "ios-spritekit-flappy-flying-bird";
+			name = "flappy-fly-bird";
 			productName = "ios-spritekit-flappy-flying-bird";
-			productReference = A9ACB9192099A1F200966991 /* ios-spritekit-flappy-flying-bird.app */;
+			productReference = A9ACB9192099A1F200966991 /* flappy-fly-bird.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A9ACB9322099A1F300966991 /* ios-spritekit-flappy-flying-birdTests */ = {
+		A9ACB9322099A1F300966991 /* flappy-fly-birdTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A9ACB93F2099A1F300966991 /* Build configuration list for PBXNativeTarget "ios-spritekit-flappy-flying-birdTests" */;
+			buildConfigurationList = A9ACB93F2099A1F300966991 /* Build configuration list for PBXNativeTarget "flappy-fly-birdTests" */;
 			buildPhases = (
 				A9ACB92F2099A1F300966991 /* Sources */,
 				A9ACB9302099A1F300966991 /* Frameworks */,
@@ -606,9 +606,9 @@
 			dependencies = (
 				A9ACB9352099A1F300966991 /* PBXTargetDependency */,
 			);
-			name = "ios-spritekit-flappy-flying-birdTests";
+			name = "flappy-fly-birdTests";
 			productName = "ios-spritekit-flappy-flying-birdTests";
-			productReference = A9ACB9332099A1F300966991 /* ios-spritekit-flappy-flying-birdTests.xctest */;
+			productReference = A9ACB9332099A1F300966991 /* flappy-fly-birdTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -632,7 +632,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A9ACB9142099A1F200966991 /* Build configuration list for PBXProject "ios-spritekit-flappy-flying-bird" */;
+			buildConfigurationList = A9ACB9142099A1F200966991 /* Build configuration list for PBXProject "flappy-fly-bird" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -645,8 +645,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A9ACB9182099A1F200966991 /* ios-spritekit-flappy-flying-bird */,
-				A9ACB9322099A1F300966991 /* ios-spritekit-flappy-flying-birdTests */,
+				A9ACB9182099A1F200966991 /* flappy-fly-bird */,
+				A9ACB9322099A1F300966991 /* flappy-fly-birdTests */,
 			);
 		};
 /* End PBXProject section */
@@ -738,7 +738,7 @@
 				A9B9F83620B449EC00FC0BDA /* Playable.swift in Sources */,
 				A9ACB9872099E74600966991 /* BirdNode.swift in Sources */,
 				A9D4CFD9209AF53E006461AF /* SKTextureAtlas+FrameUploader.swift in Sources */,
-				A9ACB97E2099C8C400966991 /* InfiniteSpriteScrollNode.swift in Sources */,
+				A94A97F721A287890087C018 /* InfiniteSpriteScrollNode.swift in Sources */,
 				A9ACB99F209A0F4D00966991 /* GameSceneAdapter.swift in Sources */,
 				A92E72E4209D81820015F647 /* GameOverState.swift in Sources */,
 				A9ACB99C209A0DE100966991 /* CGFloat+MathUtils.swift in Sources */,
@@ -773,7 +773,7 @@
 /* Begin PBXTargetDependency section */
 		A9ACB9352099A1F300966991 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A9ACB9182099A1F200966991 /* ios-spritekit-flappy-flying-bird */;
+			target = A9ACB9182099A1F200966991 /* flappy-fly-bird */;
 			targetProxy = A9ACB9342099A1F300966991 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -917,13 +917,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T3K58FE38R;
-				INFOPLIST_FILE = "ios-spritekit-flappy-flying-bird/Info.plist";
+				DEVELOPMENT_TEAM = 5W8256FV33;
+				INFOPLIST_FILE = "$(SRCROOT)/flappy-fly-bird/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.io.ios-spritekit-flappy-fly-bird-";
+				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.io.flappy-fly-bird";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -935,13 +935,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T3K58FE38R;
-				INFOPLIST_FILE = "ios-spritekit-flappy-flying-bird/Info.plist";
+				DEVELOPMENT_TEAM = 5W8256FV33;
+				INFOPLIST_FILE = "$(SRCROOT)/flappy-fly-bird/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.io.ios-spritekit-flappy-fly-bird-";
+				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.io.flappy-fly-bird";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -965,7 +965,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios-spritekit-flappy-flying-bird.app/ios-spritekit-flappy-flying-bird";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/flappy-fly-bird.app/flappy-fly-bird";
 			};
 			name = Debug;
 		};
@@ -986,14 +986,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios-spritekit-flappy-flying-bird.app/ios-spritekit-flappy-flying-bird";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/flappy-fly-bird.app/flappy-fly-bird";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A9ACB9142099A1F200966991 /* Build configuration list for PBXProject "ios-spritekit-flappy-flying-bird" */ = {
+		A9ACB9142099A1F200966991 /* Build configuration list for PBXProject "flappy-fly-bird" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A9ACB93A2099A1F300966991 /* Debug */,
@@ -1002,7 +1002,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A9ACB93C2099A1F300966991 /* Build configuration list for PBXNativeTarget "ios-spritekit-flappy-flying-bird" */ = {
+		A9ACB93C2099A1F300966991 /* Build configuration list for PBXNativeTarget "flappy-fly-bird" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A9ACB93D2099A1F300966991 /* Debug */,
@@ -1011,7 +1011,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A9ACB93F2099A1F300966991 /* Build configuration list for PBXNativeTarget "ios-spritekit-flappy-flying-birdTests" */ = {
+		A9ACB93F2099A1F300966991 /* Build configuration list for PBXNativeTarget "flappy-fly-birdTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A9ACB9402099A1F300966991 /* Debug */,
