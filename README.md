@@ -6,12 +6,14 @@
 [![Shaders](https://img.shields.io/badge/shaders-GLSL-green.svg)]()
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)]()
 
-**Last Update: 08/October/2018.**
+**Last Update: 19/December/2018.**
 
 ![](logo-flappy_fly_bird.png)
 
+### If you like the project, please give it a star ⭐ It will show the creator your appreciation and help others to discover the repo.
+
 # ✍️ About 
-🐦 `Flappy Fly-Bird` is an `iOS/SpriteKit` game written using the latest verion of `Swift` programming language and `GameplayKit`.
+🐦 `Flappy Fly-Bird` is an `iOS/SpriteKit` game written using the latest verion of `Swift` programming language and `GameplayKit`. 
 
 # 📺 Demo 
 
