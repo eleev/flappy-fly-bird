@@ -6,7 +6,7 @@
 [![Shaders](https://img.shields.io/badge/shaders-GLSL-green.svg)]()
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)]()
 
-**Last Update: 19/December/2018.**
+**Last Update: 07/January/2019.**
 
 ![](logo-flappy_fly_bird.png)
 
@@ -18,16 +18,16 @@
 # 📺 Demo 
 
 ## Screens
-<img src="/resources/img-01.PNG" width="30%"> <img src="/resources/img-02.PNG" width="30%">
+<img src="/resources/img-01.PNG" width="49%"> <img src="/resources/img-02.PNG" width="49%">
 
-<img src="/resources/img-03.PNG" width="30%"> <img src="/resources/img-04.PNG" width="30%">
+<img src="/resources/img-03.PNG" width="49%"> <img src="/resources/img-04.PNG" width="49%">
 
-<img src="/resources/img-05.PNG" width="30%">
+<img src="/resources/img-05.PNG" width="49%">
 
 ## Gifs
-<img src="/resources/intro.gif" width="45%"> <img src="/resources/gameplay.gif" width="45%">
+<img src="/resources/intro.gif" width="49%"> <img src="/resources/gameplay.gif" width="49%">
 
-<img src="/resources/characters.gif" width="45%"> <img src="/resources/cat-gameplay.gif" width="45%">
+<img src="/resources/characters.gif" width="49%"> <img src="/resources/cat-gameplay.gif" width="49%">
 
 # ☢️ Caution 
 There were used graphical resources such as `audio`, `music` and `images`. Those resources are for non commercial use. If you want to reuse the developments in your projects you **must remove all the assets**.
