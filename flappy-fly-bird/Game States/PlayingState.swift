@@ -14,7 +14,11 @@ class PlayingState: GKState {
     // MARK: - Properites
     
     unowned var adapter: GameSceneAdapter
-
+    
+    private let playerScale = CGPoint(x: 0.4, y: 0.4)
+    private let snowEmitterAdvancementInSeconds: TimeInterval = 15
+    private let animationTimeInterval: TimeInterval = 0.1
+    
     private(set) var infinitePipeProducer: SKAction! = nil
     let infinitePipeProducerKey = "Pipe Action"
     
@@ -33,13 +37,20 @@ class PlayingState: GKState {
             infinitePipeProducer = PipeFactory.launch(for: scene, targetNode: target)
         }
         
-        adapter.advanceSnowEmitter(for: 15)
+        adapter.advanceSnowEmitter(for: snowEmitterAdvancementInSeconds)
     }
     
     // MARK: - Lifecycle
     
     override func didEnter(from previousState: GKState?) {
         super.didEnter(from: previousState)
+        
+        // If previous state is GameOver or nil (which is the default state, when the game is launched), we then check whether the adaper's scene is not nil and the we instantiate a new player character.
+        //
+        // Otherwise, we do nothing, since we were in the PausedState, and all we have to do is to resume the game
+//        if let scene = adapter.scene, previousState is GameOverState || previousState == nil {
+//            preparePlayer(for: scene)
+//        }
         
         // Tell the bird that it needs to be resting until the user taps on a screen
         adapter.playerCharacter?.isAffectedByGravity = false
@@ -83,10 +94,11 @@ class PlayingState: GKState {
         
         if adapter.isSoundOn {
             adapter.playingAudio.removeFromParent()
-            adapter.scene?.removeAction(forKey: infinitePipeProducerKey)
         }
 
         if nextState is GameOverState {
+            adapter.scene?.removeAction(forKey: infinitePipeProducerKey)
+
             // Clean up the pipes from the previous run
             adapter.removePipes()
 
@@ -107,11 +119,16 @@ class PlayingState: GKState {
         
         switch character {
         case .bird:
-            adapter.playerCharacter = BirdNode(animationTimeInterval: 0.1, withTextureAtlas: assetName, size: adapter.playerSize)
+            adapter.playerCharacter = BirdNode(
+                animationTimeInterval: animationTimeInterval,
+                withTextureAtlas: assetName,
+                size: adapter.playerSize)
         case .coinCat, .gamecat, .hipCat, .jazzCat, .lifelopeCat:
-            let player = NyancatNode(animatedGif: assetName, correctAspectRatioFor: adapter.playerSize.width)
-            player.xScale = 0.4
-            player.yScale = 0.4
+            let player = NyancatNode(
+                animatedGif: assetName,
+                correctAspectRatioFor: adapter.playerSize.width)
+            player.xScale = playerScale.x
+            player.yScale = playerScale.y
             adapter.playerCharacter = player
         }
         
