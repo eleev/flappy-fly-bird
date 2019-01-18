@@ -23,6 +23,8 @@ class GameSceneAdapter: NSObject, GameSceneProtocol {
     
     // MARK: - Properties
     
+    private let overlayDuration: TimeInterval = 0.25
+
     let gravity: CGFloat = -5.0
     let playerSize = CGSize(width: 100, height: 100)
     let backgroundResourceName = "airadventurelevel4"//"Background-Winter"
@@ -39,7 +41,7 @@ class GameSceneAdapter: NSObject, GameSceneProtocol {
     private(set) var hitSound = SKAction.playSoundFileNamed("Hit_Hurt.wav", waitForCompletion: false)
     
 //    var bird: BirdNode?
-    typealias PlayableCharacter = (Updatable & Touchable & Playable & SKNode)
+    typealias PlayableCharacter = (PhysicsContactable & Updatable & Touchable & Playable & SKNode)
     var playerCharacter: PlayableCharacter?
     
     private(set) lazy var menuAudio: SKAudioNode = {
@@ -74,7 +76,7 @@ class GameSceneAdapter: NSObject, GameSceneProtocol {
             buttons = []
             
             // Animate the old overlay out.
-            oldValue?.backgroundNode.run(SKAction.fadeOut(withDuration: 0.25)) {
+            oldValue?.backgroundNode.run(SKAction.fadeOut(withDuration: overlayDuration)) {
                 debugPrint(#function + " remove old overlay")
                 oldValue?.backgroundNode.removeFromParent()
             }
@@ -86,7 +88,7 @@ class GameSceneAdapter: NSObject, GameSceneProtocol {
                 
                 // Animate the overlay in.
                 overlay.backgroundNode.alpha = 1.0
-                overlay.backgroundNode.run(SKAction.fadeIn(withDuration: 0.25))
+                overlay.backgroundNode.run(SKAction.fadeIn(withDuration: overlayDuration))
                 
                 buttons = scene.findAllButtonsInScene()
             }
@@ -149,9 +151,18 @@ class GameSceneAdapter: NSObject, GameSceneProtocol {
     }
     
     func removePipes() {
-        infiniteBackgroundNode?.childNode(withName: "top-pipe")?.removeFromParent()
-        infiniteBackgroundNode?.childNode(withName: "bottom-pipe")?.removeFromParent()
-        infiniteBackgroundNode?.childNode(withName: "threshold-pipe")?.removeFromParent()
+        var nodes = [SKNode]()
+        
+        infiniteBackgroundNode?.children.forEach({ node in
+            let nodeName = node.name
+            if let doesContainNodeName = nodeName?.contains("pipe"), doesContainNodeName { nodes += [node] }
+        })
+        nodes.forEach { node in
+            node.removeAllActions()
+            node.removeAllChildren()
+            node.removeFromParent()
+        }
+        nodes.removeAll()
     }
     
     private func prepareWorld(for scene: SKScene) {
@@ -201,33 +212,33 @@ extension GameSceneAdapter: SKPhysicsContactDelegate {
         }
         
         if collision == (player | PhysicsCategories.pipe.rawValue) {
-            // game over state, the player has touched pipe
-            deadState()
-            hit()
+            // game over state, the player has touched a pipe
+            handleDeadState()
         }
         
         if collision == (player | PhysicsCategories.boundary.rawValue) {
-            // game over state, the player has touched the boundary of the world (floor)
+            // game over state, the player has touched the boundary of the world (floor or ceiling)
             // player's position needs to be set to the default one
-            deadState()
-            hit()
+            handleDeadState()
         }
-
     }
     
     // MARK: - Collision Helpers
     
-    func deadState() {
+    private func handleDeadState() {
+        debugPrint("handleDeadState")
+        deadState()
+        hit()
+    }
+    
+    private func deadState() {
         // Do not enter the same state twice
-        if stateMahcine?.currentState is GameOverState {
-            return
-        }
+        if stateMahcine?.currentState is GameOverState { return }
         stateMahcine?.enter(GameOverState.self)
     }
     
-    func hit() {
+    private func hit() {
         impact.impactOccurred()
-        if isSoundOn { scene?.run(hitSound)}
+        if isSoundOn { scene?.run(hitSound) }
     }
-
 }
