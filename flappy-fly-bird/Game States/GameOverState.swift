@@ -84,13 +84,16 @@ class GameOverState: GKState {
         
         // Only remove the overlay scene when the next state is Playing state
         if nextState is PlayingState {
-            debugPrint("GameOverSate: will exit")
             // Remove the overlay node
             levelScene.overlay = nil
             // Reveal the game scene HUD
             levelScene.isHUDHidden = false
             // Enable the interactions with the bird
             levelScene.playerCharacter?.shouldAcceptTouches = true
+            
+            // Removes the player form the scene, just right before launching the PlayingState. This is experimental, and should be removed once the current version will be validated on stability
+//            levelScene.playerCharacter?.shouldEnablePhysics = true
+//            levelScene.playerCharacter?.removeFromParent()
         }
     }
     
