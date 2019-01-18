@@ -35,8 +35,8 @@ There were used graphical resources such as `audio`, `music` and `images`. Those
 # 👻 Features
 - Supports both `iPhone` & `iPad` devices
 - Multiple, animated, selectable characters
-- Minimum deployment target `iOS 11.3`
-- `Swift 4.2` ready
+- Minimum deployment target is `iOS 11.3`
+- `Swift 4.2`
 - Uses `GameplayKit` for in-game states: `Playing`, `Deatch`, `Paused` states
 - Supports multiple `pipe` types
 - Difficulty setting
