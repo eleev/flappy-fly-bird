@@ -32,7 +32,19 @@
 # ☢️ Caution 
 There were used graphical resources such as `audio`, `music` and `images`. Those resources are for non commercial use. If you want to reuse the developments in your projects you **must remove all the assets**.
 
-# 📝 Features
+# 👻 Features
+- Supports both `iPhone` & `iPad` devices
+- Multiple, animated, selectable characters
+- Minimum deployment target `iOS 11.3`
+- `Swift 4.2` ready
+- Uses `GameplayKit` for in-game states: `Playing`, `Deatch`, `Paused` states
+- Supports multiple `pipe` types
+- Difficulty setting
+- `Tile-Based` pipes: uses the mixture of `CoreGraphics` and `SpriteKit` frameworks
+- Property list based persistence for `Scores` & `Settings`
+- Protocol-Oriented desing in mind
+
+# 📝 Changelog 
 
 ## v 1.0
 - `Infinite` side-scrolling game 
