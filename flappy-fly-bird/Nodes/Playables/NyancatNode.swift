@@ -9,9 +9,9 @@
 import SpriteKit
 import Foundation
 
-class NyancatNode: SKNode, Updatable, Playable {
+class NyancatNode: SKNode, Updatable, Playable, PhysicsContactable {
     
-    // MARK: - Conformance to Playable protocol
+    // MARK: - Conformance to Updatable, Playable & PhysicsContactable protocols
 
     var size: CGSize
     
@@ -32,7 +32,16 @@ class NyancatNode: SKNode, Updatable, Playable {
             self.isUserInteractionEnabled = shouldAcceptTouches
         }
     }
+
+    var shouldEnablePhysics: Bool = true {
+        didSet {
+            // Set the specified collision bit mask or 0 which basically disables all the collision testing
+            physicsBody?.collisionBitMask = shouldEnablePhysics ? collisionBitMask : 0
+        }
+    }
     
+    var collisionBitMask: UInt32 = PhysicsCategories.pipe.rawValue | PhysicsCategories.boundary.rawValue
+
     // MARK: - Private properties
     
     private let impact = UIImpactFeedbackGenerator(style: .medium)
@@ -64,6 +73,8 @@ class NyancatNode: SKNode, Updatable, Playable {
         preparePlayer()
     }
     
+    // MARK: - Private methods
+    
     private func preparePlayer() {
         animatedGifNode.name = self.name
         animatedGifNode.position = .zero
@@ -72,7 +83,7 @@ class NyancatNode: SKNode, Updatable, Playable {
         physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: size.width - 32, height: size.height - 32))
         physicsBody?.categoryBitMask = PhysicsCategories.player.rawValue
         physicsBody?.contactTestBitMask = PhysicsCategories.pipe.rawValue | PhysicsCategories.gap.rawValue | PhysicsCategories.boundary.rawValue
-        physicsBody?.collisionBitMask = PhysicsCategories.pipe.rawValue | PhysicsCategories.boundary.rawValue
+        physicsBody?.collisionBitMask = collisionBitMask
         
         physicsBody?.mass /= 7
         physicsBody?.allowsRotation = false

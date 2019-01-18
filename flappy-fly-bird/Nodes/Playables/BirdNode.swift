@@ -9,9 +9,9 @@
 import SpriteKit
 import UIKit
 
-class BirdNode: SKSpriteNode, Updatable, Playable {
+class BirdNode: SKSpriteNode, Updatable, Playable, PhysicsContactable {
     
-    // MARK: - Conformance to Updatable protocol
+    // MARK: - Conformance to Playable, Updatable & PhysicsContactable protocols
     
     var delta: TimeInterval = 0
     var lastUpdateTime: TimeInterval = 0
@@ -36,6 +36,15 @@ class BirdNode: SKSpriteNode, Updatable, Playable {
             self.isUserInteractionEnabled = shouldAcceptTouches
         }
     }
+    
+    var shouldEnablePhysics: Bool = true {
+        didSet {
+            // Set the specified collision bit mask or 0 which basically disables all the collision testing
+            physicsBody?.collisionBitMask = shouldEnablePhysics ? collisionBitMask : 0
+        }
+    }
+    
+    var collisionBitMask: UInt32 = PhysicsCategories.pipe.rawValue | PhysicsCategories.boundary.rawValue
     
     // MARK: - Properties
     
