@@ -13,7 +13,7 @@ class RoutingUtilityScene: SKScene, ButtonNodeResponderType {
     // MARK: - Properties
     
     let selection = UISelectionFeedbackGenerator()
-    static let sceneScaleMode: SKSceneScaleMode = .aspectFit
+    static let sceneScaleMode: SKSceneScaleMode = .aspectFill
     private static var lastPushTransitionDirection: SKTransitionDirection?
     
     
