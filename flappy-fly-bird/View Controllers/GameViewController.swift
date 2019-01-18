@@ -40,7 +40,7 @@ extension NodeScale {
         
         switch self {
         case .gameBackgroundScale:
-            return isPad ? 1.5 : 1.25
+            return isPad ? 1.5 : 1.35
         }
     }
 }
@@ -66,7 +66,8 @@ class GameViewController: UIViewController {
         if let scene = SKScene(fileNamed: sceneName) as? TitleScene {
 
             // Set the scale mode to scale to fit the window
-            scene.scaleMode = .aspectFit
+//            scene.scaleMode = .aspectFit
+            scene.scaleMode = .aspectFill
             
             // Present the scene
             if let view = self.view as! SKView? {
