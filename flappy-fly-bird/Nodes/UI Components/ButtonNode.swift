@@ -234,7 +234,7 @@ class ButtonNode: SKSpriteNode {
     
     /// Determine if any of the touches are within the `ButtonNode`.
     private func containsTouches(touches: Set<UITouch>) -> Bool {
-        guard let scene = scene else { fatalError("Button must be used within a scene.") }
+        guard let scene = scene else { return false }
         
         return touches.contains { touch in
             let touchPoint = touch.location(in: scene)
@@ -264,7 +264,7 @@ class ButtonNode: SKSpriteNode {
     
     /// Determine if the event location is within the `ButtonNode`.
     private func containsLocationForEvent(_ event: NSEvent) -> Bool {
-        guard let scene = scene else { fatalError("Button must be used within a scene.")  }
+        guard let scene = scene else { return false }
         
         let location = event.location(in: scene)
         let clickedNode = scene.atPoint(location)
