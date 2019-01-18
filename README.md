@@ -6,7 +6,7 @@
 [![Shaders](https://img.shields.io/badge/shaders-GLSL-green.svg)]()
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)]()
 
-**Last Update: 07/January/2019.**
+**Last Update: 18/January/2019.**
 
 ![](logo-flappy_fly_bird.png)
 
@@ -49,6 +49,10 @@ There were used graphical resources such as `audio`, `music` and `images`. Those
 
 ## v 1.4
 -  Support for `Diffculty` setting
+
+## v 1.4.5
+- Fixed issue that caused the player node to stuck after the death. The issue was caused by multiple death hander calls and jumbing between `Playing` and `Death` states, where some time-dependent actions were run at the same time
+- Added full support for `iPhone` `X`, `Xs`, `Xs Max`
 
 # 🗺 Roadmap
 - [x] New playable characters 
