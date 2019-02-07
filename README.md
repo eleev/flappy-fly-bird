@@ -25,11 +25,8 @@ Please wait while the `.gif` files are loading...
 <img src="/resources/characters.gif" width="49%"> <img src="/resources/cat-gameplay.gif" width="49%">
 
 ## Screens
-<img src="/resources/img-01.PNG" width="49%"> <img src="/resources/img-02.PNG" width="49%">
+<img src="/resources/img-01.PNG" width="49%"> <img src="/resources/img-05.PNG" width="49%">
 
-<img src="/resources/img-03.PNG" width="49%"> <img src="/resources/img-04.PNG" width="49%">
-
-<img src="/resources/img-05.PNG" width="49%">
 
 # ☢️ Caution 
 There were used graphical resources such as `audio`, `music` and `images`. Those resources are for non commercial use. If you want to reuse the developments in your projects you **must remove all the assets**.
