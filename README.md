@@ -6,7 +6,7 @@
 [![Shaders](https://img.shields.io/badge/shaders-GLSL-green.svg)]()
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)]()
 
-**Last Update: 07/February/2019.**
+**Last Update: 20/February/2019.**
 
 ![](logo-flappy_fly_bird.png)
 
@@ -20,9 +20,7 @@
 ## Gifs
 Please wait while the `.gif` files are loading...
 
-<img src="/resources/intro.gif" width="49%"> <img src="/resources/gameplay.gif" width="49%">
-
-<img src="/resources/characters.gif" width="49%"> <img src="/resources/cat-gameplay.gif" width="49%">
+<img src="/resources/intro.gif" width="24.5%"> <img src="/resources/gameplay.gif" width="24.5%"> <img src="/resources/characters.gif" width="24.5%"> <img src="/resources/cat-gameplay.gif" width="24.5%">
 
 ## Screens
 <img src="/resources/img-01.PNG" width="49%"> <img src="/resources/img-05.PNG" width="49%">
