@@ -71,6 +71,8 @@ class RoutingUtilityScene: SKScene, ButtonNodeResponderType {
                     pushDirection = .right
                 case .right:
                     pushDirection = .left
+                @unknown default:
+                    fatalError("Unknown case was deteced in .menu case in buttonTriggered method. Please, make sure that all the cases are properly handled.")
                 }
                 RoutingUtilityScene.lastPushTransitionDirection = pushDirection
             }

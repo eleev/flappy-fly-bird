@@ -48,7 +48,6 @@
 		A9ACB9282099A1F200966991 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9ACB9262099A1F200966991 /* Main.storyboard */; };
 		A9ACB92A2099A1F300966991 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9ACB9292099A1F300966991 /* Assets.xcassets */; };
 		A9ACB92D2099A1F300966991 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9ACB92B2099A1F300966991 /* LaunchScreen.storyboard */; };
-		A9ACB9382099A1F300966991 /* ios_spritekit_flappy_flying_birdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ACB9372099A1F300966991 /* ios_spritekit_flappy_flying_birdTests.swift */; };
 		A9ACB96B2099B42300966991 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9ACB96A2099B42300966991 /* Actions.sks */; };
 		A9ACB9732099B7AF00966991 /* rollover1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A9ACB96D2099B7AE00966991 /* rollover1.mp3 */; };
 		A9ACB9742099B7AF00966991 /* click1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A9ACB96E2099B7AF00966991 /* click1.mp3 */; };
@@ -95,16 +94,6 @@
 		A9EC756820A6E479007C42EC /* RoutingUtilityScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EC756720A6E479007C42EC /* RoutingUtilityScene.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		A9ACB9342099A1F300966991 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A9ACB9112099A1F200966991 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A9ACB9182099A1F200966991;
-			remoteInfo = "ios-spritekit-flappy-flying-bird";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		A90192FA21F1BDF40020C612 /* PhysicsContactable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsContactable.swift; sourceTree = "<group>"; };
 		A90292DF20B1909A0043C9B2 /* NyancatRainbowNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NyancatRainbowNode.swift; sourceTree = "<group>"; };
@@ -149,9 +138,6 @@
 		A9ACB9292099A1F300966991 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9ACB92C2099A1F300966991 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9ACB92E2099A1F300966991 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A9ACB9332099A1F300966991 /* flappy-fly-birdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "flappy-fly-birdTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A9ACB9372099A1F300966991 /* ios_spritekit_flappy_flying_birdTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_spritekit_flappy_flying_birdTests.swift; sourceTree = "<group>"; };
-		A9ACB9392099A1F300966991 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9ACB96A2099B42300966991 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		A9ACB96D2099B7AE00966991 /* rollover1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rollover1.mp3; sourceTree = "<group>"; };
 		A9ACB96E2099B7AF00966991 /* click1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = click1.mp3; sourceTree = "<group>"; };
@@ -200,13 +186,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		A9ACB9162099A1F200966991 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A9ACB9302099A1F300966991 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -301,7 +280,6 @@
 			children = (
 				A9ACB9962099F19E00966991 /* .gitignore */,
 				A9ACB91B2099A1F200966991 /* flappy-fly-bird */,
-				A9ACB9362099A1F300966991 /* flappy-fly-birdTests */,
 				A9ACB91A2099A1F200966991 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -310,7 +288,6 @@
 			isa = PBXGroup;
 			children = (
 				A9ACB9192099A1F200966991 /* flappy-fly-bird.app */,
-				A9ACB9332099A1F300966991 /* flappy-fly-birdTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -334,15 +311,6 @@
 				A9ACB9882099F0B600966991 /* Nodes */,
 			);
 			path = "flappy-fly-bird";
-			sourceTree = "<group>";
-		};
-		A9ACB9362099A1F300966991 /* flappy-fly-birdTests */ = {
-			isa = PBXGroup;
-			children = (
-				A9ACB9372099A1F300966991 /* ios_spritekit_flappy_flying_birdTests.swift */,
-				A9ACB9392099A1F300966991 /* Info.plist */,
-			);
-			path = "flappy-fly-birdTests";
 			sourceTree = "<group>";
 		};
 		A9ACB9442099A47800966991 /* Fonts */ = {
@@ -596,24 +564,6 @@
 			productReference = A9ACB9192099A1F200966991 /* flappy-fly-bird.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A9ACB9322099A1F300966991 /* flappy-fly-birdTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A9ACB93F2099A1F300966991 /* Build configuration list for PBXNativeTarget "flappy-fly-birdTests" */;
-			buildPhases = (
-				A9ACB92F2099A1F300966991 /* Sources */,
-				A9ACB9302099A1F300966991 /* Frameworks */,
-				A9ACB9312099A1F300966991 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A9ACB9352099A1F300966991 /* PBXTargetDependency */,
-			);
-			name = "flappy-fly-birdTests";
-			productName = "ios-spritekit-flappy-flying-birdTests";
-			productReference = A9ACB9332099A1F300966991 /* flappy-fly-birdTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -626,12 +576,7 @@
 				TargetAttributes = {
 					A9ACB9182099A1F200966991 = {
 						CreatedOnToolsVersion = 9.3;
-						LastSwiftMigration = 1000;
-					};
-					A9ACB9322099A1F300966991 = {
-						CreatedOnToolsVersion = 9.3;
-						LastSwiftMigration = 1000;
-						TestTargetID = A9ACB9182099A1F200966991;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -649,7 +594,6 @@
 			projectRoot = "";
 			targets = (
 				A9ACB9182099A1F200966991 /* flappy-fly-bird */,
-				A9ACB9322099A1F300966991 /* flappy-fly-birdTests */,
 			);
 		};
 /* End PBXProject section */
@@ -709,13 +653,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A9ACB9312099A1F300966991 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -764,23 +701,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A9ACB92F2099A1F300966991 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A9ACB9382099A1F300966991 /* ios_spritekit_flappy_flying_birdTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		A9ACB9352099A1F300966991 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A9ACB9182099A1F200966991 /* flappy-fly-bird */;
-			targetProxy = A9ACB9342099A1F300966991 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A9ACB9262099A1F200966991 /* Main.storyboard */ = {
@@ -929,7 +850,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.io.flappy-fly-bird";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -947,50 +868,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.io.flappy-fly-bird";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		A9ACB9402099A1F300966991 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T3K58FE38R;
-				INFOPLIST_FILE = "ios-spritekit-flappy-flying-birdTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.io.ios-spritekit-flappy-flying-birdTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/flappy-fly-bird.app/flappy-fly-bird";
-			};
-			name = Debug;
-		};
-		A9ACB9412099A1F300966991 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T3K58FE38R;
-				INFOPLIST_FILE = "ios-spritekit-flappy-flying-birdTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.io.ios-spritekit-flappy-flying-birdTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/flappy-fly-bird.app/flappy-fly-bird";
 			};
 			name = Release;
 		};
@@ -1011,15 +890,6 @@
 			buildConfigurations = (
 				A9ACB93D2099A1F300966991 /* Debug */,
 				A9ACB93E2099A1F300966991 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A9ACB93F2099A1F300966991 /* Build configuration list for PBXNativeTarget "flappy-fly-birdTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A9ACB9402099A1F300966991 /* Debug */,
-				A9ACB9412099A1F300966991 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
