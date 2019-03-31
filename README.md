@@ -1,12 +1,12 @@
 # flappy-fly-bird [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
-[![Language](https://img.shields.io/badge/language-Swift-orange.svg)]()
+[![Language](https://img.shields.io/badge/language-Swift_5.0****-orange.svg)]()
 [![Framework](https://img.shields.io/badge/framework-SpriteKit-red.svg)]()
 [![Framework](https://img.shields.io/badge/framework-GameplayKit-purple.svg)]()
 [![Shaders](https://img.shields.io/badge/shaders-GLSL-green.svg)]()
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)]()
 
-**Last Update: 20/February/2019.**
+**Last Update: 31/March/2019.**
 
 ![](logo-flappy_fly_bird.png)
 
@@ -33,7 +33,7 @@ There were used graphical resources such as `audio`, `music` and `images`. Those
 - Supports both `iPhone` & `iPad` devices
 - Multiple, animated, selectable characters
 - Minimum deployment target is `iOS 11.3`
-- `Swift 4.2`
+- `Swift 5.0`
 - Uses `GameplayKit` for in-game states: `Playing`, `Deatch`, `Paused` states
 - Supports multiple `pipe` types
 - Difficulty setting
@@ -62,6 +62,10 @@ There were used graphical resources such as `audio`, `music` and `images`. Those
 ## v 1.4.5
 - Fixed issue that caused the player node to stuck after the death. The issue was caused by multiple death hander calls and jumbing between `Playing` and `Death` states, where some time-dependent actions were run at the same time
 - Added full support for `iPhone` `X`, `Xs`, `Xs Max`
+
+## v 1.4.6
+- Migration to `Swift 5.0`
+- Minor changes
 
 # 🗺 Roadmap
 - [x] New playable characters 
