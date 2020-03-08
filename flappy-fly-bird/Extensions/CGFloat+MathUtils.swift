@@ -29,7 +29,6 @@ extension CGFloat {
     }
     
     static func range(min: CGFloat, max: CGFloat) -> CGFloat {
-        return CGFloat(Float(arc4random()) / 0xFFFFFFFF) * (max - min) + min
+        CGFloat.random(in: min...max)
     }
-    
 }
