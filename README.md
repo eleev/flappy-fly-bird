@@ -57,7 +57,7 @@ There were used graphical resources such as `audio`, `music` and `images`. Those
 - `2` pipe types that make gameplay more unpredictable and enjoying
 
 ## v 1.4
--  Support for `Diffculty` setting
+-  Support for `Difficulty` setting
 
 ## v 1.4.5
 - Fixed issue that caused the player node to stuck after the death. The issue was caused by multiple death hander calls and jumbing between `Playing` and `Death` states, where some time-dependent actions were run at the same time
