@@ -6,7 +6,7 @@
 [![Shaders](https://img.shields.io/badge/Shaders-GLSL-green.svg)]()
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)]()
 
-**Last Update: 08/March/2020.**
+**Last Update: 22/June/2020.**
 
 ![](logo-flappy_fly_bird.png)
 
