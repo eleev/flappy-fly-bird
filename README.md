@@ -1,12 +1,12 @@
 # flappy-fly-bird [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
-[![Language](https://img.shields.io/badge/Language-Swift_5.1-orange.svg)]()
+[![Language](https://img.shields.io/badge/Language-Swift_5.3-orange.svg)]()
 [![Framework](https://img.shields.io/badge/Framework-SpriteKit-red.svg)]()
 [![Framework](https://img.shields.io/badge/Framework-GameplayKit-purple.svg)]()
 [![Shaders](https://img.shields.io/badge/Shaders-GLSL-green.svg)]()
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)]()
 
-**Last Update: 22/June/2020.**
+**Last Update: 18/July/2020.**
 
 ![](logo-flappy_fly_bird.png)
 
@@ -69,6 +69,9 @@ There were used graphical resources such as `audio`, `music` and `images`. Those
 
 ## v 1.4.7
 - Minor updated that includes the support for the latest changes in the language and SDK
+
+## v 1.4.8
+- Updated to the latest Swift version and lifted the minimum deplayment target to `iOS/iPadOS 12.0` 
 
 # 🗺 Roadmap
 - [x] New playable characters 
