@@ -4,9 +4,11 @@
 [![Framework](https://img.shields.io/badge/Framework-SpriteKit-red.svg)]()
 [![Framework](https://img.shields.io/badge/Framework-GameplayKit-purple.svg)]()
 [![Shaders](https://img.shields.io/badge/Shaders-GLSL-green.svg)]()
+[![Last Commit](https://img.shields.io/github/last-commit/jvirus/flappy-fly-bird)]()
+[![NLOC](https://img.shields.io/tokei/lines/github/jvirus/flappy-fly-bird)]()
+[![Contributors](https://img.shields.io/github/contributors/jvirus/flappy-fly-bird)]()
+[![Repo Size](https://img.shields.io/github/repo-size/jvirus/flappy-fly-bird)]()
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)]()
-
-**Last Update: 18/July/2020.**
 
 ![](logo-flappy_fly_bird.png)
 
