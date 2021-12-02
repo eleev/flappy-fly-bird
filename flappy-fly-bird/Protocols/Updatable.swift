@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol Updatable: class {
+protocol Updatable: AnyObject {
     
     // MARK: - Properties
     
