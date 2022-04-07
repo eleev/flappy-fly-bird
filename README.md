@@ -22,7 +22,11 @@
 ## Gifs
 Please wait while the `.gif` files are loading...
 
-<img src="/resources/intro.gif" width="24.5%"> <img src="/resources/gameplay.gif" width="24.5%"> <img src="/resources/characters.gif" width="24.5%"> <img src="/resources/cat-gameplay.gif" width="24.5%">
+|  |  |
+:-------------------------:|:-------------------------:
+![](/resources/intro.gif) | ![](/resources/gameplay.gif)
+![](/resources/characters.gif) | ![](/resources/cat-gameplay.gif) 
+
 
 ## Screens
 <img src="/resources/img-01.PNG" width="49%"> <img src="/resources/img-05.PNG" width="49%">
