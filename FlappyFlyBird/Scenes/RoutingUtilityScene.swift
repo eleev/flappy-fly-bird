@@ -1,6 +1,6 @@
 //
 //  RoutingUtilityScene.swift
-//  ios-spritekit-flappy-flying-bird
+//  FlappyFlyBird
 //
 //  Created by Astemir Eleev on 12/05/2018.
 //  Copyright © 2018 Astemir Eleev. All rights reserved.

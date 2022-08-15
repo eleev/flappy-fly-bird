@@ -1,6 +1,6 @@
 //
 //  TriggleButtonNode.swift
-//  ios-spritekit-flappy-flying-bird
+//  FlappyFlyBird
 //
 //  Created by Astemir Eleev on 08/10/2018.
 //  Copyright © 2018 Astemir Eleev. All rights reserved.
@@ -9,7 +9,7 @@
 import SpriteKit
 
 /// A type that can respond to `TriggleButtonNode` button press events.
-protocol TriggleButtonNodeResponderType: class {
+protocol TriggleButtonNodeResponderType: AnyObject {
     /// Responds to a button press.
     func triggleButtonTriggered(triggle: TriggleButtonNode)
 }
