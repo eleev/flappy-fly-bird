@@ -129,7 +129,7 @@
 		A9A313A020B0239100B36175 /* GameScene iPad.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "GameScene iPad.sks"; sourceTree = "<group>"; };
 		A9A313A220B0263C00B36175 /* PauseScene iPad.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "PauseScene iPad.sks"; sourceTree = "<group>"; };
 		A9A313A420B026E000B36175 /* FailedScene iPad.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "FailedScene iPad.sks"; sourceTree = "<group>"; };
-		A9ACB9192099A1F200966991 /* flappy-fly-bird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "flappy-fly-bird.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9ACB9192099A1F200966991 /* FlappyFlyBird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlappyFlyBird.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9ACB91C2099A1F200966991 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9ACB91E2099A1F200966991 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		A9ACB9222099A1F200966991 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -279,7 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				A9ACB9962099F19E00966991 /* .gitignore */,
-				A9ACB91B2099A1F200966991 /* flappy-fly-bird */,
+				A9ACB91B2099A1F200966991 /* FlappyFlyBird */,
 				A9ACB91A2099A1F200966991 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -287,12 +287,12 @@
 		A9ACB91A2099A1F200966991 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A9ACB9192099A1F200966991 /* flappy-fly-bird.app */,
+				A9ACB9192099A1F200966991 /* FlappyFlyBird.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A9ACB91B2099A1F200966991 /* flappy-fly-bird */ = {
+		A9ACB91B2099A1F200966991 /* FlappyFlyBird */ = {
 			isa = PBXGroup;
 			children = (
 				A9ACB91C2099A1F200966991 /* AppDelegate.swift */,
@@ -310,7 +310,7 @@
 				A9ACB9892099F0C100966991 /* Protocols */,
 				A9ACB9882099F0B600966991 /* Nodes */,
 			);
-			path = "flappy-fly-bird";
+			path = FlappyFlyBird;
 			sourceTree = "<group>";
 		};
 		A9ACB9442099A47800966991 /* Fonts */ = {
@@ -547,9 +547,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A9ACB9182099A1F200966991 /* flappy-fly-bird */ = {
+		A9ACB9182099A1F200966991 /* FlappyFlyBird */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A9ACB93C2099A1F300966991 /* Build configuration list for PBXNativeTarget "flappy-fly-bird" */;
+			buildConfigurationList = A9ACB93C2099A1F300966991 /* Build configuration list for PBXNativeTarget "FlappyFlyBird" */;
 			buildPhases = (
 				A9ACB9152099A1F200966991 /* Sources */,
 				A9ACB9162099A1F200966991 /* Frameworks */,
@@ -559,9 +559,9 @@
 			);
 			dependencies = (
 			);
-			name = "flappy-fly-bird";
+			name = FlappyFlyBird;
 			productName = "ios-spritekit-flappy-flying-bird";
-			productReference = A9ACB9192099A1F200966991 /* flappy-fly-bird.app */;
+			productReference = A9ACB9192099A1F200966991 /* FlappyFlyBird.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -580,7 +580,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A9ACB9142099A1F200966991 /* Build configuration list for PBXProject "flappy-fly-bird" */;
+			buildConfigurationList = A9ACB9142099A1F200966991 /* Build configuration list for PBXProject "FlappyFlyBird" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -593,7 +593,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A9ACB9182099A1F200966991 /* flappy-fly-bird */,
+				A9ACB9182099A1F200966991 /* FlappyFlyBird */,
 			);
 		};
 /* End PBXProject section */
@@ -844,15 +844,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5W8256FV33;
-				INFOPLIST_FILE = "$(SRCROOT)/flappy-fly-bird/Info.plist";
+				DEVELOPMENT_TEAM = T3K58FE38R;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				INFOPLIST_FILE = "$(SRCROOT)/FlappyFlyBird/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.arcade-games";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4.8;
+				MARKETING_VERSION = 1.4.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.io.flappy-fly-bird";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -863,13 +866,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5W8256FV33;
-				INFOPLIST_FILE = "$(SRCROOT)/flappy-fly-bird/Info.plist";
+				DEVELOPMENT_TEAM = T3K58FE38R;
+				INFOPLIST_FILE = "$(SRCROOT)/FlappyFlyBird/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.arcade-games";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4.8;
+				MARKETING_VERSION = 1.4.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.io.flappy-fly-bird";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -880,7 +884,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A9ACB9142099A1F200966991 /* Build configuration list for PBXProject "flappy-fly-bird" */ = {
+		A9ACB9142099A1F200966991 /* Build configuration list for PBXProject "FlappyFlyBird" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A9ACB93A2099A1F300966991 /* Debug */,
@@ -889,7 +893,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A9ACB93C2099A1F300966991 /* Build configuration list for PBXNativeTarget "flappy-fly-bird" */ = {
+		A9ACB93C2099A1F300966991 /* Build configuration list for PBXNativeTarget "FlappyFlyBird" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A9ACB93D2099A1F300966991 /* Debug */,
