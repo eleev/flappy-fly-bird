@@ -87,7 +87,7 @@ class GameScene: SKScene {
         var deltaTime = currentTime - lastUpdateTime
         
         // If more than `maximumUpdateDeltaTime` has passed, clamp to the maximum; otherwise use `deltaTime`.
-        deltaTime = deltaTime > lastUpdateTime ? maximumUpdateDeltaTime : deltaTime
+        deltaTime = deltaTime > maximumUpdateDeltaTime ? maximumUpdateDeltaTime : deltaTime
         
         // The current time will be used as the last update time in the next execution of the method.
         lastUpdateTime = currentTime
